@@ -8,7 +8,8 @@
 #include <dt-bindings/zmk/keys.h>
 #include <dt-bindings/zmk/bt.h>
 
-
+#define XXX &none
+#define ___ &trans
 
 /* Homerow mods */
 
@@ -32,21 +33,6 @@ MAKE_HRM(hmr, &kp, &kp, KEYS_L THUMBS)  // right-hand HRMs
 MAKE_HRM(hml_repeat, &kp, &key_repeat, KEYS_R THUMBS)  // used for HRM-combo
 MAKE_HRM(hmr_lpar_lt, &kp, &lpar_lt, KEYS_R THUMBS)    // "    "   "   "
 MAKE_HRM(hmr_rpar_gt, &kp, &rpar_gt, KEYS_R THUMBS)    // "    "   "   "
-
-
-// copy all macro -- not working
-ZMK_BEHAVIOR(copy_all, macro,
-	wait-ms = <15>;
-	tap-ms = <15>;
-	bindings = <&kp LG(A)>, <&kp LG(C)>;
-)
-
-ZMK_BEHAVIOR(copy_all_td, tap_dance,
-	tapping-term-ms = <200>;
-	bindings = <&kp LG(A)>, <&copy_all>;
-)
-MAKE_HRM(hml_copy_all, &kp, &copy_all_td, KEYS_R THUMBS)  // "    "   "   "
-
 
 / {
 		keymap {

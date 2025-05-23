@@ -69,7 +69,7 @@ ZMK_HOLD_TAP(hmr,
 //                    | GUI | LWR | SPC |   | ENT | RSE  | ALT |
 						display-name = "Base";
 						bindings = <
-   &kp TAB		&kpQ		&kp W		&kp F			&kp P			&kp B		&kp J		&kp L			&kp U			&kp Y		&kp SEMI	&kp BSPC
+   &kp TAB		&kp Q		&kp W		&kp F			&kp P			&kp B		&kp J		&kp L			&kp U			&kp Y		&kp SEMI	&kp BSPC
    &kp LCTRL	&hml LGUI A	&hml LALT R	&hml LSHFT S	&hml LCTRL T	&kp G		&kp M		&hmr LCTRL N	&hmr RSHFT E	&hmr LALT I	&hmr LGUI O	&kp SQT
    &kp LSHFT	&kp Z		&kp X		&kp C			&kp D			&kp V		&kp K		&kp H			&kp COMMA		&kp DOT		&kp FSLH	&kp ESC
 										&kp RALT		&mo 2			&kp RET		&kp SPACE	&mo 1	&kp LGUI

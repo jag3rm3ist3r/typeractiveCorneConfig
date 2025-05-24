@@ -46,7 +46,7 @@ MAKE_HRM(hmr, &kp, &kp, KEYS_L THUMBS)
 // Non-macro setup
 / {
     behaviors {
-        hmlg: home_row_mod_left {
+        hmlg: home_row_mod_leftg {
             compatible = "zmk,behavior-hold-tap";
             #binding-cells = <2>;
             flavor = "balanced";
@@ -57,7 +57,7 @@ MAKE_HRM(hmr, &kp, &kp, KEYS_L THUMBS)
             hold-trigger-key-positions = <KEYS_R THUMBS>; // List of keys on the right side of the keyboard
             hold-trigger-on-release;
         };
-        hmrg: home_row_mod_right {
+        hmrg: home_row_mod_rightg {
             compatible = "zmk,behavior-hold-tap";
             #binding-cells = <2>;
             flavor = "balanced";
@@ -68,7 +68,7 @@ MAKE_HRM(hmr, &kp, &kp, KEYS_L THUMBS)
             hold-trigger-key-positions = <KEYS_L THUMBS>; // List of keys on the left side of the keyboard
             hold-trigger-on-release;
         };
-        hmla: home_row_mod_left {
+        hmla: home_row_mod_lefta {
             compatible = "zmk,behavior-hold-tap";
             #binding-cells = <2>;
             flavor = "balanced";
@@ -79,7 +79,7 @@ MAKE_HRM(hmr, &kp, &kp, KEYS_L THUMBS)
             hold-trigger-key-positions = <KEYS_R THUMBS>; // List of keys on the right side of the keyboard
             hold-trigger-on-release;
         };
-        hmra: home_row_mod_right {
+        hmra: home_row_mod_righta {
             compatible = "zmk,behavior-hold-tap";
             #binding-cells = <2>;
             flavor = "balanced";
@@ -90,7 +90,7 @@ MAKE_HRM(hmr, &kp, &kp, KEYS_L THUMBS)
             hold-trigger-key-positions = <KEYS_L THUMBS>; // List of keys on the left side of the keyboard
             hold-trigger-on-release;
         };
-        hmls: home_row_mod_left {
+        hmls: home_row_mod_lefts {
             compatible = "zmk,behavior-hold-tap";
             #binding-cells = <2>;
             flavor = "balanced";
@@ -101,7 +101,7 @@ MAKE_HRM(hmr, &kp, &kp, KEYS_L THUMBS)
             hold-trigger-key-positions = <KEYS_R THUMBS>; // List of keys on the right side of the keyboard
             hold-trigger-on-release;
         };
-        hmrs: home_row_mod_right {
+        hmrs: home_row_mod_rights {
             compatible = "zmk,behavior-hold-tap";
             #binding-cells = <2>;
             flavor = "balanced";
@@ -112,7 +112,7 @@ MAKE_HRM(hmr, &kp, &kp, KEYS_L THUMBS)
             hold-trigger-key-positions = <KEYS_L THUMBS>; // List of keys on the left side of the keyboard
             hold-trigger-on-release;
         };
-        hmlc: home_row_mod_left {
+        hmlc: home_row_mod_leftc {
             compatible = "zmk,behavior-hold-tap";
             #binding-cells = <2>;
             flavor = "balanced";
@@ -123,7 +123,7 @@ MAKE_HRM(hmr, &kp, &kp, KEYS_L THUMBS)
             hold-trigger-key-positions = <KEYS_R THUMBS>; // List of keys on the right side of the keyboard
             hold-trigger-on-release;
         };
-        hmrc: home_row_mod_right {
+        hmrc: home_row_mod_rightc {
             compatible = "zmk,behavior-hold-tap";
             #binding-cells = <2>;
             flavor = "balanced";

@@ -40,8 +40,6 @@
 MAKE_HRM(hml, &kp, &kp, KEYS_R THUMBS)
 // Right hand HRMs.
 MAKE_HRM(hmr, &kp, &kp, KEYS_L THUMBS)
-#define BUNDLE_HRM_L(&hml LGUI A		&hml LALT R		&hml LSHFT S	&hml LCTRL T)
-#define BUNDLE_HRM_R(&hmr LCTRL N	&hmr RSHFT E	&hmr LALT I		&hmr LGUI O)
 
 #define MACRO(_name_, _bindings_)			\
 _name_: macro_##_name_ {					\
@@ -70,8 +68,7 @@ _name_: macro_##_name_ {					\
 //╭───────────────┬───────────────┬───────────────┬───────────────┬───────────────┬───────────────╮   ╭───────────────┬───────────────┬───────────────┬───────────────┬───────────────┬───────────────╮
 	&kp TAB			&kp Q			&kp W			&kp F			&kp P			&kp B				&kp J			&kp L			&kp U			&kp Y			&kp SEMI		&kp BSPC
 //├───────────────┼───────────────┼───────────────┼───────────────┼───────────────┼───────────────┤   ├───────────────┼───────────────┼───────────────┼───────────────┼───────────────┼───────────────┤
-//	&kp LCTRL		&hml LGUI A		&hml LALT R		&hml LSHFT S	&hml LCTRL T	&kp G				&kp M			&hmr LCTRL N	&hmr RSHFT E	&hmr LALT I		&hmr LGUI O		&kp SQT
-	&kp LCTRL		BUNDLE_HRM_L													&kp G				&kp M			BUNDLE_HRM_R													&kp SQT
+	&kp LCTRL		&hml LGUI A		&hml LALT R		&hml LSHFT S	&hml LCTRL T	&kp G				&kp M			&hmr LCTRL N	&hmr RSHFT E	&hmr LALT I		&hmr LGUI O		&kp SQT
 //├───────────────┼───────────────┼───────────────┼───────────────┼───────────────┼───────────────┤   ├───────────────┼───────────────┼───────────────┼───────────────┼───────────────┼───────────────┤
 	&kp LSHFT		&kp Z			&kp X			&kp C			&kp D			&kp V				&kp K			&kp H			&kp COMMA		&kp DOT			&kp FSLH		&kp RSHFT
 //╰───────────────┴───────────────┴───────────────┼───────────────┼───────────────┼───────────────┤   ├───────────────┼───────────────┼───────────────┼───────────────┴───────────────┴───────────────╯

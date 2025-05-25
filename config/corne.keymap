@@ -91,6 +91,7 @@ MAKE_HRM(hmr, &kp, &kp, KEYS_L THUMBS)
 	};
 };
 
+// Macros
 #define MACRO(_name_, _bindings_)			\
 _name_: macro_##_name_ {					\
 	compatible		= "zmk,behavior-macro";	\
@@ -102,9 +103,16 @@ _name_: macro_##_name_ {					\
 
 / {
 	macros {
+		// <-
 		MACRO(larr,	&kp LT &kp MINUS)
+		// ->
 		MACRO(rarr,	&kp MINUS &kp GT)
 	};
+};
+
+// Caps word
+&caps_word {
+    continue-list = <UNDERSCORE MINUS>;
 };
 
 //ZMK_MOD_MORPH(name, mods, binding)
@@ -120,7 +128,7 @@ _name_: macro_##_name_ {					\
 //├───────────────┼───────────────┼───────────────┼───────────────┼───────────────┼───────────────┤   ├───────────────┼───────────────┼───────────────┼───────────────┼───────────────┼───────────────┤
 	&mo 1			&hml LGUI A		&hml LALT R		&hml LSHFT S	&hml LCTL T		&kp G				&kp M			&hmr LCTRL N	&hmr LSHFT E	&hmr LALT I		&hmr LGUI O		&mo 5
 //├───────────────┼───────────────┼───────────────┼───────────────┼───────────────┼───────────────┤   ├───────────────┼───────────────┼───────────────┼───────────────┼───────────────┼───────────────┤
-	&kp LSHFT		&kp Z			&kp X			&kp C			&kp D			&kp V				&kp K			&kp H			&cscln			&fscln			&bqm			&kp RSHFT
+&mt LSHFT caps_word	&kp Z			&kp X			&kp C			&kp D			&kp V				&kp K			&kp H			&cscln			&fscln			&bqm		&mt RSHFT caps_word
 //╰───────────────┴───────────────┴───────────────┼───────────────┼───────────────┼───────────────┤   ├───────────────┼───────────────┼───────────────┼───────────────┴───────────────┴───────────────╯
 													&kp ESC			&mo 4			&kp RET				&kp SPACE		&mo 2			&key_repeat
 //                                                ╰───────────────┴───────────────┴───────────────╯   ╰───────────────┴───────────────┴───────────────╯

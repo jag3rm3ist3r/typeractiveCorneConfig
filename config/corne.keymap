@@ -73,7 +73,7 @@ MAKE_HRM(hmr, &kp, &kp, KEYS_L THUMBS)
 		cscln: comma_scln {
 			compatible = "zmk,behavior-mod-morph";
 			#binding-cells = <0>;
-			bindings = <&kp COMMA>, <&kp SCLN>;
+			bindings = <&kp COMMA>, <&kp SEMI>;
 			mods = <(MOD_LSFT|MOD_RSFT)>;
 		};
 		fscln: fs_colon {

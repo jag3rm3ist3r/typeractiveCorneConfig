@@ -28,7 +28,7 @@
 #define THUMBS LH2 LH1 LH0 RH0 RH1 RH2
 
 /* Homerow mods */
-//#include "zmk-helpers/helper.h"
+#include "zmk-helpers/helper.h"
 /*
 #define QUICK_TAP_MS 175
 #define MAKE_HRM(NAME, HOLD, TAP, TRIGGER_POS)							\

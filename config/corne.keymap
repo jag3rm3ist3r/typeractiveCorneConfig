@@ -70,7 +70,6 @@ MAKE_HRM(hmr, &kp, &kp, KEYS_L THUMBS)
 			hold-trigger-on-release;
 		};
 		// Mod morphs
-		/*
 		cscln: comma_scln {
 			compatible = "zmk,behavior-mod-morph";
 			#binding-cells = <0>;
@@ -89,7 +88,6 @@ MAKE_HRM(hmr, &kp, &kp, KEYS_L THUMBS)
 			bindings = <&kp EXCL>, <&kp QMARK>;
 			mods = <(MOD_LSFT|MOD_RSFT)>;
 		};
-		*/
 	};
 };
 

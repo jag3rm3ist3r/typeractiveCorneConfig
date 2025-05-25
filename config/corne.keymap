@@ -16,12 +16,12 @@
 #define ___ &trans
 
 // Layers
-#define BASE 1
-#define NAV 2
-#define NUM 3
-#define SYM 4
-#define MACR 5
-#define META 6
+#define BASE 0
+#define NAV 1
+#define NUM 2
+#define SYM 3
+#define MACR 4
+#define META 5
 
 /*                                      42 KEY MATRIX / LAYOUT MAPPING
 
@@ -152,7 +152,7 @@ _name_: macro_##_name_ {					\
 //├───────────────┼───────────────┼───────────────┼───────────────┼───────────────┼───────────────┤   ├───────────────┼───────────────┼───────────────┼───────────────┼───────────────┼───────────────┤
 	&kp LSHFT 		&kp Z			&kp X			&kp C			&kp D			&kp V				&kp K			&kp H			&cscln			&fscln			&bqm			&kp RSHFT
 //╰───────────────┴───────────────┴───────────────┼───────────────┼───────────────┼───────────────┤   ├───────────────┼───────────────┼───────────────┼───────────────┴───────────────┴───────────────╯
-													&kp ESC			&sl SYM			&kp RET				&kp SPACE		&sl NUM			&key_repeat
+													&kp ESC			&mo SYM			&kp RET				&kp SPACE		&mo NUM			&key_repeat
 //                                                ╰───────────────┴───────────────┴───────────────╯   ╰───────────────┴───────────────┴───────────────╯
 			>;
 		};

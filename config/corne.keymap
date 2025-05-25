@@ -16,12 +16,12 @@
 #define ___ &trans
 
 // Layers
-#define 0 BASE
-#define 1 NAV
-#define 2 NUM
-#define 3 SYM
-#define 4 MACRO
-#define 5 META
+#define BASE 1
+#define NAV 2
+#define NUM 3
+#define SYM 4
+#define MACRO 5
+#define META 6
 
 /*                                      42 KEY MATRIX / LAYOUT MAPPING
 

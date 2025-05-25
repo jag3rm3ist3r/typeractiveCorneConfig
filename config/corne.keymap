@@ -58,7 +58,7 @@ MAKE_HRM(hmr, &kp, &kp, KEYS_L THUMBS)
 			hold-trigger-key-positions = <KEYS_R THUMBS>; // List of keys on the right side of the keyboard
 			hold-trigger-on-release;
 		};
-			hmr: home_row_mod_right {
+		hmr: home_row_mod_right {
 			compatible = "zmk,behavior-hold-tap";
 			#binding-cells = <2>;
 			flavor = "balanced";
@@ -70,6 +70,7 @@ MAKE_HRM(hmr, &kp, &kp, KEYS_L THUMBS)
 			hold-trigger-on-release;
 		};
 		// Mod morphs
+		/*
 		cscln: comma_scln {
 			compatible = "zmk,behavior-mod-morph";
 			#binding-cells = <0>;
@@ -88,6 +89,7 @@ MAKE_HRM(hmr, &kp, &kp, KEYS_L THUMBS)
 			bindings = <&kp EXCL>, <&kp QMARK>;
 			mods = <(MOD_LSFT|MOD_RSFT)>;
 		};
+		*/
 	};
 };
 

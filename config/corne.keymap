@@ -155,7 +155,7 @@ _name_: macro_##_name_ {					\
         aeq: append_equals_macro {
             compatible = "zmk,behavior-macro-one-param";
             #binding-cells = <1>; // Must be 1
-            bindings = <&macro_param_1to1>, <&kp>,  <&kp EQUAL>;
+            bindings = <&macro_param_1to1>, <&kp MACRO_PLACEHOLDER>,  <&kp EQUAL>;
         };
 		ncoper: null_coalescing_oper {
 			compatible = "zmk,behavior-macro";

@@ -160,7 +160,7 @@ _name_: macro_##_name_ {					\
 		ncoper: null_coalescing_oper {
 			compatible = "zmk,behavior-macro";
 			#binding-cells = <0>;
-			bindings = <&kp QMARK>, <&kp QMARK>, <&kp EQUAL>;
+			bindings = <&kp QMARK &kp QMARK &kp EQUAL>;
 		};
 	};
 };

@@ -57,6 +57,22 @@ MAKE_HRM(hml, &kp, &kp, KEYS_R THUMBS)
 MAKE_HRM(hmr, &kp, &kp, KEYS_L THUMBS)
 */
 
+/ {
+	macros {
+		// Prepend =
+        aeq: append_equals_macro {
+            compatible = "zmk,behavior-macro-one-param";
+            #binding-cells = <1>; // Must be 1
+            bindings = <&kp>,  <&kp EQUAL>;
+        };
+		ncoper: null_coalescing_oper {
+			compatible = "zmk,behavior-macro";
+			#binding-cells = <0>;
+			bindings = <&kp QMARK>, <&kp QMARK>, <&kp EQUAL>;
+		};
+	};
+};
+
 // Non-macro setup
 / {
 	behaviors {
@@ -151,17 +167,6 @@ _name_: macro_##_name_ {					\
 		MACRO(lteq, &kp LT &kp EQUAL)
 		// <=
 		MACRO(gteq, &kp GT &kp EQUAL)
-		// Prepend =
-        aeq: append_equals_macro {
-            compatible = "zmk,behavior-macro-one-param";
-            #binding-cells = <1>; // Must be 1
-            bindings = <&kp>,  <&kp EQUAL>;
-        };
-		ncoper: null_coalescing_oper {
-			compatible = "zmk,behavior-macro";
-			#binding-cells = <0>;
-			bindings = <&kp QMARK>, <&kp QMARK>, <&kp EQUAL>;
-		};
 	};
 };
 
@@ -235,7 +240,7 @@ _name_: macro_##_name_ {					\
 			display-name = "Symbols";
 			bindings = <
 //╭───────────────┬───────────────┬───────────────┬───────────────┬───────────────┬───────────────╮   ╭───────────────┬───────────────┬───────────────┬───────────────┬───────────────┬───────────────╮
-	___				&qq_e		XXX				XXX				&plus_e			&excl_e				XXX				XXX				&kp UNDER		XXX				XXX				&kp DEL
+	___				&qq_e			XXX				XXX				&plus_e			&excl_e				XXX				XXX				&kp UNDER		XXX				XXX				&kp DEL
 //├───────────────┼───────────────┼───────────────┼───────────────┼───────────────┼───────────────┤   ├───────────────┼───────────────┼───────────────┼───────────────┼───────────────┼───────────────┤
 	___				&amps_e			XXX				&star_e			&kp TILDE		&kp GRAVE			&minus_e		XXX				&equal_e		&pipe_e			&kp AT			___
 //├───────────────┼───────────────┼───────────────┼───────────────┼───────────────┼───────────────┤   ├───────────────┼───────────────┼───────────────┼───────────────┼───────────────┼───────────────┤

@@ -111,7 +111,7 @@ MAKE_HRM(hmr, &kp, &kp, KEYS_L THUMBS)
 		qmark_ee: qmark_ee {
 			compatible = "zmk,behavior-mod-morph";
 			#binding-cells = <0>;
-			bindings = <&kp QMARK>, <&ncoper>
+			bindings = <&kp QMARK>, <&ncoper>;
 			mods = <(MOD_LSFT|MOD_RSFT)>;
 		};
 		plus_e: plus_e { compatible = "zmk,behavior-mod-morph"; #binding-cells = <0>; bindings = <&kp PLUS>, <&aeq PLUS>; mods = <(MOD_LSFT|MOD_RSFT)>; };

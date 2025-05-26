@@ -155,7 +155,7 @@ _name_: macro_##_name_ {					\
         aeq: append_equals_macro {
             compatible = "zmk,behavior-macro-one-param";
             #binding-cells = <1>; // Must be 1
-            bindings = <&macro_param_1to1>, <&kp MACRO_PLACEHOLDER>,  <&kp EQUAL>;
+            bindings = <&macro_param_1to1>, <&kp MACRO_PLACEHOLDER>,  <&kp EQUAL>
         };
 		ncoper: null_coalescing_oper {
 			compatible = "zmk,behavior-macro";
@@ -193,7 +193,7 @@ _name_: macro_##_name_ {					\
 //├───────────────┼───────────────┼───────────────┼───────────────┼───────────────┼───────────────┤   ├───────────────┼───────────────┼───────────────┼───────────────┼───────────────┼───────────────┤
 	&mo NAV			&hml LGUI A		&hml LALT R		&hml LSHFT S	&hml LCTL T		&kp G				&kp M			&hmr LCTRL N	&hmr LSHFT E	&hmr LALT I		&hmr LGUI O		&mo MACR
 //├───────────────┼───────────────┼───────────────┼───────────────┼───────────────┼───────────────┤   ├───────────────┼───────────────┼───────────────┼───────────────┼───────────────┼───────────────┤
-&mt LSHFT &caps_word &kp Z			&kp X			&kp C			&kp D			&kp V				&kp K			&kp H			&cscln			&fscln			&bqm		&mt RSHFT &caps_word
+	&kp LSHFT		&kp Z			&kp X			&kp C			&kp D			&kp V				&kp K			&kp H			&cscln			&fscln			&bqm			&kp RSHFT
 //╰───────────────┴───────────────┴───────────────┼───────────────┼───────────────┼───────────────┤   ├───────────────┼───────────────┼───────────────┼───────────────┴───────────────┴───────────────╯
 													&mt LALT ESC	&mo NUM			&kp RET				&spund			&mo SYM			&key_repeat
 //                                                ╰───────────────┴───────────────┴───────────────╯   ╰───────────────┴───────────────┴───────────────╯

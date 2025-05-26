@@ -102,7 +102,7 @@ MAKE_HRM(hmr, &kp, &kp, KEYS_L THUMBS)
 			bindings = <&kp EXCL>, <&kp QMARK>;
 			mods = <(MOD_LSFT|MOD_RSFT)>;
 		};
-		spu: space_underscore {
+		spu: spc_unds {
 			compatible = "zmk,behavior-mod-morph";
 			#binding-cells = <0>;
 			bindings = <&kp SPACE>, <&kp UNDER>;

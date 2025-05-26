@@ -102,12 +102,14 @@ MAKE_HRM(hmr, &kp, &kp, KEYS_L THUMBS)
 			bindings = <&kp EXCL>, <&kp QMARK>;
 			mods = <(MOD_LSFT|MOD_RSFT)>;
 		};
+/*
 		spu: spc_unds {
 			compatible = "zmk,behavior-mod-morph";
 			#binding-cells = <0>;
 			bindings = <&kp SPACE>, <&kp UNDER>;
 			mods = <(MOD_LSFT|MOD_RSFT)>;
 		};
+*/
 	};
 };
 
@@ -160,7 +162,7 @@ _name_: macro_##_name_ {					\
 //├───────────────┼───────────────┼───────────────┼───────────────┼───────────────┼───────────────┤   ├───────────────┼───────────────┼───────────────┼───────────────┼───────────────┼───────────────┤
 	&kp LSHFT 		&kp Z			&kp X			&kp C			&kp D			&kp V				&kp K			&kp H			&cscln			&fscln			&bqm			&kp RSHFT
 //╰───────────────┴───────────────┴───────────────┼───────────────┼───────────────┼───────────────┤   ├───────────────┼───────────────┼───────────────┼───────────────┴───────────────┴───────────────╯
-													&mt LALT ESC	&mo NUM			&kp RET				&spu			&mo SYM			&key_repeat
+													&mt LALT ESC	&mo NUM			&kp RET				&kp SPACE		&mo SYM			&key_repeat
 //                                                ╰───────────────┴───────────────┴───────────────╯   ╰───────────────┴───────────────┴───────────────╯
 			>;
 		};

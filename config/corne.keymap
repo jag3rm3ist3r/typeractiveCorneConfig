@@ -108,12 +108,14 @@ MAKE_HRM(hmr, &kp, &kp, KEYS_L THUMBS)
 			bindings = <&kp SPACE>, <&kp UNDER>;
 			mods = <(MOD_LSFT|MOD_RSFT)>;
 		};
-		qmark_ee: qmark_ee {
+		// Null coalescing operator ??=
+		qmark_e: qmark_qmark_e {
 			compatible = "zmk,behavior-mod-morph";
 			#binding-cells = <0>;
 			bindings = <&kp QMARK>, <&ncoper>;
 			mods = <(MOD_LSFT|MOD_RSFT)>;
 		};
+		// Symbols with appended = when shift is held.
 		plus_e: plus_e { compatible = "zmk,behavior-mod-morph"; #binding-cells = <0>; bindings = <&kp PLUS>, <&aeq PLUS>; mods = <(MOD_LSFT|MOD_RSFT)>; };
 		excl_e: excl_e { compatible = "zmk,behavior-mod-morph"; #binding-cells = <0>; bindings = <&kp EXCL>, <&aeq EXCL>; mods = <(MOD_LSFT|MOD_RSFT)>; };
 		del_e: del_e { compatible = "zmk,behavior-mod-morph"; #binding-cells = <0>; bindings = <&kp DEL>, <&aeq DEL>; mods = <(MOD_LSFT|MOD_RSFT)>; };

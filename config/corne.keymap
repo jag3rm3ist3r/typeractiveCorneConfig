@@ -131,10 +131,10 @@ MAKE_HRM(hmr, &kp, &kp, KEYS_L THUMBS)
 
 		smrtShft: mod_tap {
 			compatible = "zmk,behavior-hold-tap";
-			#binding-cells = <1>;
+			#binding-cells = <2>;
 			flavor = "hold-preferred";
 			tapping-term-ms = <200>;
-			bindings = <&kp>, <&caps_word>;
+			bindings = <&LSHFT>, <&caps_word>;
 			display-name = "SmartShift";
 		};
 	};
@@ -202,7 +202,7 @@ _name_: macro_##_name_ {					\
 //├───────────────┼───────────────┼───────────────┼───────────────┼───────────────┼───────────────┤   ├───────────────┼───────────────┼───────────────┼───────────────┼───────────────┼───────────────┤
 	&mo NAV			&hml LSHFT A	&hml LCTL R		&hml LGUI S		&hml LALT T		&kp G				&kp M			&hmr RALT N		&hmr RGUI E		&hmr RCTL I		&hmr RSHFT O	&mo MACR
 //├───────────────┼───────────────┼───────────────┼───────────────┼───────────────┼───────────────┤   ├───────────────┼───────────────┼───────────────┼───────────────┼───────────────┼───────────────┤
-	&smrtShft LSHFT	&kp Z			&kp X			&kp C			&kp D			&kp V				&kp K			&kp H			&cscln			&fscln			&bqm			&smrtShft RSHFT
+	&smrtShft		&kp Z			&kp X			&kp C			&kp D			&kp V				&kp K			&kp H			&cscln			&fscln			&bqm			&smrtShft RSHFT
 //╰───────────────┴───────────────┴───────────────┼───────────────┼───────────────┼───────────────┤   ├───────────────┼───────────────┼───────────────┼───────────────┴───────────────┴───────────────╯
 													&mt LALT ESC	&mo NUM			&kp RET				&spund			&mo SYM			&key_repeat
 //                                                ╰───────────────┴───────────────┴───────────────╯   ╰───────────────┴───────────────┴───────────────╯

@@ -129,7 +129,7 @@ MAKE_HRM(hmr, &kp, &kp, KEYS_L THUMBS)
 		hash_e:		hash_equals		{ compatible = "zmk,behavior-mod-morph"; #binding-cells = <0>; bindings = <&kp HASH>, <&aeq HASH>; mods = <(MOD_LSFT|MOD_RSFT)>; };
 		prcnt_e:	prcnt_equals	{ compatible = "zmk,behavior-mod-morph"; #binding-cells = <0>; bindings = <&kp PRCNT>, <&aeq PRCNT>; mods = <(MOD_LSFT|MOD_RSFT)>; };
 
-		ss: mod_tap {
+		ss: smart_shift {
 			compatible = "zmk,behavior-hold-tap";
 			#binding-cells = <2>;
 			flavor = "hold-preferred";

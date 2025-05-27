@@ -128,6 +128,15 @@ MAKE_HRM(hmr, &kp, &kp, KEYS_L THUMBS)
 		dollar_e:	dollar_equals	{ compatible = "zmk,behavior-mod-morph"; #binding-cells = <0>; bindings = <&kp DOLLAR>, <&aeq DOLLAR>; mods = <(MOD_LSFT|MOD_RSFT)>; };
 		hash_e:		hash_equals		{ compatible = "zmk,behavior-mod-morph"; #binding-cells = <0>; bindings = <&kp HASH>, <&aeq HASH>; mods = <(MOD_LSFT|MOD_RSFT)>; };
 		prcnt_e:	prcnt_equals	{ compatible = "zmk,behavior-mod-morph"; #binding-cells = <0>; bindings = <&kp PRCNT>, <&aeq PRCNT>; mods = <(MOD_LSFT|MOD_RSFT)>; };
+
+		smrtShft: mod_tap {
+			compatible = "zmk,behavior-hold-tap";
+			#binding-cells = <1>;
+			flavor = "hold-preferred";
+			tapping-term-ms = <200>;
+			bindings = <&kp>, <&caps_word>;
+			display-name = "SmartShift";
+		};
 	};
 };
 
@@ -193,7 +202,7 @@ _name_: macro_##_name_ {					\
 //├───────────────┼───────────────┼───────────────┼───────────────┼───────────────┼───────────────┤   ├───────────────┼───────────────┼───────────────┼───────────────┼───────────────┼───────────────┤
 	&mo NAV			&hml LSHFT A	&hml LCTL R		&hml LGUI S		&hml LALT T		&kp G				&kp M			&hmr RALT N		&hmr RGUI E		&hmr RCTL I		&hmr RSHFT O	&mo MACR
 //├───────────────┼───────────────┼───────────────┼───────────────┼───────────────┼───────────────┤   ├───────────────┼───────────────┼───────────────┼───────────────┼───────────────┼───────────────┤
-	&kp LSHFT		&kp Z			&kp X			&kp C			&kp D			&kp V				&kp K			&kp H			&cscln			&fscln			&bqm			&kp RSHFT
+	&smrtShft LSHFT	&kp Z			&kp X			&kp C			&kp D			&kp V				&kp K			&kp H			&cscln			&fscln			&bqm			&smrtShft RSHFT
 //╰───────────────┴───────────────┴───────────────┼───────────────┼───────────────┼───────────────┤   ├───────────────┼───────────────┼───────────────┼───────────────┴───────────────┴───────────────╯
 													&mt LALT ESC	&mo NUM			&kp RET				&spund			&mo SYM			&key_repeat
 //                                                ╰───────────────┴───────────────┴───────────────╯   ╰───────────────┴───────────────┴───────────────╯

@@ -57,7 +57,7 @@ MAKE_HRM(hml, &kp, &kp, KEYS_R THUMBS)
 MAKE_HRM(hmr, &kp, &kp, KEYS_L THUMBS)
 */
 #define APPEND_E_MOD_MORPH(_name_, _bindings_)		\
-_name__e: _name_##_equals {							\
+_name_: _name_##_equals {							\
 	compatible = "zmk,behavior-mod-morph";			\
 	#binding-cells = <0>;							\
 	bindings = <&kp _bindings_>, <&aeq _bindings_>;	\
@@ -126,20 +126,20 @@ _name__e: _name_##_equals {							\
 			mods = <(MOD_LSFT|MOD_RSFT)>;
 		};
 		// Symbols with appended = when shift is held.
-		APPEND_E_MOD_MORPH(plus, PLUS)
-		APPEND_E_MOD_MORPH(excl, EXCL)
-		APPEND_E_MOD_MORPH(del, DEL)
-		APPEND_E_MOD_MORPH(amps, AMPS)
-		APPEND_E_MOD_MORPH(star, STAR)
-		APPEND_E_MOD_MORPH(minus, MINUS)
-		APPEND_E_MOD_MORPH(equal, EQUAL)
-		APPEND_E_MOD_MORPH(pipe, PIPE)
-		APPEND_E_MOD_MORPH(caret, CARET)
-		APPEND_E_MOD_MORPH(dollar, DOLLAR)
-		APPEND_E_MOD_MORPH(hash, HASH)
-		APPEND_E_MOD_MORPH(prcnt, PRCNT)
-		APPEND_E_MOD_MORPH(gt, GT)
-		APPEND_E_MOD_MORPH(lt, LT)
+		APPEND_E_MOD_MORPH(plus_e, PLUS)
+		APPEND_E_MOD_MORPH(excl_e, EXCL)
+		APPEND_E_MOD_MORPH(del_e, DEL)
+		APPEND_E_MOD_MORPH(amps_e, AMPS)
+		APPEND_E_MOD_MORPH(star_e, STAR)
+		APPEND_E_MOD_MORPH(minus_e, MINUS)
+		APPEND_E_MOD_MORPH(equal_e, EQUAL)
+		APPEND_E_MOD_MORPH(pipe_e, PIPE)
+		APPEND_E_MOD_MORPH(caret_e, CARET)
+		APPEND_E_MOD_MORPH(dollar_e, DOLLAR)
+		APPEND_E_MOD_MORPH(hash_e, HASH)
+		APPEND_E_MOD_MORPH(prcnt_e, PRCNT)
+		APPEND_E_MOD_MORPH(gt_e, GT)
+		APPEND_E_MOD_MORPH(lt_e, LT)
 
 		// Mod morph for nullptr / NULL macros
 		np:			null_pointer	{ compatible = "zmk,behavior-mod-morph"; #binding-cells = <0>; bindings = <&null_pointer>, <&null_capitals>; mods = <(MOD_LSFT|MOD_RSFT)>; };

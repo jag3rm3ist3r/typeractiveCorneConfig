@@ -56,11 +56,11 @@ MAKE_HRM(hml, &kp, &kp, KEYS_R THUMBS)
 // Right hand HRMs.
 MAKE_HRM(hmr, &kp, &kp, KEYS_L THUMBS)
 */
-#define APPEND_E_MOD_MORPH(_name_, _binding_)		\
-_name__e: _name_equals {							\
+#define APPEND_E_MOD_MORPH(_name_, _bindings_)		\
+_name__e: _name_##_equals {							\
 	compatible = "zmk,behavior-mod-morph";			\
 	#binding-cells = <0>;							\
-	bindings = <&kp _binding_>, <&aeq _binding_>;	\
+	bindings = <&kp _bindings_>, <&aeq _bindings_>;	\
 	mods = <(MOD_LSFT|MOD_RSFT)>;					\
 };
 // Non-macro setup

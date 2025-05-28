@@ -84,24 +84,28 @@ MAKE_HRM(hmr, &kp, &kp, KEYS_L THUMBS)
 			hold-trigger-on-release;
 		};
 		// Mod morphs
+		// , / ;
 		cscln: comma_scln {
 			compatible = "zmk,behavior-mod-morph";
 			#binding-cells = <0>;
 			bindings = <&kp COMMA>, <&kp SEMI>;
 			mods = <(MOD_LSFT|MOD_RSFT)>;
 		};
+		// . / :
 		fscln: fs_colon {
 			compatible = "zmk,behavior-mod-morph";
 			#binding-cells = <0>;
 			bindings = <&kp DOT>, <&kp COLON>;
 			mods = <(MOD_LSFT|MOD_RSFT)>;
 		};
+		// ! / ?
 		bqm: bang_question {
 			compatible = "zmk,behavior-mod-morph";
 			#binding-cells = <0>;
 			bindings = <&kp EXCL>, <&kp QMARK>;
 			mods = <(MOD_LSFT|MOD_RSFT)>;
 		};
+		// Space / Underscore
 		spund: sp_und {
 			compatible = "zmk,behavior-mod-morph";
 			#binding-cells = <0>;
@@ -116,6 +120,7 @@ MAKE_HRM(hmr, &kp, &kp, KEYS_L THUMBS)
 			mods = <(MOD_LSFT|MOD_RSFT)>;
 		};
 		// Symbols with appended = when shift is held.
+		// ToDo: define precompiler macro to simplify this.
 		plus_e:		plus_equals		{ compatible = "zmk,behavior-mod-morph"; #binding-cells = <0>; bindings = <&kp PLUS>, <&aeq PLUS>; mods = <(MOD_LSFT|MOD_RSFT)>; };
 		excl_e:		excl_equals		{ compatible = "zmk,behavior-mod-morph"; #binding-cells = <0>; bindings = <&kp EXCL>, <&aeq EXCL>; mods = <(MOD_LSFT|MOD_RSFT)>; };
 		del_e:		del_equals 		{ compatible = "zmk,behavior-mod-morph"; #binding-cells = <0>; bindings = <&kp DEL>, <&aeq DEL>; mods = <(MOD_LSFT|MOD_RSFT)>; };
@@ -131,6 +136,7 @@ MAKE_HRM(hmr, &kp, &kp, KEYS_L THUMBS)
 		gt_e:		gt_equals		{ compatible = "zmk,behavior-mod-morph"; #binding-cells = <0>; bindings = <&kp GT>, <&aeq GT>; mods = <(MOD_LSFT|MOD_RSFT)>; };
 		lt_e:		lt_equals		{ compatible = "zmk,behavior-mod-morph"; #binding-cells = <0>; bindings = <&kp LT>, <&aeq LT>; mods = <(MOD_LSFT|MOD_RSFT)>; };
 
+		// nullptr / NULL macro
 		np:			null_pointer	{ compatible = "zmk,behavior-mod-morph"; #binding-cells = <0>; bindings = <&null_pointer>, <&null_capitals>; mods = <(MOD_LSFT|MOD_RSFT)>; };
 
 		ss: smart_shift {

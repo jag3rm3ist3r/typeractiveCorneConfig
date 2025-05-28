@@ -56,7 +56,13 @@ MAKE_HRM(hml, &kp, &kp, KEYS_R THUMBS)
 // Right hand HRMs.
 MAKE_HRM(hmr, &kp, &kp, KEYS_L THUMBS)
 */
-
+#define APPEND_E_MOD_MORPH(_name_, _binding_)		\
+_name__e: _name_equals {							\
+	compatible = "zmk,behavior-mod-morph";			\
+	#binding-cells = <0>;							\
+	bindings = <&kp _binding_>, <&aeq _binding_>;	\
+	mods = <(MOD_LSFT|MOD_RSFT)>;					\
+};
 // Non-macro setup
 / {
 	behaviors {
@@ -120,25 +126,25 @@ MAKE_HRM(hmr, &kp, &kp, KEYS_L THUMBS)
 			mods = <(MOD_LSFT|MOD_RSFT)>;
 		};
 		// Symbols with appended = when shift is held.
-		// ToDo: define precompiler macro to simplify this.
-		plus_e:		plus_equals		{ compatible = "zmk,behavior-mod-morph"; #binding-cells = <0>; bindings = <&kp PLUS>, <&aeq PLUS>; mods = <(MOD_LSFT|MOD_RSFT)>; };
-		excl_e:		excl_equals		{ compatible = "zmk,behavior-mod-morph"; #binding-cells = <0>; bindings = <&kp EXCL>, <&aeq EXCL>; mods = <(MOD_LSFT|MOD_RSFT)>; };
-		del_e:		del_equals 		{ compatible = "zmk,behavior-mod-morph"; #binding-cells = <0>; bindings = <&kp DEL>, <&aeq DEL>; mods = <(MOD_LSFT|MOD_RSFT)>; };
-		amps_e:		amps_equals		{ compatible = "zmk,behavior-mod-morph"; #binding-cells = <0>; bindings = <&kp AMPS>, <&aeq AMPS>; mods = <(MOD_LSFT|MOD_RSFT)>; };
-		star_e:		star_equals		{ compatible = "zmk,behavior-mod-morph"; #binding-cells = <0>; bindings = <&kp STAR>, <&aeq STAR>; mods = <(MOD_LSFT|MOD_RSFT)>; };
-		minus_e:	minus_equals	{ compatible = "zmk,behavior-mod-morph"; #binding-cells = <0>; bindings = <&kp MINUS>, <&aeq MINUS>; mods = <(MOD_LSFT|MOD_RSFT)>; };
-		equal_e:	equal_equals	{ compatible = "zmk,behavior-mod-morph"; #binding-cells = <0>; bindings = <&kp EQUAL>, <&aeq EQUAL>; mods = <(MOD_LSFT|MOD_RSFT)>; };
-		pipe_e:		pipe_equals		{ compatible = "zmk,behavior-mod-morph"; #binding-cells = <0>; bindings = <&kp PIPE>, <&aeq PIPE>; mods = <(MOD_LSFT|MOD_RSFT)>; };
-		caret_e:	caret_equals	{ compatible = "zmk,behavior-mod-morph"; #binding-cells = <0>; bindings = <&kp CARET>, <&aeq CARET>; mods = <(MOD_LSFT|MOD_RSFT)>; };
-		dollar_e:	dollar_equals	{ compatible = "zmk,behavior-mod-morph"; #binding-cells = <0>; bindings = <&kp DOLLAR>, <&aeq DOLLAR>; mods = <(MOD_LSFT|MOD_RSFT)>; };
-		hash_e:		hash_equals		{ compatible = "zmk,behavior-mod-morph"; #binding-cells = <0>; bindings = <&kp HASH>, <&aeq HASH>; mods = <(MOD_LSFT|MOD_RSFT)>; };
-		prcnt_e:	prcnt_equals	{ compatible = "zmk,behavior-mod-morph"; #binding-cells = <0>; bindings = <&kp PRCNT>, <&aeq PRCNT>; mods = <(MOD_LSFT|MOD_RSFT)>; };
-		gt_e:		gt_equals		{ compatible = "zmk,behavior-mod-morph"; #binding-cells = <0>; bindings = <&kp GT>, <&aeq GT>; mods = <(MOD_LSFT|MOD_RSFT)>; };
-		lt_e:		lt_equals		{ compatible = "zmk,behavior-mod-morph"; #binding-cells = <0>; bindings = <&kp LT>, <&aeq LT>; mods = <(MOD_LSFT|MOD_RSFT)>; };
+		APPEND_E_MOD_MORPH(plus, PLUS)
+		APPEND_E_MOD_MORPH(excl, EXCL)
+		APPEND_E_MOD_MORPH(del, DEL)
+		APPEND_E_MOD_MORPH(amps, AMPS)
+		APPEND_E_MOD_MORPH(star, STAR)
+		APPEND_E_MOD_MORPH(minus, MINUS)
+		APPEND_E_MOD_MORPH(equal, EQUAL)
+		APPEND_E_MOD_MORPH(pipe, PIPE)
+		APPEND_E_MOD_MORPH(caret, CARET)
+		APPEND_E_MOD_MORPH(dollar, DOLLAR)
+		APPEND_E_MOD_MORPH(hash, HASH)
+		APPEND_E_MOD_MORPH(prcnt, PRCNT)
+		APPEND_E_MOD_MORPH(gt, GT)
+		APPEND_E_MOD_MORPH(lt, LT)
 
-		// nullptr / NULL macro
+		// Mod morph for nullptr / NULL macros
 		np:			null_pointer	{ compatible = "zmk,behavior-mod-morph"; #binding-cells = <0>; bindings = <&null_pointer>, <&null_capitals>; mods = <(MOD_LSFT|MOD_RSFT)>; };
 
+		// Hold tap for smart_shift
 		ss: smart_shift {
 			compatible = "zmk,behavior-hold-tap";
 			#binding-cells = <2>;

@@ -211,7 +211,7 @@ _name_: macro_##_name_ {					\
 / {
     conditional_layers {
         compatible = "zmk,conditional-layers";
-        tri_layer {
+        goto_meta {
             if-layers = <NAV SYM NUM MACR>;
             then-layer = <META>;
         };

@@ -57,7 +57,7 @@ MAKE_HRM(hml, &kp, &kp, KEYS_R THUMBS)
 MAKE_HRM(hmr, &kp, &kp, KEYS_L THUMBS)
 */
 #define APPEND_E_MOD_MORPH(_name_, _bindings_)		\
-_name_: _name_##_equals {							\
+_name_: _name_##quals {								\
 	compatible = "zmk,behavior-mod-morph";			\
 	#binding-cells = <0>;							\
 	bindings = <&kp _bindings_>, <&aeq _bindings_>;	\

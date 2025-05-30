@@ -149,6 +149,9 @@ _name_: _name_##mod_morph_generic_shift {					\
 		MOD_MORPH_GENERIC(mm_N9F10,	&kp N9, &kp F10)
 		MOD_MORPH_GENERIC(mm_N0F11,	&kp N0, &kp F11)
 
+		// Mod morph for nullptr / NULL macros
+		MOD_MORPH_GENERIC(np, &null_pointer, &null_capitals)
+
 		// Symbols with appended = when shift is held.
 		APPEND_E_MOD_MORPH(plus_e, PLUS)
 		APPEND_E_MOD_MORPH(excl_e, EXCL)
@@ -164,9 +167,6 @@ _name_: _name_##mod_morph_generic_shift {					\
 		APPEND_E_MOD_MORPH(prcnt_e, PRCNT)
 		APPEND_E_MOD_MORPH(gt_e, GT)
 		APPEND_E_MOD_MORPH(lt_e, LT)
-
-		// Mod morph for nullptr / NULL macros
-		np:			null_pointer	{ compatible = "zmk,behavior-mod-morph"; #binding-cells = <0>; bindings = <&null_pointer>, <&null_capitals>; mods = <(MOD_LSFT|MOD_RSFT)>; };
 
 		// Hold tap for smart_shift
 		ss: smart_shift {

@@ -242,28 +242,32 @@ _name_: macro_##_name_ {					\
     };
 };
 
+// Define HRM order
+// Left
 #define HRM_L1 LSHFT
 #define HRM_L2 LCTRL
 #define HRM_L3 LGUI
 #define HRM_L4 LALT
-
+// Right
 #define HRM_R1 RALT
 #define HRM_R2 RGUI
 #define HRM_R3 RCTRL
 #define HRM_R4 RSHFT
 
-#define HRM_L(_one_, _two_, _three_, _four_) (	\
+// Implement HRM order
+// Left
+#define HRM_L(_one_, _two_, _three_, _four_)	\
 	&hml HRM_L1 _one_							\
 	&hml HRM_L2 _two_							\
 	&hml HRM_L3 _three_							\
-	&hml HRM_L4 _four_							\
-)
-#define HRM_R(_one_, _two_, _three_, _four_) (	\
+	&hml HRM_L4 _four_
+// Right
+#define HRM_R(_one_, _two_, _three_, _four_)	\
 	&hml HRM_R1 _one_							\
 	&hml HRM_R2 _two_							\
 	&hml HRM_R3 _three_							\
-	&hml HRM_R4 _four_							\
-)
+	&hml HRM_R4 _four_
+
 
 / {
 	keymap {

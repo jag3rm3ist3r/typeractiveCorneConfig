@@ -64,6 +64,14 @@ _name_: _name_##quals {								\
 	bindings = <&kp _bindings_>, <&aeq _bindings_>;	\
 	mods = <(MOD_LSFT|MOD_RSFT)>;					\
 };
+// Generic <unshifted>, <shifted>
+#define MOD_MORPH_GENERIC(_name_, _unshifted_, _shifted_)	\
+_name_: _name_##mod_morph_generic_shift {					\
+	compatible = "zmk,behavior-mod-morph";					\
+	#binding-cells = <2>;									\
+	bindings = <_unshifted_>, <_shifted_>;					\
+	mods = <(MOD_LSFT|MOD_RSFT)>;							\
+};
 // Non-macro setup
 / {
 	behaviors {
@@ -114,13 +122,6 @@ _name_: _name_##quals {								\
 			hold-trigger-on-release;
 		};
 		// Mod morphs
-		// Generic <unshifted>, <shifted>
-		mm: mod_morph_generic_shift {
-			compatible = "zmk,behavior-mod-morph";
-			#binding-cells = <2>;
-			bindings = <&kp>, <&kp>;
-			mods = <(MOD_LSFT|MOD_RSFT)>;
-		};
 		// , / ;
 		cscln: comma_scln {
 			compatible = "zmk,behavior-mod-morph";
@@ -143,12 +144,7 @@ _name_: _name_##quals {								\
 			mods = <(MOD_LSFT|MOD_RSFT)>;
 		};
 		// Space / Underscore
-		spund: sp_und {
-			compatible = "zmk,behavior-mod-morph";
-			#binding-cells = <0>;
-			bindings = <&kp SPACE>, <&kp UNDER>;
-			mods = <(MOD_LSFT|MOD_RSFT)>;
-		};
+		MOD_MORPH_GENERIC(spund, &kp SPACE, &kp UNDER)
 		// Null coalescing operator ??=
 		qq_e: qmark_qmark_equals {
 			compatible = "zmk,behavior-mod-morph";

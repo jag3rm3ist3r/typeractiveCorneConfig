@@ -123,26 +123,11 @@ _name_: _name_##mod_morph_generic_shift {					\
 		};
 		// Mod morphs
 		// , / ;
-		cscln: comma_scln {
-			compatible = "zmk,behavior-mod-morph";
-			#binding-cells = <0>;
-			bindings = <&kp COMMA>, <&kp SEMI>;
-			mods = <(MOD_LSFT|MOD_RSFT)>;
-		};
+		MOD_MORPH_GENERIC(cscln, &kp COMMA, &kp SEMI)
 		// . / :
-		fscln: fs_colon {
-			compatible = "zmk,behavior-mod-morph";
-			#binding-cells = <0>;
-			bindings = <&kp DOT>, <&kp COLON>;
-			mods = <(MOD_LSFT|MOD_RSFT)>;
-		};
+		MOD_MORPH_GENERIC(fscln, &kp DOT, &kp COLON)
 		// ! / ?
-		bqm: bang_question {
-			compatible = "zmk,behavior-mod-morph";
-			#binding-cells = <0>;
-			bindings = <&kp EXCL>, <&kp QMARK>;
-			mods = <(MOD_LSFT|MOD_RSFT)>;
-		};
+		MOD_MORPH_GENERIC(bqm, &kp EXCL, &kp QMARK)
 		// Space / Underscore
 		MOD_MORPH_GENERIC(spund, &kp SPACE, &kp UNDER)
 		// Null coalescing operator ??=
@@ -152,6 +137,18 @@ _name_: _name_##mod_morph_generic_shift {					\
 			bindings = <&kp QMARK>, <&ncoper>;
 			mods = <(MOD_LSFT|MOD_RSFT)>;
 		};
+
+		MOD_MORPH_GENERIC(mm_N1F2,	&kp N1, &kp F2)
+		MOD_MORPH_GENERIC(mm_N2F3,	&kp N2, &kp F3)
+		MOD_MORPH_GENERIC(mm_N3F4,	&kp N3, &kp F4)
+		MOD_MORPH_GENERIC(mm_N4F5,	&kp N4, &kp F5)
+		MOD_MORPH_GENERIC(mm_N5F6,	&kp N5, &kp F6)
+		MOD_MORPH_GENERIC(mm_N6F7,	&kp N6, &kp F7)
+		MOD_MORPH_GENERIC(mm_N7F8,	&kp N7, &kp F8)
+		MOD_MORPH_GENERIC(mm_N8F9,	&kp N8, &kp F9)
+		MOD_MORPH_GENERIC(mm_N9F10,	&kp N9, &kp F10)
+		MOD_MORPH_GENERIC(mm_N0F11,	&kp N0, &kp F11)
+
 		// Symbols with appended = when shift is held.
 		APPEND_E_MOD_MORPH(plus_e, PLUS)
 		APPEND_E_MOD_MORPH(excl_e, EXCL)
@@ -309,9 +306,7 @@ _name_: macro_##_name_ {					\
 			display-name = "(Num)";
 			bindings = <
 //╭───────────────┬───────────────┬───────────────┬───────────────┬───────────────┬───────────────╮   ╭───────────────┬───────────────┬───────────────┬───────────────┬───────────────┬───────────────╮
-	//&kp F1			&mm_N1F2		&mm_N2F3		&mm_N3F4		&mm_N4F5		&mm_N5F6			&mm_N6F7		&mm_N7F8		&mm_N8F9		&mm_N9F10		&mm_N0F11		&kp F12
-	___	___ ___ ___ ___ ___
-	___ ___ ___ ___ ___ ___
+	&kp F1			&mm_N1F2		&mm_N2F3		&mm_N3F4		&mm_N4F5		&mm_N5F6			&mm_N6F7		&mm_N7F8		&mm_N8F9		&mm_N9F10		&mm_N0F11		&kp F12
 //├───────────────┼───────────────┼───────────────┼───────────────┼───────────────┼───────────────┤   ├───────────────┼───────────────┼───────────────┼───────────────┼───────────────┼───────────────┤
 	___			&hml_abk LSHFT 0 &hml HRM_L2 LBKT &hml HRM_L3 LBRC &hml HRM_L4 RS(N9) &kp BSLH			&kp FSLH	&hmr HRM_R1 LS(N0) &hmr HRM_R2 RBRC &hmr HRM_R3 RBKT &hmr_abk RSHFT 0 ___
 //├───────────────┼───────────────┼───────────────┼───────────────┼───────────────┼───────────────┤   ├───────────────┼───────────────┼───────────────┼───────────────┼───────────────┼───────────────┤

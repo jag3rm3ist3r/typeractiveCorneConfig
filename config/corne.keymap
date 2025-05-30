@@ -93,7 +93,7 @@ _name_: _name_##quals {								\
 		// HRM for symbols layer arrow brackets
 		hml_abk: home_row_mod_left_ARROW {
 			compatible = "zmk,behavior-hold-tap";
-			#binding-cells = <1>;
+			#binding-cells = <2>;
 			flavor = "balanced";
 			require-prior-idle-ms = <150>;
 			tapping-term-ms = <280>;
@@ -104,7 +104,7 @@ _name_: _name_##quals {								\
 		};
 		hmr_abk: home_row_mod_right_ARROW {
 			compatible = "zmk,behavior-hold-tap";
-			#binding-cells = <0>;
+			#binding-cells = <2>;
 			flavor = "balanced";
 			require-prior-idle-ms = <150>;
 			tapping-term-ms = <280>;

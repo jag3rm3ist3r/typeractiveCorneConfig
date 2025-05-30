@@ -68,7 +68,7 @@ _name_: _name_##quals {								\
 #define MOD_MORPH_GENERIC(_name_, _unshifted_, _shifted_)	\
 _name_: _name_##mod_morph_generic_shift {					\
 	compatible = "zmk,behavior-mod-morph";					\
-	#binding-cells = <2>;									\
+	#binding-cells = <0>;									\
 	bindings = <_unshifted_>, <_shifted_>;					\
 	mods = <(MOD_LSFT|MOD_RSFT)>;							\
 };

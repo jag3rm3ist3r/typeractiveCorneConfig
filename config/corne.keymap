@@ -263,10 +263,10 @@ _name_: macro_##_name_ {					\
 	&hml HRM_L4 _four_
 // Right
 #define HRM_R(_one_, _two_, _three_, _four_)	\
-	&hml HRM_R1 _one_							\
-	&hml HRM_R2 _two_							\
-	&hml HRM_R3 _three_							\
-	&hml HRM_R4 _four_
+	&hmr HRM_R1 _one_							\
+	&hmr HRM_R2 _two_							\
+	&hmr HRM_R3 _three_							\
+	&hmr HRM_R4 _four_
 
 
 / {

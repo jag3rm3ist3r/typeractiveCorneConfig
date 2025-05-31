@@ -151,7 +151,8 @@ hmr_##_name_: home_row_mod_right_##_name_ {					\
 			mods = <(MOD_LSFT|MOD_RSFT)>;
 		};
 
-		MOD_MORPH_GENERIC(mm_transF1, &trans, &kp F1)
+		//MOD_MORPH_GENERIC(mm_transF1, &trans, &kp F1)
+		MOD_MORPH_GENERIC(mm_transF1, &kp TAB, &kp F1)
 		MOD_MORPH_GENERIC(mm_N1F2,	&kp N1, &kp F2)
 		MOD_MORPH_GENERIC(mm_N2F3,	&kp N2, &kp F3)
 		MOD_MORPH_GENERIC(mm_N3F4,	&kp N3, &kp F4)
@@ -162,7 +163,8 @@ hmr_##_name_: home_row_mod_right_##_name_ {					\
 		MOD_MORPH_GENERIC(mm_N8F9,	&kp N8, &kp F9)
 		MOD_MORPH_GENERIC(mm_N9F10,	&kp N9, &kp F10)
 		MOD_MORPH_GENERIC(mm_N0F11,	&kp N0, &kp F11)
-		MOD_MORPH_GENERIC(mm_transF12, &trans, &kp F12)
+		//MOD_MORPH_GENERIC(mm_transF12, &trans, &kp F12)
+		MOD_MORPH_GENERIC(mm_transF12, &kp BSPC, &kp F12)
 
 		// Mod morph for /* / */ c style comments
 		MOD_MORPH_GENERIC(mm_bs_comm,	&kp BSLH, &lcomm)

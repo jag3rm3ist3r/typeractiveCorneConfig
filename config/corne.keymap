@@ -116,16 +116,6 @@ hmr_##_name_: home_row_mod_right_##_name_ {					\
 			hold-trigger-key-positions = <KEYS_L THUMBS>; // List of keys on the left side of the keyboard
 			hold-trigger-on-release;
 		};
-		// HRM for symbol macros
-		// Left
-		HML_GENERIC(abk, &lt_e)
-		HML_GENERIC(amps_e, &amps_e)
-		HML_GENERIC(star_e, &star_e)
-		// Right
-		HMR_GENERIC(abk, &gt_e)
-		HMR_GENERIC(minus_e, &minus_e)
-		HMR_GENERIC(equal_e, &equal_e)
-		HMR_GENERIC(pipe_e, &pipe_e)
 
 		// Mod morphs
 		// , / ;

@@ -150,6 +150,10 @@ _name_: _name_##mod_morph_generic_shift {					\
 		MOD_MORPH_GENERIC(mm_N9F10,	&kp N9, &kp F10)
 		MOD_MORPH_GENERIC(mm_N0F11,	&kp N0, &kp F11)
 
+		// Mod morph for /* / */ c style comments
+		MOD_MORPH_GENERIC(mm_bs_comm,	&kp BSLH, &lcomm)
+		MOD_MORPH_GENERIC(mm_fs_comm,	&kp FSLH, &rcomm)
+
 		// Mod morph for nullptr / NULL macros
 		MOD_MORPH_GENERIC(np, &null_pointer, &null_capitals)
 
@@ -215,11 +219,24 @@ _name_: macro_##_name_ {					\
 			&kp LS(L)
 		)
 		// Append =
-        aeq: append_equals_macro {
-            compatible = "zmk,behavior-macro-one-param";
-            #binding-cells = <1>; // Must be 1
-            bindings = <&macro_param_1to1>, <&kp MACRO_PLACEHOLDER>,  <&kp KP_EQUAL>;
-        };
+		aeq: append_equals_macro {
+			compatible = "zmk,behavior-macro-one-param";
+			#binding-cells = <1>; // Must be 1
+			bindings = <&macro_param_1to1>, <&kp MACRO_PLACEHOLDER>,  <&kp KP_EQUAL>;
+		};
+		// c style comments
+		// /*
+		lcomm: left_comment {
+			compatible = "zmk,behavior-macro";
+			#binding-cells = <0>;
+			bindings = <&kp FSLH &kp STAR>;
+		};
+		// */
+		rcomm: right_comment {
+			compatible = "zmk,behavior-macro";
+			#binding-cells = <0>;
+			bindings = <&kp STAR &kp FSLH>;
+		};
 		// ??=
 		ncoper: null_coalescing_oper {
 			compatible = "zmk,behavior-macro";
@@ -325,7 +342,7 @@ _name_: macro_##_name_ {					\
 //╭───────────────┬───────────────┬───────────────┬───────────────┬───────────────┬───────────────╮   ╭───────────────┬───────────────┬───────────────┬───────────────┬───────────────┬───────────────╮
 	&kp F1			&mm_N1F2		&mm_N2F3		&mm_N3F4		&mm_N4F5		&mm_N5F6			&mm_N6F7		&mm_N7F8		&mm_N8F9		&mm_N9F10		&mm_N0F11		&kp F12
 //├───────────────┼───────────────┼───────────────┼───────────────┼───────────────┼───────────────┤   ├───────────────┼───────────────┼───────────────┼───────────────┼───────────────┼───────────────┤
-	___			&hml_abk LSHFT 0 &hml HRM_L2 LBKT &hml HRM_L3 LBRC &hml HRM_L4 RS(N9) &kp BSLH			&kp FSLH	&hmr HRM_R1 LS(N0) &hmr HRM_R2 RBRC &hmr HRM_R3 RBKT &hmr_abk RSHFT 0 ___
+	___			&hml_abk LSHFT 0 &hml HRM_L2 LBKT &hml HRM_L3 LBRC &hml HRM_L4 RS(N9) &mm_bs_comm		&mm_fs_comm	&hmr HRM_R1 LS(N0) &hmr HRM_R2 RBRC &hmr HRM_R3 RBKT &hmr_abk RSHFT 0 ___
 //├───────────────┼───────────────┼───────────────┼───────────────┼───────────────┼───────────────┤   ├───────────────┼───────────────┼───────────────┼───────────────┼───────────────┼───────────────┤
 	___				___				___				___				___				___					___				___				___				___				___				___
 //╰───────────────┴───────────────┴───────────────┼───────────────┼───────────────┼───────────────┤   ├───────────────┼───────────────┼───────────────┼───────────────┴───────────────┴───────────────╯

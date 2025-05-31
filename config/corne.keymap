@@ -220,6 +220,7 @@ _name_: macro_##_name_ {					\
             #binding-cells = <1>; // Must be 1
             bindings = <&macro_param_1to1>, <&kp MACRO_PLACEHOLDER>,  <&kp EQUAL>;
         };
+		// ??=
 		ncoper: null_coalescing_oper {
 			compatible = "zmk,behavior-macro";
 			#binding-cells = <0>;
@@ -244,6 +245,8 @@ _name_: macro_##_name_ {					\
 };
 
 // Define HRM order
+/*
+// SCGA
 // Left
 #define HRM_L1 LSHFT
 #define HRM_L2 LCTRL
@@ -254,6 +257,19 @@ _name_: macro_##_name_ {					\
 #define HRM_R2 RGUI
 #define HRM_R3 RCTRL
 #define HRM_R4 RSHFT
+*/
+// GASC
+// Left
+#define HRM_L1 LGUI
+#define HRM_L2 LALT
+#define HRM_L3 LSHFT
+#define HRM_L4 LCTRL
+// Right
+#define HRM_R1 RCTRL
+#define HRM_R2 RSHFT
+#define HRM_R3 RALT
+#define HRM_R4 RGUI
+
 
 // Implement HRM order
 // Left

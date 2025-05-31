@@ -73,29 +73,29 @@ _name_: _name_##mod_morph_generic_shift {					\
 	bindings = <_unshifted_>, <_shifted_>;					\
 	mods = <(MOD_LSFT|MOD_RSFT)>;							\
 };
-#define HML_GENERIC(_name_, _binding_)	\
-hml_##_name_: home_row_mod_left_##_name_ {
-	compatible = "zmk,behavior-hold-tap";
-	#binding-cells = <2>;
-	flavor = "balanced";
-	require-prior-idle-ms = <150>;
-	tapping-term-ms = <280>;
-	quick-tap-ms = <175>;
-	bindings = <&kp>, <_binding_>;
-	hold-trigger-key-positions = <KEYS_R THUMBS>; // List of keys on the right side of the keyboard
-	hold-trigger-on-release;
+#define HML_GENERIC(_name_, _binding_)						\
+hml_##_name_: home_row_mod_left_##_name_ {					\
+	compatible = "zmk,behavior-hold-tap";					\
+	#binding-cells = <2>;									\
+	flavor = "balanced";									\
+	require-prior-idle-ms = <150>;							\
+	tapping-term-ms = <280>;								\
+	quick-tap-ms = <175>;									\
+	bindings = <&kp>, <_binding_>;							\
+	hold-trigger-key-positions = <KEYS_R THUMBS>; /* RHS */	\
+	hold-trigger-on-release;								\
 };
 #define HMR_GENERIC(_name_, _binding_)	\
-hmr_##_name_: home_row_mod_right_##_name_ {
-	compatible = "zmk,behavior-hold-tap";
-	#binding-cells = <2>;
-	flavor = "balanced";
-	require-prior-idle-ms = <150>;
-	tapping-term-ms = <280>;
-	quick-tap-ms = <175>;
-	bindings = <&kp>, <_binding_>;
-	hold-trigger-key-positions = <KEYS_L THUMBS>; // List of keys on the left side of the keyboard
-	hold-trigger-on-release;
+hmr_##_name_: home_row_mod_right_##_name_ {					\
+	compatible = "zmk,behavior-hold-tap";					\
+	#binding-cells = <2>;									\
+	flavor = "balanced";									\
+	require-prior-idle-ms = <150>;							\
+	tapping-term-ms = <280>;								\
+	quick-tap-ms = <175>;									\
+	bindings = <&kp>, <_binding_>;							\
+	hold-trigger-key-positions = <KEYS_L THUMBS>; /* LHS */	\
+	hold-trigger-on-release;								\
 };
 // Non-macro setup
 / {

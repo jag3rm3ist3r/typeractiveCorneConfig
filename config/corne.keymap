@@ -243,7 +243,7 @@ _name_: macro_##_name_ {					\
 			#binding-cells = <1>; // Must be 1
 			wait-ms = <10>;
 			tap-ms = <10>;
-			bindings = <&macro_param_1to1>, <&kp MACRO_PLACEHOLDER>, <&kp EQUAL>;
+			bindings = <&macro_param_1to1>, <&kp MACRO_PLACEHOLDER>, <&macro_release &kp LSHFT>, <&macro_release &kp RSHFT>, <&kp EQUAL>;
 		};
 		// c style comments
 		// /*

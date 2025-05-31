@@ -63,6 +63,7 @@ _name_: _name_##quals {								\
 	compatible = "zmk,behavior-mod-morph";			\
 	#binding-cells = <0>;							\
 	bindings = <&kp _bindings_>, <&aeq _bindings_>;	\
+	keep-mods = <(MOD_LSFT|MOD_RSFT)>;				\
 	mods = <(MOD_LSFT|MOD_RSFT)>;					\
 };
 // Generic <unshifted>, <shifted>
@@ -73,6 +74,7 @@ _name_: _name_##mod_morph_generic_shift {					\
 	bindings = <_unshifted_>, <_shifted_>;					\
 	mods = <(MOD_LSFT|MOD_RSFT)>;							\
 };
+// Generic HML macros
 #define HML_GENERIC(_name_, _binding_)						\
 hml_##_name_: home_row_mod_left_##_name_ {					\
 	compatible = "zmk,behavior-hold-tap";					\
@@ -217,7 +219,7 @@ _name_: macro_##_name_ {					\
 		MACRO(larr,	&kp LT &kp MINUS)
 		// ->
 		MACRO(rarr,	&kp MINUS &kp GT)
-		// nullptr / NULL
+		// nullptr
 		MACRO(
 			null_pointer,
 			&kp N
@@ -228,6 +230,7 @@ _name_: macro_##_name_ {					\
 			&kp T
 			&kp R
 		)
+		// NULL
 		MACRO(null_capitals,
 			&kp LS(N)
 			&kp LS(U)
@@ -240,7 +243,7 @@ _name_: macro_##_name_ {					\
 			#binding-cells = <1>; // Must be 1
 			wait-ms = <10>;
 			tap-ms = <10>;
-			bindings = <&macro_param_1to1>, <&kp MACRO_PLACEHOLDER>, <&macro_release &kp LSHFT>, <&macro_release &kp RSHFT>, <&kp EQUAL>;
+			bindings = <&macro_param_1to1>, <&kp MACRO_PLACEHOLDER>, <&kp EQUAL>;
 		};
 		// c style comments
 		// /*

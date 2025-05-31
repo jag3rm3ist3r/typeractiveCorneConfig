@@ -63,7 +63,6 @@ _name_: _name_##quals {								\
 	compatible = "zmk,behavior-mod-morph";			\
 	#binding-cells = <0>;							\
 	bindings = <&kp _bindings_>, <&aeq _bindings_>;	\
-	keep-mods = <(MOD_LSFT|MOD_RSFT)>;				\
 	mods = <(MOD_LSFT|MOD_RSFT)>;					\
 };
 // Generic <unshifted>, <shifted>
@@ -241,9 +240,9 @@ _name_: macro_##_name_ {					\
 		aeq: append_equals_macro {
 			compatible = "zmk,behavior-macro-one-param";
 			#binding-cells = <1>; // Must be 1
-			wait-ms = <10>;
-			tap-ms = <10>;
-			bindings = <&macro_param_1to1>, <&kp MACRO_PLACEHOLDER>, <&macro_release &kp LSHFT>, <&macro_release &kp RSHFT>, <&kp EQUAL>;
+			wait-ms = <1>;
+			tap-ms = <1>;
+			bindings = <&macro_param_1to1>, <&kp MACRO_PLACEHOLDER>, <&kp EQUAL>;
 		};
 		// c style comments
 		// /*

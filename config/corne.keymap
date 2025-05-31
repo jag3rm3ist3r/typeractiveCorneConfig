@@ -57,14 +57,6 @@ MAKE_HRM(hml, &kp, &kp, KEYS_R THUMBS)
 // Right hand HRMs.
 MAKE_HRM(hmr, &kp, &kp, KEYS_L THUMBS)
 */
-// Assignment operator macro
-#define APPEND_E_MOD_MORPH(_name_, _bindings_)		\
-_name_: _name_##quals {								\
-	compatible = "zmk,behavior-mod-morph";			\
-	#binding-cells = <0>;							\
-	bindings = <&kp _bindings_>, <&aeq _bindings_>;	\
-	mods = <(MOD_LALT|MOD_RALT)>;					\
-};
 // Generic <unshifted>, <shifted>
 #define MOD_MORPH_GENERIC(_name_, _unshifted_, _shifted_)	\
 _name_: _name_##mod_morph_generic_shift {					\
@@ -167,28 +159,8 @@ hmr_##_name_: home_row_mod_right_##_name_ {					\
 		MOD_MORPH_GENERIC(mm_transF12, &trans, &kp F12)
 		//MOD_MORPH_GENERIC(mm_transF12, &kp BSPC, &kp F12)
 
-		// Mod morph for /* / */ c style comments
-		MOD_MORPH_GENERIC(mm_bs_comm,	&kp BSLH, &lcomm)
-		MOD_MORPH_GENERIC(mm_fs_comm,	&kp FSLH, &rcomm)
-
 		// Mod morph for nullptr / NULL macros
 		MOD_MORPH_GENERIC(np, &null_pointer, &null_capitals)
-
-		// Symbols with appended = when shift is held.
-		APPEND_E_MOD_MORPH(plus_e, PLUS)
-		APPEND_E_MOD_MORPH(excl_e, EXCL)
-		APPEND_E_MOD_MORPH(del_e, DEL)
-		APPEND_E_MOD_MORPH(amps_e, AMPS)
-		APPEND_E_MOD_MORPH(star_e, STAR)
-		APPEND_E_MOD_MORPH(minus_e, MINUS)
-		APPEND_E_MOD_MORPH(equal_e, EQUAL)
-		APPEND_E_MOD_MORPH(pipe_e, PIPE)
-		APPEND_E_MOD_MORPH(caret_e, CARET)
-		APPEND_E_MOD_MORPH(dollar_e, DOLLAR)
-		APPEND_E_MOD_MORPH(hash_e, HASH)
-		APPEND_E_MOD_MORPH(prcnt_e, PRCNT)
-		APPEND_E_MOD_MORPH(gt_e, GT)
-		APPEND_E_MOD_MORPH(lt_e, LT)
 
 		// Hold tap for smart_shift
 		ss: smart_shift {
@@ -362,7 +334,7 @@ _name_: macro_##_name_ {					\
 //╭───────────────┬───────────────┬───────────────┬───────────────┬───────────────┬───────────────╮   ╭───────────────┬───────────────┬───────────────┬───────────────┬───────────────┬───────────────╮
 	&mm_transF1		&mm_N1F2		&mm_N2F3		&mm_N3F4		&mm_N4F5		&mm_N5F6			&mm_N6F7		&mm_N7F8		&mm_N8F9		&mm_N9F10		&mm_N0F11		&mm_transF12
 //├───────────────┼───────────────┼───────────────┼───────────────┼───────────────┼───────────────┤   ├───────────────┼───────────────┼───────────────┼───────────────┼───────────────┼───────────────┤
-	___			&hml_abk LSHFT 0 &hml HRM_L2 LBKT &hml HRM_L3 LBRC &hml HRM_L4 RS(N9) &mm_bs_comm		&mm_fs_comm	&hmr HRM_R1 LS(N0) &hmr HRM_R2 RBRC &hmr HRM_R3 RBKT &hmr_abk RSHFT 0 ___
+	___				HRM_L(LT,		LBKT,			LBRC,			RS(N9))			&kp BSLH			&kp FSLH		HRM_R(LS(N0),	RBRC,			RBKT,			GT)				___
 //├───────────────┼───────────────┼───────────────┼───────────────┼───────────────┼───────────────┤   ├───────────────┼───────────────┼───────────────┼───────────────┼───────────────┼───────────────┤
 	___				___				&kp LC(X)		&kp LC(C)		___				&kp LC(V)			___				___				___				___				___				___
 //╰───────────────┴───────────────┴───────────────┼───────────────┼───────────────┼───────────────┤   ├───────────────┼───────────────┼───────────────┼───────────────┴───────────────┴───────────────╯
@@ -378,7 +350,7 @@ _name_: macro_##_name_ {					\
 //╭───────────────┬───────────────┬───────────────┬───────────────┬───────────────┬───────────────╮   ╭───────────────┬───────────────┬───────────────┬───────────────┬───────────────┬───────────────╮
 	___				&qq_e			XXX				XXX				&plus_e			&excl_e				XXX				XXX				&kp UNDER		XXX				XXX				___
 //├───────────────┼───────────────┼───────────────┼───────────────┼───────────────┼───────────────┤   ├───────────────┼───────────────┼───────────────┼───────────────┼───────────────┼───────────────┤
-	___		&hml_amps_e HRM_L1 0	&kp HRM_L2	&hml_star_e HRM_L3 0 &hml HRM_L4 TILDE	&kp GRAVE		&hmr_minus_e HRM_R1 0 XXX &hmr_equal_e HRM_R3 0 &hmr_pipe_e HRM_R3 0 &hmr HRM_R4 AT	___
+	___				HRM_L(AMPS,		XXX,			STAR,			TILDE)			&kp GRAVE			&kp MINUS		HRM_R(XXX,		EQUAL,			PIPE,			AT)				___
 //├───────────────┼───────────────┼───────────────┼───────────────┼───────────────┼───────────────┤   ├───────────────┼───────────────┼───────────────┼───────────────┼───────────────┼───────────────┤
 	___				XXX				XXX				&caret_e		&dollar_e		XXX					XXX				&hash_e			&larr			&rarr			&prcnt_e		___
 //╰───────────────┴───────────────┴───────────────┼───────────────┼───────────────┼───────────────┤   ├───────────────┼───────────────┼───────────────┼───────────────┴───────────────┴───────────────╯
@@ -386,6 +358,23 @@ _name_: macro_##_name_ {					\
 //                                                ╰───────────────┴───────────────┴───────────────╯   ╰───────────────┴───────────────┴───────────────╯
 			>;
 		};
+
+/* macro keys to be added for assignment operators
+plus_e
+excl_e
+del_e
+amps_e
+star_e
+minus_e
+equal_e
+pipe_e
+caret_e
+dollar_e
+hash_e
+prcnt_e
+gt_e
+lt_ e
+*/
 
 		Macro {
 			display-name = "Macro";

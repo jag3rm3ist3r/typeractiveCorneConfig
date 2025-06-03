@@ -239,17 +239,21 @@ _name_: macro_##_name_ {					\
 
 // Caps word
 &caps_word {
-    continue-list = <UNDERSCORE MINUS>;
+	continue-list = <UNDERSCORE MINUS>;
+};
+
+&sl {
+	release-after-ms = <2000>;
 };
 
 / {
-    conditional_layers {
-        compatible = "zmk,conditional-layers";
-        goto_meta {
-            if-layers = <NAV SYM NUM MACR>;
-            then-layer = <META>;
-        };
-    };
+	conditional_layers {
+		compatible = "zmk,conditional-layers";
+		goto_meta {
+			if-layers = <NAV SYM NUM MACR>;
+			then-layer = <META>;
+		};
+	};
 };
 
 // Define HRM order

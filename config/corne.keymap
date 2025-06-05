@@ -264,7 +264,7 @@ _name_: macro_##_name_ {					\
 		};
 		fkeys {
 			if-layers = <NAV MACR>;
-			then-layer = <FKEY>
+			then-layer = <FKEY>;
 		}
 		SYMC {
 			if-layers = <NUM SYM>;

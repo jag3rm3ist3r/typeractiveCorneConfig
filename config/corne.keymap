@@ -272,15 +272,23 @@ _name_: macro_##_name_ {					\
 */
 // GASC
 // Left
-#define HRM_L1 LGUI
-#define HRM_L2 LALT
-#define HRM_L3 LSHFT
-#define HRM_L4 LCTRL
+#define HRM_L1 \
+LGUI
+#define HRM_L2 \
+LCTRL
+#define HRM_L3 \
+LSHFT
+#define HRM_L4 \
+LALT
 // Right
-#define HRM_R1 RCTRL
-#define HRM_R2 RSHFT
-#define HRM_R3 RALT
-#define HRM_R4 RGUI
+#define HRM_R1 \
+RALT
+#define HRM_R2 \
+RSHFT
+#define HRM_R3 \
+RCTRL
+#define HRM_R4 \
+RGUI
 
 
 // Implement HRM order
@@ -305,13 +313,13 @@ _name_: macro_##_name_ {					\
 			display-name = "Base";
 			bindings = <
 //╭───────────────┬───────────────┬───────────────┬───────────────┬───────────────┬───────────────╮   ╭───────────────┬───────────────┬───────────────┬───────────────┬───────────────┬───────────────╮
-	&kp ESC			&kp Q			&kp W			&kp F			&kp P			&kp B				&kp J			&kp L			&kp U			&kp Y			&kp SQT			&kp BSPC
+	&kp TAB			&kp Q			&kp W			&kp F			&kp P			&kp B				&kp J			&kp L			&kp U			&kp Y			&kp SQT			&kp BSPC
 //├───────────────┼───────────────┼───────────────┼───────────────┼───────────────┼───────────────┤   ├───────────────┼───────────────┼───────────────┼───────────────┼───────────────┼───────────────┤
 	&mo NAV			HRM_L(A,		R,				S,				T)				&kp G				&kp M			HRM_R(N,		E,				I,				O)				&mo MACR
 //├───────────────┼───────────────┼───────────────┼───────────────┼───────────────┼───────────────┤   ├───────────────┼───────────────┼───────────────┼───────────────┼───────────────┼───────────────┤
 	&ss LSHFT 0		&kp Z			&kp X			&kp C			&kp D			&kp V				&kp K			&kp H			&c_scln			&dot_cln		&bqm			&ss RSHFT 0
 //╰───────────────┴───────────────┴───────────────┼───────────────┼───────────────┼───────────────┤   ├───────────────┼───────────────┼───────────────┼───────────────┴───────────────┴───────────────╯
-													&mo NUM			&kp TAB			&kp RET				&spund			&key_repeat		&mo SYM
+													&mo NUM			&kp ESC			&kp RET				&spund			&key_repeat		&mo SYM
 //                                                ╰───────────────┴───────────────┴───────────────╯   ╰───────────────┴───────────────┴───────────────╯
 			>;
 		};

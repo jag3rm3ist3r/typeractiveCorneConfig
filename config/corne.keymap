@@ -329,7 +329,7 @@ _name_: macro_##_name_ {					\
 						<&macro_release &kp LALT>,
 						<&macro_release &kp RALT>,
 						<&macro_release &kp LGUI>,
-						<&macro_release &kp RGUI;
+						<&macro_release &kp RGUI>;
 		};
 		// Append =
 		aeq: append_equals_macro {

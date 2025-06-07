@@ -77,6 +77,57 @@
 #define LRB LB5 LB4 LB3 LB2 LB1 LB0
 #define RRB RB0 RB1 RB2 RB3 RB4 RB5
 
+
+// Define HRM order
+/*
+// SCGA
+// Left
+#define HRM_L1 LSHFT
+#define HRM_L2 LCTRL
+#define HRM_L3 LGUI
+#define HRM_L4 LALT
+// Right
+#define HRM_R1 RALT
+#define HRM_R2 RGUI
+#define HRM_R3 RCTRL
+#define HRM_R4 RSHFT
+*/
+// GASC
+// Left
+#define HRM_L1 \
+LGUI
+#define HRM_L2 \
+LCTRL
+#define HRM_L3 \
+LSHFT
+#define HRM_L4 \
+LALT
+// Right
+#define HRM_R1 \
+RALT
+#define HRM_R2 \
+RSHFT
+#define HRM_R3 \
+RCTRL
+#define HRM_R4 \
+RGUI
+
+
+// Implement HRM order
+// Left
+#define HRM_L(_one_, _two_, _three_, _four_)	\
+	&hml HRM_L1 _one_							\
+	&hml HRM_L2 _two_							\
+	&hml HRM_L3 _three_							\
+	&hml HRM_L4 _four_
+// Right
+#define HRM_R(_one_, _two_, _three_, _four_)	\
+	&hmr HRM_R1 _one_							\
+	&hmr HRM_R2 _two_							\
+	&hmr HRM_R3 _three_							\
+	&hmr HRM_R4 _four_
+
+
 /* Homerow mods */
 #include "zmk-helpers/helper.h"
 /*
@@ -320,57 +371,6 @@ _name_: macro_##_name_ {					\
 };
 
 
-
-// Define HRM order
-/*
-// SCGA
-// Left
-#define HRM_L1 LSHFT
-#define HRM_L2 LCTRL
-#define HRM_L3 LGUI
-#define HRM_L4 LALT
-// Right
-#define HRM_R1 RALT
-#define HRM_R2 RGUI
-#define HRM_R3 RCTRL
-#define HRM_R4 RSHFT
-*/
-// GASC
-// Left
-#define HRM_L1 \
-LGUI
-#define HRM_L2 \
-LCTRL
-#define HRM_L3 \
-LSHFT
-#define HRM_L4 \
-LALT
-// Right
-#define HRM_R1 \
-RALT
-#define HRM_R2 \
-RSHFT
-#define HRM_R3 \
-RCTRL
-#define HRM_R4 \
-RGUI
-
-
-// Implement HRM order
-// Left
-#define HRM_L(_one_, _two_, _three_, _four_)	\
-	&hml HRM_L1 _one_							\
-	&hml HRM_L2 _two_							\
-	&hml HRM_L3 _three_							\
-	&hml HRM_L4 _four_
-// Right
-#define HRM_R(_one_, _two_, _three_, _four_)	\
-	&hmr HRM_R1 _one_							\
-	&hmr HRM_R2 _two_							\
-	&hmr HRM_R3 _three_							\
-	&hmr HRM_R4 _four_
-
-
 / {
 	keymap {
 		compatible = "zmk,keymap";
@@ -471,9 +471,9 @@ RGUI
 //╭───────────────┬───────────────┬───────────────┬───────────────┬───────────────┬───────────────╮   ╭───────────────┬───────────────┬───────────────┬───────────────┬───────────────┬───────────────╮
 	&kp F1			&kp F2			&kp F3			&kp F4			&kp F5			&kp F6				&kp F7			&kp F8			&kp F9			&kp F10			&kp F11			&kp F12
 //├───────────────┼───────────────┼───────────────┼───────────────┼───────────────┼───────────────┤   ├───────────────┼───────────────┼───────────────┼───────────────┼───────────────┼───────────────┤
-	___				&kt HRM_L1		&kt HRM_L2		&kt HRM_L3		&kt HRM_L4		___					___				___				___				___				___				___
-//├───────────────┼───────────────┼───────────────┼───────────────┼───────────────┼───────────────┤   ├───────────────┼───────────────┼───────────────┼───────────────┼───────────────┼───────────────┤
 	___				&bt BT_SEL 0	&bt BT_SEL 1	&bt BT_SEL 2	&bt BT_SEL 3	&bt BT_SEL 4		&bt BT_SEL 0	&bt BT_SEL 1	&bt BT_SEL 2	&bt BT_SEL 3	&bt BT_SEL 4	___
+//├───────────────┼───────────────┼───────────────┼───────────────┼───────────────┼───────────────┤   ├───────────────┼───────────────┼───────────────┼───────────────┼───────────────┼───────────────┤
+	___				&kt HRM_L1		&kt HRM_L2		&kt HRM_L3		&kt HRM_L4		___					___				___				___				___				___				___
 //╰───────────────┴───────────────┴───────────────┼───────────────┼───────────────┼───────────────┤   ├───────────────┼───────────────┼───────────────┼───────────────┴───────────────┴───────────────╯
 													&sys_reset		&btc_hold		&bootloader			&bootloader		&btc_hold		&sys_reset
 //                                                ╰───────────────┴───────────────┴───────────────╯   ╰───────────────┴───────────────┴───────────────╯

@@ -317,6 +317,20 @@ _name_: macro_##_name_ {					\
 			&kp O
 			&kp F
 		)
+		clr_mod: clear_mods {
+			compatible = "zmk,behavior-macro";
+			#binding-cells = <0>;
+			wait-ms = <1>;
+			tap-ms = <1>;
+			bindings =	<&macro_release &kp LSHFT>,
+						<&macro_release &kp RSHFT>,
+						<&macro_release &kp LCTRL>,
+						<&macro_release &kp RCTRL>,
+						<&macro_release &kp LALT>,
+						<&macro_release &kp RALT>,
+						<&macro_release &kp LGUI>,
+						<&macro_release &kp RGUI;
+		};
 		// Append =
 		aeq: append_equals_macro {
 			compatible = "zmk,behavior-macro-one-param";
@@ -473,7 +487,7 @@ _name_: macro_##_name_ {					\
 //├───────────────┼───────────────┼───────────────┼───────────────┼───────────────┼───────────────┤   ├───────────────┼───────────────┼───────────────┼───────────────┼───────────────┼───────────────┤
 	___				&bt BT_SEL 0	&bt BT_SEL 1	&bt BT_SEL 2	&bt BT_SEL 3	&bt BT_SEL 4		&bt BT_SEL 0	&bt BT_SEL 1	&bt BT_SEL 2	&bt BT_SEL 3	&bt BT_SEL 4	___
 //├───────────────┼───────────────┼───────────────┼───────────────┼───────────────┼───────────────┤   ├───────────────┼───────────────┼───────────────┼───────────────┼───────────────┼───────────────┤
-	___				&kt HRM_L1		&kt HRM_L2		&kt HRM_L3		&kt HRM_L4		___					___				___				___				___				___				___
+	___				&kt HRM_L1		&kt HRM_L2		&kt HRM_L3		&kt HRM_L4		___					___				&clr_mod		___				___				___				___
 //╰───────────────┴───────────────┴───────────────┼───────────────┼───────────────┼───────────────┤   ├───────────────┼───────────────┼───────────────┼───────────────┴───────────────┴───────────────╯
 													&sys_reset		&btc_hold		&bootloader			&bootloader		&btc_hold		&sys_reset
 //                                                ╰───────────────┴───────────────┴───────────────╯   ╰───────────────┴───────────────┴───────────────╯

@@ -59,14 +59,14 @@
 #define LC3 LT3 LM3 LB3
 #define LC2 LT2 LM2 LB2
 #define LC1 LT1 LM1 LB1
-#define LC5 LT0 LM0 LB0
+#define LC0 LT0 LM0 LB0
 // Right
 #define RC5 RT5 RM5 RB5
 #define RC4 RT4 RM4 RB4
 #define RC3 RT3 RM3 RB3
 #define RC2 RT2 RM2 RB2
 #define RC1 RT1 RM1 RB1
-#define RC5 RT0 RM0 RB0
+#define RC0 RT0 RM0 RB0
 
 /* Homerow mods */
 #include "zmk-helpers/helper.h"
@@ -116,6 +116,8 @@ hmr_##_name_: home_row_mod_right_##_name_ {					\
 	hold-trigger-key-positions = <KEYS_L THUMBS>; /* LHS */	\
 	hold-trigger-on-release;								\
 };
+
+
 
 // Non-macro setup
 / {

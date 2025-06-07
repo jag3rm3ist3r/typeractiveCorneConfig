@@ -52,6 +52,22 @@
 #define KEYS_R RT0 RT1 RT2 RT3 RT4 RT5 RM0 RM1 RM2 RM3 RM4 RM5 RB0 RB1 RB2 RB3 RB4 RB5
 #define THUMBS LH2 LH1 LH0 RH0 RH1 RH2
 
+// Define columns
+// Left
+#define LC5 LT5 LM5 LB5
+#define LC4 LT4 LM4 LB4
+#define LC3 LT3 LM3 LB3
+#define LC2 LT2 LM2 LB2
+#define LC1 LT1 LM1 LB1
+#define LC5 LT0 LM0 LB0
+// Right
+#define RC5 RT5 RM5 RB5
+#define RC4 RT4 RM4 RB4
+#define RC3 RT3 RM3 RB3
+#define RC2 RT2 RM2 RB2
+#define RC1 RT1 RM1 RB1
+#define RC5 RT0 RM0 RB0
+
 /* Homerow mods */
 #include "zmk-helpers/helper.h"
 /*
@@ -100,6 +116,7 @@ hmr_##_name_: home_row_mod_right_##_name_ {					\
 	hold-trigger-key-positions = <KEYS_L THUMBS>; /* LHS */	\
 	hold-trigger-on-release;								\
 };
+
 // Non-macro setup
 / {
 	behaviors {
@@ -112,7 +129,7 @@ hmr_##_name_: home_row_mod_right_##_name_ {					\
 			tapping-term-ms = <280>;
 			quick-tap-ms = <175>;
 			bindings = <&kp>, <&kp>;
-			hold-trigger-key-positions = <KEYS_R THUMBS>; // List of keys on the right side of the keyboard
+			hold-trigger-key-positions = <LC5 KEYS_R THUMBS>; // List of keys on the right side of the keyboard
 			hold-trigger-on-release;
 		};
 		hmr: home_row_mod_right {
@@ -123,7 +140,7 @@ hmr_##_name_: home_row_mod_right_##_name_ {					\
 			tapping-term-ms = <280>;
 			quick-tap-ms = <175>;
 			bindings = <&kp>, <&kp>;
-			hold-trigger-key-positions = <KEYS_L THUMBS>; // List of keys on the left side of the keyboard
+			hold-trigger-key-positions = <RC5 KEYS_L THUMBS>; // List of keys on the left side of the keyboard
 			hold-trigger-on-release;
 		};
 

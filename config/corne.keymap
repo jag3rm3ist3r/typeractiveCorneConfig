@@ -317,7 +317,7 @@ _name_: macro_##_name_ {					\
 		goto_meta_2 {
 			if-layers = <FKEY SYMC>;
 			then-layer = <META>;
-		}
+		};
 		fkeys {
 			if-layers = <NAV MACR>;
 			then-layer = <FKEY>;

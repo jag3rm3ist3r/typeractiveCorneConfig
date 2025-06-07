@@ -177,7 +177,7 @@ hmr_##_name_: home_row_mod_right_##_name_ {					\
 		MOD_MORPH_GENERIC(EN7, &kp N7, &kp N7)
 		MOD_MORPH_GENERIC(EN8, &kp N8, &kp N8)
 		MOD_MORPH_GENERIC(EN9, &kp N9, &kp N9)
-		MOD_MORPH_GENERIC(EN10, &kp N10, &kp N10)
+		MOD_MORPH_GENERIC(EN0, &kp N0, &kp N0)
 
 		// Numbers / F keys row
 		MOD_MORPH_GENERIC(mm_transF1, &trans, &kp F1)

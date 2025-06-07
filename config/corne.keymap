@@ -83,7 +83,7 @@ hml_##_name_: home_row_mod_left_##_name_ {					\
 	flavor = "balanced";									\
 	require-prior-idle-ms = <150>;							\
 	tapping-term-ms = <280>;								\
-	/*quick-tap-ms = <175>;*/								\
+	quick-tap-ms = <175>;									\
 	bindings = <&kp>, <_binding_>;							\
 	hold-trigger-key-positions = <KEYS_R THUMBS>; /* RHS */	\
 	hold-trigger-on-release;								\
@@ -95,7 +95,7 @@ hmr_##_name_: home_row_mod_right_##_name_ {					\
 	flavor = "balanced";									\
 	require-prior-idle-ms = <150>;							\
 	tapping-term-ms = <280>;								\
-	/*quick-tap-ms = <175>;*/								\
+	quick-tap-ms = <175>;									\
 	bindings = <&kp>, <_binding_>;							\
 	hold-trigger-key-positions = <KEYS_L THUMBS>; /* LHS */	\
 	hold-trigger-on-release;								\

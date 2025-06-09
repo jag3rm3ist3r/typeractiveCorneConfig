@@ -303,13 +303,14 @@ _name_: macro_##_name_ {					\
 			&kp R
 		)
 
-/*
-
-? ! - \ @ # % + = `
-< [ { ( c c ) } ] >
-a ~ ^ / _ $ * | & a
-
-*/
+//	?  ! - \ @   # % + =  `
+//	<  [ { ( /* */ ) } ]  >
+//	<- ~ ^ / _   $ * | & ->
+		MACRO(printSym,
+			&kp QMARK &kp SPACE &kp SPACE &kp EXCL &kp SPACE &kp MINUS &kp SPACE &kp BSLH &kp SPACE &kp AT &kp SPACE &kp SPACE &kp SPACE &kp HASH &kp SPACE &kp PRCNT &kp SPACE &kp PLUS &kp SPACE &kp EQUAL &kp SPACE &kp SPACE &kp GRAVE &kp ENTER
+			&kp LT &kp SPACE &kp SPACE &kp LBKT &kp SPACE &kp LBRC &kp SPACE &kp RS(N9) &kp SPACE &kp SLASH &kp STAR &kp SPACE &kp STAR &kp SLASH &kp SPACE &kp LS(N0) &kp SPACE &kp RBRC &kp SPACE &kp RBKT &kp SPACE &kp SPACE &kp GT &kp ENTER
+			&kp LT &kp MINUS &kp SPACE &kp TILDE &kp SPACE &kp CARET &kp SPACE &kp FSLH &kp SPACE &kp UNDER &kp SPACE &kp DOLLAR &kp SPACE &kp STAR &kp SPACE &kp PIPE &kp SPACE &kp AMPS &kp SPACE &kp MINUS &kp GT &kp ENTER
+		)
 
 		// NULL
 		MACRO(null_capitals,
@@ -433,9 +434,9 @@ a ~ ^ / _ $ * | & a
 //╭───────────────┬───────────────┬───────────────┬───────────────┬───────────────┬───────────────╮   ╭───────────────┬───────────────┬───────────────┬───────────────┬───────────────┬───────────────╮
 	___				___				___				___				___				___					___				&EN7			&EN8			&EN9			___				___
 //├───────────────┼───────────────┼───────────────┼───────────────┼───────────────┼───────────────┤   ├───────────────┼───────────────┼───────────────┼───────────────┼───────────────┼───────────────┤
-	___				___				___				___				___				___					___				&EN4			&EN5			&EN6			&kp DOT			___
+	___				___				___				___				___				___					___				&EN4			&EN5			&EN6			&dot_cln		___
 //├───────────────┼───────────────┼───────────────┼───────────────┼───────────────┼───────────────┤   ├───────────────┼───────────────┼───────────────┼───────────────┼───────────────┼───────────────┤
-	___				___				___				___				___				___					___				&EN1			&EN2			&EN3			&dot_cln		___
+	___				___				___				___				___				___					___				&EN1			&EN2			&EN3			&kp FSLH		___
 //╰───────────────┴───────────────┴───────────────┼───────────────┼───────────────┼───────────────┤   ├───────────────┼───────────────┼───────────────┼───────────────┴───────────────┴───────────────╯
 													___				___				___					&EN0			___				___
 //                                                ╰───────────────┴───────────────┴───────────────╯   ╰───────────────┴───────────────┴───────────────╯

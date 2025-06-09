@@ -306,9 +306,13 @@ _name_: macro_##_name_ {					\
 //	?  ! - \ @   # % + =  `
 //	<  [ { ( /* */ ) } ]  >
 //	<- ~ ^ / _   $ * | & ->
-		MACRO(printSym,
+		MACRO(printRT,
 			&kp QMARK &kp SPACE &kp SPACE &kp EXCL &kp SPACE &kp MINUS &kp SPACE &kp BSLH &kp SPACE &kp AT &kp SPACE &kp SPACE &kp SPACE &kp HASH &kp SPACE &kp PRCNT &kp SPACE &kp PLUS &kp SPACE &kp EQUAL &kp SPACE &kp SPACE &kp GRAVE &kp ENTER
+		)
+		MACRO(printRM,
 			&kp LT &kp SPACE &kp SPACE &kp LBKT &kp SPACE &kp LBRC &kp SPACE &kp RS(N9) &kp SPACE &kp SLASH &kp STAR &kp SPACE &kp STAR &kp SLASH &kp SPACE &kp LS(N0) &kp SPACE &kp RBRC &kp SPACE &kp RBKT &kp SPACE &kp SPACE &kp GT &kp ENTER
+		)
+		MACRO(printRB,
 			&kp LT &kp MINUS &kp SPACE &kp TILDE &kp SPACE &kp CARET &kp SPACE &kp FSLH &kp SPACE &kp UNDER &kp SPACE &kp DOLLAR &kp SPACE &kp STAR &kp SPACE &kp PIPE &kp SPACE &kp AMPS &kp SPACE &kp MINUS &kp GT &kp ENTER
 		)
 
@@ -477,11 +481,11 @@ _name_: macro_##_name_ {					\
 			display-name = "Macro";
 			bindings = <
 //╭───────────────┬───────────────┬───────────────┬───────────────┬───────────────┬───────────────╮   ╭───────────────┬───────────────┬───────────────┬───────────────┬───────────────┬───────────────╮
-	&printSym		___				___				___				___				___					___				___				___				___				___				___
+	___				&printRT		___				___				___				___					___				___				___				___				___				___
 //├───────────────┼───────────────┼───────────────┼───────────────┼───────────────┼───────────────┤   ├───────────────┼───────────────┼───────────────┼───────────────┼───────────────┼───────────────┤
-	___				___				___				&sizeof_oper	___				___					___				&np				___				___				___				___
+	___				&printRM		___				&sizeof_oper	___				___					___				&np				___				___				___				___
 //├───────────────┼───────────────┼───────────────┼───────────────┼───────────────┼───────────────┤   ├───────────────┼───────────────┼───────────────┼───────────────┼───────────────┼───────────────┤
-	___				___				___				___				___				___					___				___				___				___				___				___
+	___				&printRB		___				___				___				___					___				___				___				___				___				___
 //╰───────────────┴───────────────┴───────────────┼───────────────┼───────────────┼───────────────┤   ├───────────────┼───────────────┼───────────────┼───────────────┴───────────────┴───────────────╯
 													___				___				___					___				___				___
 //                                                ╰───────────────┴───────────────┴───────────────╯   ╰───────────────┴───────────────┴───────────────╯

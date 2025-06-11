@@ -212,7 +212,7 @@ hmr_##_name_: home_row_mod_right_##_name_ {					\
 		// Shift when held, escape when tapped.
 		ht_st: hold_tap_shift_tab {
 			compatible = "zmk,behavior-hold-tap";
-			#binding-cells = <3>;
+			#binding-cells = <2>;
 			flavor = "hold-preferred";
 			//require-prior-idle-ms = <150>;
 			tapping-term-ms = <TAPPING_TERM_MS>;
@@ -245,7 +245,7 @@ hmr_##_name_: home_row_mod_right_##_name_ {					\
 		MOD_MORPH_GENERIC(EN0, &kp N0, &kp N0)
 
 		// Bluetooth clear hold
-		MOD_MORPH_GENERIC(btc_hold, XXX, &bt BT_CLR)
+		//MOD_MORPH_GENERIC(btc_hold, XXX, &bt BT_CLR)
 
 		// Numbers / F keys row
 		MOD_MORPH_GENERIC(mm_transF1, &trans, &kp F1)
@@ -528,7 +528,7 @@ _name_: macro_##_name_ {					\
 //├───────────────┼───────────────┼───────────────┼───────────────┼───────────────┼───────────────┤   ├───────────────┼───────────────┼───────────────┼───────────────┼───────────────┼───────────────┤
 	___				&kt HRM_L1		&kt HRM_L2		&kt HRM_L3		&kt HRM_L4		___					___				&clr_mod		___				___				___				___
 //╰───────────────┴───────────────┴───────────────┼───────────────┼───────────────┼───────────────┤   ├───────────────┼───────────────┼───────────────┼───────────────┴───────────────┴───────────────╯
-													&sys_reset		&btc_hold		&bootloader			&bootloader		&btc_hold		&sys_reset
+													&sys_reset		&bt BT_CLR		&bootloader			&bootloader		&bt BT_CLR		&sys_reset
 //                                                ╰───────────────┴───────────────┴───────────────╯   ╰───────────────┴───────────────┴───────────────╯
 			>;
 		};

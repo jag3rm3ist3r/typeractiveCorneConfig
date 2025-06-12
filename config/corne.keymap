@@ -208,6 +208,30 @@ hmr_##_name_: home_row_mod_right_##_name_ {					\
 			//hold-trigger-on-release;
 		};
 
+		ltl_und: layerTapLeft_Underscore {
+			compatible = "zmk,behavior-hold-tap";
+			#binding-cells = <2>;
+			flavor = "balanced";
+			require-prior-idle-ms = <150>;
+			tapping-term-ms = <TAPPING_TERM_MS>;
+			quick-tap-ms = <QUICK_TAP_MS>;
+			bindings = <&mo>, <&undmin>;
+			hold-trigger-key-positions = <LC5 KEYS_R THUMBS>; /* RHS */
+			//hold-trigger-on-release;
+		};
+
+		ltr_kp: layerTapRight_SingleQuote {
+			compatible = "zmk,behavior-hold-tap";
+			#binding-cells = <2>;
+			flavor = "balanced";
+			require-prior-idle-ms = <150>;
+			tapping-term-ms = <TAPPING_TERM_MS>;
+			quick-tap-ms = <QUICK_TAP_MS>;
+			bindings = <&mo>, <&kp>;
+			hold-trigger-key-positions = <RC5 KEYS_L THUMBS>; /* LHS */
+			//hold-trigger-on-release;
+		};
+
 		// Mod morphs
 		// , / ;
 		MOD_MORPH_GENERIC(c_scln, &kp COMMA, &kp SEMI)
@@ -426,9 +450,9 @@ _name_: macro_##_name_ {					\
 //╭───────────────┬───────────────┬───────────────┬───────────────┬───────────────┬───────────────╮   ╭───────────────┬───────────────┬───────────────┬───────────────┬───────────────┬───────────────╮
 	&kp TAB			&kp Q			&kp W			&kp F			&kp P			&kp B				&kp J			&kp L			&kp U			&kp Y			&qmb			&kp BSPC
 //├───────────────┼───────────────┼───────────────┼───────────────┼───────────────┼───────────────┤   ├───────────────┼───────────────┼───────────────┼───────────────┼───────────────┼───────────────┤
-	&undmin			HRM_L(A,		R,				S,				T)				&kp G				&kp M			HRM_R(N,		E,				I,				O)				&kp SQT
+	&ltl_und MACRO 0 HRM_L(A,		R,				S,				T)				&kp G				&kp M			HRM_R(N,		E,				I,				O)				&ltr_kp MACRO SQT
 //├───────────────┼───────────────┼───────────────┼───────────────┼───────────────┼───────────────┤   ├───────────────┼───────────────┼───────────────┼───────────────┼───────────────┼───────────────┤
-	&kp ESC			&kp Z			&kp X			&kp C			&kp D			&kp V				&kp K			&kp H			&c_scln			&dot_cln		&fsbs			&kp DEL
+	&key_repeat		&kp Z			&kp X			&kp C			&kp D			&kp V				&kp K			&kp H			&c_scln			&dot_cln		&fsbs			&kp DEL
 //╰───────────────┴───────────────┴───────────────┼───────────────┼───────────────┼───────────────┤   ├───────────────┼───────────────┼───────────────┼───────────────┴───────────────┴───────────────╯
 													&ht LSHFT ESC	&mo SYM			&kp RET				&kp SPACE		&mo NN			&ss RSHFT 0
 //                                                ╰───────────────┴───────────────┴───────────────╯   ╰───────────────┴───────────────┴───────────────╯

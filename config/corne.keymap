@@ -232,10 +232,10 @@ hmr_##_name_: home_row_mod_right_##_name_ {					\
 			//hold-trigger-on-release;
 		};
 
-		HML_GENERIC(hml_dot_cln, &dot_cln)
-		HML_GENERIC(hml_EN4, &EN4)
-		HML_GENERIC(hml_EN5, &EN5)
-		HML_GENERIC(hml_EN6, &EN6)
+		HML_GENERIC(dot_cln, &dot_cln)
+		HML_GENERIC(EN4, &EN4)
+		HML_GENERIC(EN5, &EN5)
+		HML_GENERIC(EN6, &EN6)
 
 		// Mod morphs
 		// , / ;
@@ -463,7 +463,7 @@ _name_: macro_##_name_ {					\
 //                                                ╰───────────────┴───────────────┴───────────────╯   ╰───────────────┴───────────────┴───────────────╯
 			>;
 		};
- 
+
 		navLayer {
 			display-name = "Nav/Num";
 			bindings = <

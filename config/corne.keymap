@@ -347,7 +347,7 @@ _name_: macro_##_name_ {					\
 
 //	  ?  ! - \ @   # % + =  `
 //	" <  [ { ( /* */ ) } ]  > '
-//	  <- ~ ^ / _   $ * | & ->
+//	  <- ~ ^ / :   $ * | & ->
 		MACRO(printRT,
 			&kp SPACE &kp SPACE &kp QMARK &kp SPACE &kp SPACE &kp EXCL &kp SPACE &kp MINUS &kp SPACE &kp BSLH &kp SPACE &kp AT &kp SPACE &kp SPACE &kp SPACE &kp HASH &kp SPACE &kp PRCNT &kp SPACE &kp PLUS &kp SPACE &kp EQUAL &kp SPACE &kp SPACE &kp GRAVE &kp ENTER
 		)
@@ -355,7 +355,7 @@ _name_: macro_##_name_ {					\
 			&kp DQT &kp SPACE &kp LT &kp SPACE &kp SPACE &kp LBKT &kp SPACE &kp LBRC &kp SPACE &kp RS(N9) &kp SPACE &kp SLASH &kp STAR &kp SPACE &kp STAR &kp SLASH &kp SPACE &kp LS(N0) &kp SPACE &kp RBRC &kp SPACE &kp RBKT &kp SPACE &kp SPACE &kp GT &kp ENTER &kp SPACE &kp SQT
 		)
 		MACRO(printRB,
-			&kp SPACE &kp SPACE &kp LT &kp MINUS &kp SPACE &kp TILDE &kp SPACE &kp CARET &kp SPACE &kp FSLH &kp SPACE &kp UNDER &kp SPACE &kp SPACE &kp SPACE &kp DOLLAR &kp SPACE &kp STAR &kp SPACE &kp PIPE &kp SPACE &kp AMPS &kp SPACE &kp MINUS &kp GT &kp ENTER
+			&kp SPACE &kp SPACE &kp LT &kp MINUS &kp SPACE &kp TILDE &kp SPACE &kp CARET &kp SPACE &kp FSLH &kp SPACE &kp COLON &kp SPACE &kp SPACE &kp SPACE &kp DOLLAR &kp SPACE &kp STAR &kp SPACE &kp PIPE &kp SPACE &kp AMPS &kp SPACE &kp MINUS &kp GT &kp ENTER
 		)
 
 		MACRO(email,
@@ -488,7 +488,7 @@ _name_: macro_##_name_ {					\
 			display-name = "Num";
 			bindings = <
 //╭───────────────┬───────────────┬───────────────┬───────────────┬───────────────┬───────────────╮   ╭───────────────┬───────────────┬───────────────┬───────────────┬───────────────┬───────────────╮
-	___				&EN1			&EN2			&EN3			&EN4			&EN5				&EN6			&EN7			&EN8			&EN9			&EN0				___
+	___				&EN1			&EN2			&EN3			&EN4			&EN5				&EN6			&EN7			&EN8			&EN9			&EN0			___
 //├───────────────┼───────────────┼───────────────┼───────────────┼───────────────┼───────────────┤   ├───────────────┼───────────────┼───────────────┼───────────────┼───────────────┼───────────────┤
 	___				&kp HRM_L1		&kp HRM_L2		&kp HRM_L3		&kp HRM_L4		___					___				&EN4			&EN5			&EN6			&dot_cln		___
 //├───────────────┼───────────────┼───────────────┼───────────────┼───────────────┼───────────────┤   ├───────────────┼───────────────┼───────────────┼───────────────┼───────────────┼───────────────┤
@@ -507,7 +507,7 @@ _name_: macro_##_name_ {					\
 //├───────────────┼───────────────┼───────────────┼───────────────┼───────────────┼───────────────┤   ├───────────────┼───────────────┼───────────────┼───────────────┼───────────────┼───────────────┤
 	&kp DQT			HRM_L(LT,		LBKT,			LBRC,			RS(N9))			&lcomm				&rcomm			HRM_R(LS(N0),	RBRC,			RBKT,			GT)				&kp SQT
 //├───────────────┼───────────────┼───────────────┼───────────────┼───────────────┼───────────────┤   ├───────────────┼───────────────┼───────────────┼───────────────┼───────────────┼───────────────┤
-	___				&larr			&kp TILDE		&kp CARET		&kp FSLH		&kp UNDER			&kp DOLLAR		&kp STAR		&kp PIPE		&kp AMPS		&rarr			___
+	___				&larr			&kp TILDE		&kp CARET		&kp FSLH		&kp COLON			&kp DOLLAR		&kp STAR		&kp PIPE		&kp AMPS		&rarr			___
 //╰───────────────┴───────────────┴───────────────┼───────────────┼───────────────┼───────────────┤   ├───────────────┼───────────────┼───────────────┼───────────────┴───────────────┴───────────────╯
 													___				___				___					___				___				___
 //                                                ╰───────────────┴───────────────┴───────────────╯   ╰───────────────┴───────────────┴───────────────╯
@@ -520,9 +520,9 @@ _name_: macro_##_name_ {					\
 //╭───────────────┬───────────────┬───────────────┬───────────────┬───────────────┬───────────────╮   ╭───────────────┬───────────────┬───────────────┬───────────────┬───────────────┬───────────────╮
 	___				&nc_oper		&aeq EXCL		&aeq MINUS		&aeq BSLH		&aeq AT				&aeq HASH		&aeq PRCNT		&aeq PLUS		&aeq EQUAL		&aeq GRAVE		___
 //├───────────────┼───────────────┼───────────────┼───────────────┼───────────────┼───────────────┤   ├───────────────┼───────────────┼───────────────┼───────────────┼───────────────┼───────────────┤
-	&kp DQT			&aeq LT			&kp LBKT		&kp LBRC		&kp RS(N9)		&lcomm				&rcomm			&kp LS(N0)		&kp RBRC		&kp RBKT		&aeq GT			&kp SQT
+	&aeq DQT		&aeq LT			&kp LBKT		&kp LBRC		&kp RS(N9)		&lcomm				&rcomm			&kp LS(N0)		&kp RBRC		&kp RBKT		&aeq GT			&aeq SQT
 //├───────────────┼───────────────┼───────────────┼───────────────┼───────────────┼───────────────┤   ├───────────────┼───────────────┼───────────────┼───────────────┼───────────────┼───────────────┤
-	___				&learr			&aeq TILDE		&aeq CARET		&aeq FSLH		&aeq UNDER			&aeq DOLLAR		&aeq STAR		&aeq PIPE		&aeq AMPS		&rearr			___
+	___				&learr			&aeq TILDE		&aeq CARET		&aeq FSLH		&aeq COLON			&aeq DOLLAR		&aeq STAR		&aeq PIPE		&aeq AMPS		&rearr			___
 //╰───────────────┴───────────────┴───────────────┼───────────────┼───────────────┼───────────────┤   ├───────────────┼───────────────┼───────────────┼───────────────┴───────────────┴───────────────╯
 													___				___				___					___				___				___
 //                                                ╰───────────────┴───────────────┴───────────────╯   ╰───────────────┴───────────────┴───────────────╯

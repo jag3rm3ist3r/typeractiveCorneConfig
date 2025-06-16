@@ -222,7 +222,7 @@ hmr_##_name_: home_row_mod_right_##_name_ {					\
 			//hold-trigger-on-release;
 		};
 
-		ltr_kr: layerTapLeft_keyRepeat {
+		ltr_kr: layerTapRight_keyRepeat {
 			compatible = "zmk,behavior-hold-tap";
 			#binding-cells = <2>;
 			flavor = "balanced";

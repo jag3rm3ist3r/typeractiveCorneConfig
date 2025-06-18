@@ -214,6 +214,7 @@ hmr_##_name_: home_row_mod_right_##_name_ {					\
 		adaptive_repeat: adaptive_repeat {
 			compatible = "zmk,behavior-adaptive-key";
 			#binding-cells = <0>;
+			bindings = <&kp LSHFT>;
 			repeat {
 				trigger-keys = <A B C D E F G H I J K L M N O P Q R S T U V W X Y Z>;
 				bindings = <&key_repeat>;

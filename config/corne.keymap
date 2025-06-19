@@ -216,7 +216,7 @@ hmr_##_name_: home_row_mod_right_##_name_ {					\
 			#binding-cells = <0>;
 			bindings = <&kp LSHFT>;
 			repeat {
-				trigger-keys = <A B C D E F G H I J K L M N O P Q R S T U V W X Y Z>;
+				trigger-keys = <A B C D E F G H I J L M N O P Q R S T U V W X Y Z>;
 				bindings = <&key_repeat>;
 				max-prior-idle-ms = <350>;
 				strict-modifiers;

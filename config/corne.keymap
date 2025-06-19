@@ -221,14 +221,15 @@ hmr_##_name_: home_row_mod_right_##_name_ {					\
 				max-prior-idle-ms = <350>;
 				strict-modifiers;
 			};
-			repeat {
+			// KN single finger bigram
+			kn_bigram {
 				trigger-keys = <K>;
 				bindings = <&kp N>;
 				max-prior-idle-ms = <350>;
 				strict-modifiers;
 			};
-
 		};
+
 		adap_shift: adaptive_shift {
 			compatible = "zmk,behavior-hold-tap";
 			#binding-cells = <2>;

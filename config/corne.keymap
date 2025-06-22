@@ -529,14 +529,17 @@ _name_: macro_##_name_ {					\
 		qu_key_caps: qu_dedicated_key_caps {
 			compatible = "zmk,behavior-macro";
 			#binding-cells = <0>;
-			bindings = <&macro_press &kp LSHFT>
-					 , <&kp Q>
+			wait-ms = <20>;
+			tap-ms = <10>;
+			bindings = <&kp LS(Q)>
 					 , <&macro_release &kp LSHFT>
 					 , <&macro_release &kp RSHFT>
+					 , <&macro_wait_time 20>
 					 , <&kp U>;
 		};
 	};
 };
+
 
 // Caps word
 &caps_word {

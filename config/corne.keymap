@@ -129,6 +129,7 @@ RGUI
 	&hmr HRM_R3 _three_							\
 	&hmr HRM_R4 _four_
 
+// Combos
 / {
 	combos {
 		compatible = "zmk,combos";
@@ -532,8 +533,8 @@ _name_: macro_##_name_ {					\
 			wait-ms = <20>;
 			tap-ms = <10>;
 			bindings = <&kp LS(Q)>
-					 , <&macro_release &kp LSHFT>
-					 , <&macro_release &kp RSHFT>
+					//, <&macro_release &kp LSHFT>
+					//, <&macro_release &kp RSHFT>
 					 , <&macro_wait_time 20>
 					 , <&kp U>;
 		};

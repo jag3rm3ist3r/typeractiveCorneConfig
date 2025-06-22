@@ -129,6 +129,16 @@ RGUI
 	&hmr HRM_R3 _three_							\
 	&hmr HRM_R4 _four_
 
+/ {
+	combos {
+		compatible = "zmk,combos";
+		// Q macro, Q is Qu instead.
+		combo_q { timeout-ms = <50>; key-positions = <LT4 LT3>; bindings = <&kp Q>; };
+		// Bootloader access.
+		combo_rst_l { timeout-ms = <50>; key-positions = <LT0 LM5 LH1>; bindings = <&bootloader>; };
+		combo_rst_r { timeout-ms = <50>; key-positions = <RT0 RM5 RH1>; bindings = <&bootloader>; };
+	};
+};
 
 /* Homerow mods */
 #include "zmk-helpers/helper.h"
@@ -216,7 +226,7 @@ hmr_##_name_: home_row_mod_right_##_name_ {					\
 		adaptive_repeat: adaptive_repeat {
 			compatible = "zmk,behavior-adaptive-key";
 			#binding-cells = <0>;
-			bindings = <&kp LSHFT>;
+			bindings = <&ss LSHFT 0>;
 			repeat {
 				trigger-keys = <A B C D E F G H I J L M N O P Q R S T U V W X Y Z>;
 				bindings = <&key_repeat>;
@@ -329,6 +339,8 @@ hmr_##_name_: home_row_mod_right_##_name_ {					\
 		MOD_MORPH_GENERIC(undmin, &kp UNDER, &kp MINUS)
 		// Forwardslash / Backslash
 		MOD_MORPH_GENERIC(fsbs, &kp FSLH, &kp BACKSLASH)
+		// qu / Qu
+		MOD_MORPH_GENERIC(QU_bi, &qu_key, &qu_key_caps)
 
 		// Explicit digit keycodes, so they can't be shifted into symbols.
 		MOD_MORPH_GENERIC(EN1, &kp N1, &kp N1)
@@ -509,6 +521,20 @@ _name_: macro_##_name_ {					\
 			#binding-cells = <0>;
 			bindings = <&kp QMARK &kp QMARK &kp EQUAL>;
 		};
+		qu_key: qu_dedicated_key {
+			compatible = "zmk,behavior-macro";
+			#binding-cells = <0>;
+			bindings = <&kp Q &kp U>;
+		};
+		qu_key_caps: qu_dedicated_key_caps {
+			compatible = "zmk,behavior-macro";
+			#binding-cells = <0>;
+			bindings = <&macro_press &kp LSHFT>
+					 , <&kp Q>
+					 , <&macro_release &kp LSHFT>
+					 , <&macro_release &kp RSHFT>
+					 , <&kp U>;
+		};
 	};
 };
 
@@ -543,11 +569,11 @@ _name_: macro_##_name_ {					\
 			display-name = "Base";
 			bindings = <
 //╭───────────────┬───────────────┬───────────────┬───────────────┬───────────────┬───────────────╮   ╭───────────────┬───────────────┬───────────────┬───────────────┬───────────────┬───────────────╮
-	&kp TAB			&kp Q			&kp W			&kp F			&kp P			&kp B				&kp J			&kp L			&kp U			&kp Y			&qmb			&kp BSPC
+	&kp TAB			&QU_bi			&kp W			&kp F			&kp P			&kp B				&kp J			&kp L			&kp U			&kp Y			&qmb			&kp BSPC
 //├───────────────┼───────────────┼───────────────┼───────────────┼───────────────┼───────────────┤   ├───────────────┼───────────────┼───────────────┼───────────────┼───────────────┼───────────────┤
 	&mo NAV			HRM_L(A,		R,				S,				T)				&kp G				&kp M			HRM_R(N,		E,				I,				O)				&mo MACR
 //├───────────────┼───────────────┼───────────────┼───────────────┼───────────────┼───────────────┤   ├───────────────┼───────────────┼───────────────┼───────────────┼───────────────┼───────────────┤
-	&ss LSHFT 0		&kp Z			&kp X			&kp C			&kp D			&kp V				&kp K			&kp H			&c_scln			&dot_cln		&kp SQT			&kt CAPS
+	&kp ESC			&kp Z			&kp X			&kp C			&kp D			&kp V				&kp K			&kp H			&c_scln			&dot_cln		&kp SQT			&kp CAPS
 //╰───────────────┴───────────────┴───────────────┼───────────────┼───────────────┼───────────────┤   ├───────────────┼───────────────┼───────────────┼───────────────┴───────────────┴───────────────╯
 													&kp RET			&ltt NUM MINUS	&adap_shift LSHFT 0	&kp SPACE		&ltt SYM UNDER	&kp ESC
 //                                                ╰───────────────┴───────────────┴───────────────╯   ╰───────────────┴───────────────┴───────────────╯

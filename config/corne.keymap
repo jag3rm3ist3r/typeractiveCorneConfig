@@ -530,8 +530,8 @@ _name_: macro_##_name_ {					\
 		qu_key_caps: qu_dedicated_key_caps {
 			compatible = "zmk,behavior-macro";
 			#binding-cells = <0>;
-			wait-ms = <20>;
-			tap-ms = <10>;
+			wait-ms = <1>;
+			tap-ms = <1>;
 			bindings = <&kp LS(Q)>
 					//, <&macro_release &kp LSHFT>
 					//, <&macro_release &kp RSHFT>

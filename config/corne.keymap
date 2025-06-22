@@ -182,6 +182,7 @@ hmr_##_name_: home_row_mod_right_##_name_ {					\
 };
 
 
+#define MAX_PRIOR_IDLE_MS 350
 
 // Non-macro setup
 / {
@@ -227,18 +228,24 @@ hmr_##_name_: home_row_mod_right_##_name_ {					\
 		adaptive_repeat: adaptive_repeat {
 			compatible = "zmk,behavior-adaptive-key";
 			#binding-cells = <0>;
-			bindings = <&ss LSHFT 0>;
+			bindings = <&caps_word>;
 			repeat {
-				trigger-keys = <A B C D E F G H I J L M N O P Q R S T U V W X Y Z>;
+				trigger-keys = <A B C D E F G H I J L M N O P R S T U V W X Y Z>;
 				bindings = <&key_repeat>;
-				max-prior-idle-ms = <350>;
+				max-prior-idle-ms = <MAX_PRIOR_IDLE_MS>;
 				strict-modifiers;
 			};
 			// KN single finger bigram
 			kn_bigram {
 				trigger-keys = <K>;
 				bindings = <&kp N>;
-				max-prior-idle-ms = <350>;
+				max-prior-idle-ms = <MAX_PRIOR_IDLE_MS>;
+				strict-modifiers;
+			};
+			qu_bigram {
+				trigger-keys = <Q>;
+				bindings = <&kp U>;
+				max-prior-idle-ms = <MAX_PRIOR_IDLE_MS>;
 				strict-modifiers;
 			};
 		};

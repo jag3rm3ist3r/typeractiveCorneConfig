@@ -139,17 +139,17 @@ RGUI
 		combo_rst_l { timeout-ms = <50>; key-positions = <LT0 LM5 LH1>; bindings = <&bootloader>; };
 		combo_rst_r { timeout-ms = <50>; key-positions = <RT0 RM5 RH1>; bindings = <&bootloader>; };
 		// ( / )
-		combo_l_paren { timeout-ms = <50>; key-positions = <LT3 LT2>; bindings = <LS(9)>; };
-		combo_r_paren { timeout-ms = <50>; key-positions = <LT2 LT1>; bindings = <LS(9)>; };
+		combo_l_paren { timeout-ms = <50>; key-positions = <LT3 LT2>; bindings = <&kp LS(9)>; };
+		combo_r_paren { timeout-ms = <50>; key-positions = <LT2 LT1>; bindings = <&kp LS(9)>; };
 		// { / }
-		combo_l_brace { timeout-ms = <50>; key-positions = <RT3 RT2>; bindings = <LBRC>; };
-		combo_r_brace { timeout-ms = <50>; key-positions = <RT2 RT1>; bindings = <RBRC>; };
+		combo_l_brace { timeout-ms = <50>; key-positions = <RT3 RT2>; bindings = <&kp LBRC>; };
+		combo_r_brace { timeout-ms = <50>; key-positions = <RT2 RT1>; bindings = <&kp RBRC>; };
 		// [ / ]
-		combo_l_bracket { timeout-ms = <50>; key-positions = <LB3 LB2>; bindings = <LBKT>; };
-		combo_r_bracket { timeout-ms = <50>; key-positions = <LB2 LB1>; bindings = <RBKT>; };
+		combo_l_bracket { timeout-ms = <50>; key-positions = <LB3 LB2>; bindings = <&kp LBKT>; };
+		combo_r_bracket { timeout-ms = <50>; key-positions = <LB2 LB1>; bindings = <&kp RBKT>; };
 		// < / >
-		combo_l_abk { timeout-ms = <50>; key-positions = <RB3 RB2>; bindings = <LT>; };
-		combo_r_abk { timeout-ms = <50>; key-positions = <RB2 RB1>; bindings = <GT>; };
+		combo_l_abk { timeout-ms = <50>; key-positions = <RB3 RB2>; bindings = <&kp LT>; };
+		combo_r_abk { timeout-ms = <50>; key-positions = <RB2 RB1>; bindings = <&kp GT>; };
 	};
 };
 

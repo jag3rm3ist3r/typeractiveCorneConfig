@@ -230,7 +230,7 @@ hmr_##_name_: home_row_mod_right_##_name_ {					\
 			#binding-cells = <0>;
 			bindings = <&caps_word>;
 			repeat {
-				trigger-keys = <A B C D E F G H I J L M N O P R S T U V W X Y Z>;
+				trigger-keys = <A B C D E F G H I J L M N O P R S T V W X Y Z>;
 				bindings = <&key_repeat>;
 				max-prior-idle-ms = <MAX_PRIOR_IDLE_MS>;
 				strict-modifiers;
@@ -245,6 +245,12 @@ hmr_##_name_: home_row_mod_right_##_name_ {					\
 			qu_bigram {
 				trigger-keys = <Q>;
 				bindings = <&kp U>;
+				max-prior-idle-ms = <MAX_PRIOR_IDLE_MS>;
+				strict-modifiers;
+			};
+			ue_bigram {
+				trigger-keys = <U>;
+				bindings = <&kp E>;
 				max-prior-idle-ms = <MAX_PRIOR_IDLE_MS>;
 				strict-modifiers;
 			};

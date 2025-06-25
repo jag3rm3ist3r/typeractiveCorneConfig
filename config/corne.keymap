@@ -157,8 +157,8 @@ RGUI
 		combo_l_bracket { timeout-ms = <50>; key-positions = <LT3 LM3>; bindings = <&kp LBKT>; };
 		combo_r_bracket { timeout-ms = <50>; key-positions = <RT3 RM3>; bindings = <&kp RBKT>; };
 		// < / >
-		combo_l_abk { timeout-ms = <50>; key-positions = <LB4 LM4>; bindings = <&kp LT>; };
-		combo_r_abk { timeout-ms = <50>; key-positions = <RB4 RM4>; bindings = <&kp GT>; };
+		combo_l_abk { timeout-ms = <50>; key-positions = <LT4 LM4>; bindings = <&kp LT>; };
+		combo_r_abk { timeout-ms = <50>; key-positions = <RT4 RM4>; bindings = <&kp GT>; };
 	};
 };
 

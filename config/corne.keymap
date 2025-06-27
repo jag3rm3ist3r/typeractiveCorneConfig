@@ -94,7 +94,8 @@
 #define HRM_R3 RCTRL
 #define HRM_R4 RSHFT
 */
-// GASC
+/*
+// GCSA
 // Left
 #define HRM_L1 \
 LGUI
@@ -113,9 +114,49 @@ RSHFT
 RCTRL
 #define HRM_R4 \
 RGUI
+*/
+// GCmA
+// Left
+#define HRM_L1 \
+LGUI
+#define HRM_L2 \
+LCTRL
+#define HRM_L3 \
+SYM
+#define HRM_L4 \
+LALT
+// Right
+#define HRM_R1 \
+RALT
+#define HRM_R2 \
+SYM
+#define HRM_R3 \
+RCTRL
+#define HRM_R4 \
+RGUI
+/*
+I can't completely eliminate the shift key from the HRM setup,
+considering putting them on the D and H keys (index down).
+I need the shift keys on the HRMs in order to press things like LG(LS(S)) without a macro.
+On an unrelated note, I should probably have a macro for that.
+*/
 
 
 // Implement HRM order
+/*
+// Left
+#define HRM_L(_one_, _two_, _three_, _four_)	\
+	&hml HRM_L1 _one_							\
+	&hml HRM_L2 _two_							\
+	&hml HRM_L3 _three_							\
+	&hml HRM_L4 _four_
+// Right
+#define HRM_R(_one_, _two_, _three_, _four_)	\
+	&hmr HRM_R1 _one_							\
+	&hmr HRM_R2 _two_							\
+	&hmr HRM_R3 _three_							\
+	&hmr HRM_R4 _four_
+*/
 // Left
 #define HRM_L(_one_, _two_, _three_, _four_)	\
 	&hml HRM_L1 _one_							\
@@ -231,6 +272,29 @@ hmr_##_name_: home_row_mod_right_##_name_ {					\
 			tapping-term-ms = <TAPPING_TERM_MS>;
 			quick-tap-ms = <QUICK_TAP_MS>;
 			bindings = <&kp>, <&kp>;
+			hold-trigger-key-positions = <RC5 KEYS_L THUMBS>; // List of keys on the left side of the keyboard
+			hold-trigger-on-release;
+		};
+		// Home row momentary layer keys
+		hml_mo: home_row_mod_left_momentary_layer {
+			compatible = "zmk,behavior-hold-tap";
+			#binding-cells = <2>;
+			flavor = "balanced";
+			require-prior-idle-ms = <150>;
+			tapping-term-ms = <TAPPING_TERM_MS>;
+			quick-tap-ms = <QUICK_TAP_MS>;
+			bindings = <&mo>, <&kp>;
+			hold-trigger-key-positions = <LC5 KEYS_R THUMBS>; // List of keys on the right side of the keyboard
+			hold-trigger-on-release;
+		};
+		hmr_mo: home_row_mod_right_momentary_layer {
+			compatible = "zmk,behavior-hold-tap";
+			#binding-cells = <2>;
+			flavor = "balanced";
+			require-prior-idle-ms = <150>;
+			tapping-term-ms = <TAPPING_TERM_MS>;
+			quick-tap-ms = <QUICK_TAP_MS>;
+			bindings = <&mo>, <&kp>;
 			hold-trigger-key-positions = <RC5 KEYS_L THUMBS>; // List of keys on the left side of the keyboard
 			hold-trigger-on-release;
 		};

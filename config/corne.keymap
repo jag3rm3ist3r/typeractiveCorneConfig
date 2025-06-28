@@ -408,8 +408,8 @@ hmr_##_name_: home_row_mod_right_##_name_ {					\
 			compatible = "zmk,behavior-mod-morph";
 			#binding-cells = <0>;
 			bindings = <&adap_shift LSHFT 0>, <&kp TAB>;
-			keep-mods = <(MOD_LALT|MOD_RALT)>;
-			mods = <(MOD_LALT|MOD_RALT)>;
+			keep-mods = <(MOD_LCTRL|MOD_RCTRL|MOD_LGUI|MOD_RGUI|MOD_LALT|MOD_RALT)>;
+			mods = <(MOD_LCTRL|MOD_RCTRL|MOD_LGUI|MOD_RGUI|MOD_LALT|MOD_RALT)>;
 		};
 		// , / ;
 		MOD_MORPH_GENERIC(c_scln, &kp COMMA, &kp SEMI)

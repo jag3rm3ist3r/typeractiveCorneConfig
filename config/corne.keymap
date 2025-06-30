@@ -620,12 +620,6 @@ _name_: macro_##_name_ {					\
 / {
 	conditional_layers {
 		compatible = "zmk,conditional-layers";
-		/*
-		fkeys {
-			if-layers = <NAV MACR>;
-			then-layer = <META>;
-		};
-		*/
 		symc_1 {
 			if-layers = <FN_LB FN_RB>;
 			then-layer = <SYMC>;

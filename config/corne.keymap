@@ -618,7 +618,7 @@ _name_: macro_##_name_ {					\
 			then-layer = <SYMC>;
 		};
 		symc_2 {
-			if-layers = <SYM MACR>;
+			if-layers = <MACR SYM>;
 			then-layer = <SYMC>;
 		};
 	};

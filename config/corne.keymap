@@ -318,7 +318,7 @@ hmr_##_name_: home_row_mod_right_##_name_ {					\
 		adaptive_repeat: adaptive_repeat {
 			compatible = "zmk,behavior-adaptive-key";
 			#binding-cells = <0>;
-			bindings = <&caps_word>;
+			bindings = <&kp TAB>;
 			repeat {
 				trigger-keys = <A B C D E F G H I J L M N O P R S T V W X Y Z TAB>;
 				bindings = <&key_repeat>;
@@ -470,7 +470,7 @@ hmr_##_name_: home_row_mod_right_##_name_ {					\
 			#binding-cells = <2>;
 			flavor = "hold-preferred";
 			tapping-term-ms = <200>;
-			bindings = <&kp>, <&kp>;
+			bindings = <&kp>, <&caps_word>;
 			display-name = "smartShift";
 		};
 		// Shift / Repeat
@@ -632,7 +632,7 @@ _name_: macro_##_name_ {					\
 //├───────────────┼───────────────┼───────────────┼───────────────┼───────────────┼───────────────┤   ├───────────────┼───────────────┼───────────────┼───────────────┼───────────────┼───────────────┤
 	&mo NAV			HRM_L(A,		R,				S,				T,				G)					HRM_R(M,		N,				E,				I,				O)				&mo META
 //├───────────────┼───────────────┼───────────────┼───────────────┼───────────────┼───────────────┤   ├───────────────┼───────────────┼───────────────┼───────────────┼───────────────┼───────────────┤
-	&caps_word		&kp Z			&kp X			&kp C			&kp D			&kp V				&kp K			&kp H			&c_scln			&dot_cln		&kp SQT			&kp CAPS
+	&ss LSHFT 0		&kp Z			&kp X			&kp C			&kp D			&kp V				&kp K			&kp H			&c_scln			&dot_cln		&kp SQT			&kp CAPS
 //╰───────────────┴───────────────┴───────────────┼───────────────┼───────────────┼───────────────┤   ├───────────────┼───────────────┼───────────────┼───────────────┴───────────────┴───────────────╯
 													&kp RET			&ltt NUM MINUS	&magic				&kp SPACE		&ltt MACR UNDER	&kp ESC
 //                                                ╰───────────────┴───────────────┴───────────────╯   ╰───────────────┴───────────────┴───────────────╯

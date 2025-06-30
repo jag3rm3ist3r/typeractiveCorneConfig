@@ -163,7 +163,7 @@ RGUI
 	&hml	HRM_L2 _two_						\
 	&hml_mo	HRM_L3 _three_						\
 	&hml	HRM_L4 _four_						\
-	&hml	HRM_R5 _five_
+	&hml	HRM_L5 _five_
 // Right
 #define HRM_R(_one_, _two_, _three_, _four_, _five_)	\
 	&hmr	HRM_R1 _one_						\

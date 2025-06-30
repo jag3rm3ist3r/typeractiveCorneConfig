@@ -613,8 +613,12 @@ _name_: macro_##_name_ {					\
 			then-layer = <META>;
 		};
 		*/
-		symc {
+		symc_1 {
 			if-layers = <NUM SYM>;
+			then-layer = <SYMC>;
+		};
+		symc_2 {
+			if-layers = <SYM MACR>;
 			then-layer = <SYMC>;
 		};
 	};

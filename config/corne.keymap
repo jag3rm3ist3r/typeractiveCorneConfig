@@ -125,22 +125,21 @@ LCTRL
 SYM
 #define HRM_L4 \
 LALT
-
 #define HRM_L5 \
 LSHFT
 
 // Right
 #define HRM_R1 \
-RALT
+RSHIFT
 #define HRM_R2 \
-SYM
+RALT
 #define HRM_R3 \
-RCTRL
+SYM
 #define HRM_R4 \
+RCTRL
+#define HRM_R5 \
 RGUI
 
-#define HRM_R5 \
-RSHIFT
 
 
 // Implement HRM order
@@ -159,17 +158,19 @@ RSHIFT
 	&hmr HRM_R4 _four_
 */
 // Left
-#define HRM_L(_one_, _two_, _three_, _four_)	\
+#define HRM_L(_one_, _two_, _three_, _four_, _five_)	\
 	&hml	HRM_L1 _one_						\
 	&hml	HRM_L2 _two_						\
 	&hml_mo	HRM_L3 _three_						\
-	&hml	HRM_L4 _four_
+	&hml	HRM_L4 _four_						\
+	&hml	HRM_R5 _five_
 // Right
-#define HRM_R(_one_, _two_, _three_, _four_)	\
+#define HRM_R(_one_, _two_, _three_, _four_, _five_)	\
 	&hmr	HRM_R1 _one_						\
-	&hmr_mo	HRM_R2 _two_						\
-	&hmr	HRM_R3 _three_						\
-	&hmr	HRM_R4 _four_
+	&hmr	HRM_R2 _two_						\
+	&hmr_mo	HRM_R3 _three_						\
+	&hmr	HRM_R4 _four_						\
+	&hmr	HRM_R5 _five_
 
 
 /*                                      42 KEY MATRIX / LAYOUT MAPPING
@@ -319,7 +320,7 @@ hmr_##_name_: home_row_mod_right_##_name_ {					\
 			#binding-cells = <0>;
 			bindings = <&caps_word>;
 			repeat {
-				trigger-keys = <A B C D E F G H I J L M N O P R S T V W X Y Z>;
+				trigger-keys = <A B C D E F G H I J L M N O P R S T V W X Y Z TAB>;
 				bindings = <&key_repeat>;
 				max-prior-idle-ms = <MAX_PRIOR_IDLE_MS>;
 				strict-modifiers;
@@ -407,7 +408,7 @@ hmr_##_name_: home_row_mod_right_##_name_ {					\
 		magic: magic_shift_key {
 			compatible = "zmk,behavior-mod-morph";
 			#binding-cells = <0>;
-			bindings = <&adap_shift LSHFT 0>, <&kp TAB>;
+			bindings = <&adap_shift LSHFT TAB>, <&kp TAB>;
 			keep-mods = <(MOD_LCTL|MOD_RCTL|MOD_LGUI|MOD_RGUI|MOD_LALT|MOD_RALT)>;
 			mods = <(MOD_LCTL|MOD_RCTL|MOD_LGUI|MOD_RGUI|MOD_LALT|MOD_RALT)>;
 		};
@@ -469,7 +470,7 @@ hmr_##_name_: home_row_mod_right_##_name_ {					\
 			#binding-cells = <2>;
 			flavor = "hold-preferred";
 			tapping-term-ms = <200>;
-			bindings = <&kp>, <&caps_word>;
+			bindings = <&kp>, <&kp>;
 			display-name = "smartShift";
 		};
 		// Shift / Repeat
@@ -627,11 +628,11 @@ _name_: macro_##_name_ {					\
 			display-name = "Base";
 			bindings = <
 //╭───────────────┬───────────────┬───────────────┬───────────────┬───────────────┬───────────────╮   ╭───────────────┬───────────────┬───────────────┬───────────────┬───────────────┬───────────────╮
-	&kp TAB			&kp Q			&kp W			&kp F			&kp P			&kp B				&kp J			&kp L			&kp U			&kp Y			&qmb			&kp BACKSPACE
+	&kp DELETE		&kp Q			&kp W			&kp F			&kp P			&kp B				&kp J			&kp L			&kp U			&kp Y			&qmb			&kp BACKSPACE
 //├───────────────┼───────────────┼───────────────┼───────────────┼───────────────┼───────────────┤   ├───────────────┼───────────────┼───────────────┼───────────────┼───────────────┼───────────────┤
-	&mo NAV			HRM_L(A,		R,				S,				T)				&kp G				&kp M			HRM_R(N,		E,				I,				O)				&mo META
+	&mo NAV			HRM_L(A,		R,				S,				T,				G)					HRM_R(M,		N,				E,				I,				O)				&mo META
 //├───────────────┼───────────────┼───────────────┼───────────────┼───────────────┼───────────────┤   ├───────────────┼───────────────┼───────────────┼───────────────┼───────────────┼───────────────┤
-	&kp CAPS		&kp Z			&kp X			&kp C			&kp D			&kp V				&kp K			&kp H			&c_scln			&dot_cln		&kp SQT			&kp DELETE
+	&caps_word		&kp Z			&kp X			&kp C			&kp D			&kp V				&kp K			&kp H			&c_scln			&dot_cln		&kp SQT			&kp CAPS
 //╰───────────────┴───────────────┴───────────────┼───────────────┼───────────────┼───────────────┤   ├───────────────┼───────────────┼───────────────┼───────────────┴───────────────┴───────────────╯
 													&kp RET			&ltt NUM MINUS	&magic				&kp SPACE		&ltt MACR UNDER	&kp ESC
 //                                                ╰───────────────┴───────────────┴───────────────╯   ╰───────────────┴───────────────┴───────────────╯
@@ -644,7 +645,7 @@ _name_: macro_##_name_ {					\
 //╭───────────────┬───────────────┬───────────────┬───────────────┬───────────────┬───────────────╮   ╭───────────────┬───────────────┬───────────────┬───────────────┬───────────────┬───────────────╮
 	___				&kp Q			&kp W			&kp E			&kp R			&kp T				&kp Y			&kp U			&kp I			&kp O			&kp P			___
 //├───────────────┼───────────────┼───────────────┼───────────────┼───────────────┼───────────────┤   ├───────────────┼───────────────┼───────────────┼───────────────┼───────────────┼───────────────┤
-	___				HRM_L(A,		S,				D,				F)				&kp G				&kp H			HRM_R(J,		K,				L,				SEMI)			&ltr MACR SQT
+	___				HRM_L(A,		S,				D,				F,				G)					HRM_R(H,		J,				K,				L,				SEMI)			&ltr MACR SQT
 //├───────────────┼───────────────┼───────────────┼───────────────┼───────────────┼───────────────┤   ├───────────────┼───────────────┼───────────────┼───────────────┼───────────────┼───────────────┤
 	___				&kp Z			&kp X			&kp C			&kp V			&kp B				&kp N			&kp M			&kp COMMA		&kp DOT			&kp SLASH		___
 //╰───────────────┴───────────────┴───────────────┼───────────────┼───────────────┼───────────────┤   ├───────────────┼───────────────┼───────────────┼───────────────┴───────────────┴───────────────╯
@@ -689,7 +690,7 @@ _name_: macro_##_name_ {					\
 //╭───────────────┬───────────────┬───────────────┬───────────────┬───────────────┬───────────────╮   ╭───────────────┬───────────────┬───────────────┬───────────────┬───────────────┬───────────────╮
 	___				&kp QMARK		&kp EXCL		&kp MINUS		&kp BSLH		&kp AT				&kp HASH		&kp PRCNT		&kp PLUS		&kp EQUAL		&kp GRAVE		___
 //├───────────────┼───────────────┼───────────────┼───────────────┼───────────────┼───────────────┤   ├───────────────┼───────────────┼───────────────┼───────────────┼───────────────┼───────────────┤
-	&kp DQT			HRM_L(LT,		LBKT,			LBRC,			RS(N9))			&kp SPACE			&kp DOLLAR		HRM_R(LS(N0),	RBRC,			RBKT,			GT)				&kp SQT
+	&kp DQT			HRM_L(LT,		LBKT,			LBRC,			RS(N9),			SPACE)				HRM_R(DOLLAR,	LS(N0),			RBRC,			RBKT,			GT)				&kp SQT
 //├───────────────┼───────────────┼───────────────┼───────────────┼───────────────┼───────────────┤   ├───────────────┼───────────────┼───────────────┼───────────────┼───────────────┼───────────────┤
 	&kp COMMA		&larr			&kp TILDE		&kp CARET		&kp FSLH		&kp SEMI			&kp COLON		&kp STAR		&kp PIPE		&kp AMPS		&rarr			&kp DOT
 //╰───────────────┴───────────────┴───────────────┼───────────────┼───────────────┼───────────────┤   ├───────────────┼───────────────┼───────────────┼───────────────┴───────────────┴───────────────╯

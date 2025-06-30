@@ -615,9 +615,6 @@ _name_: macro_##_name_ {					\
 		*/
 		symc_1 {
 			if-layers = <NUM SYM>;
-			then-layer = <SYMC>;
-		};
-		symc_2 {
 			if-layers = <MACR SYM>;
 			then-layer = <SYMC>;
 		};

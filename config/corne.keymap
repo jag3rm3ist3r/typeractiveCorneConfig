@@ -461,6 +461,12 @@ hmr_##_name_: home_row_mod_right_##_name_ {					\
 		MOD_MORPH_GENERIC(mm_transF12, &trans, &kp F12)
 		//MOD_MORPH_GENERIC(mm_transF12, &kp BSPC, &kp F12)
 
+		MOD_MORPH_GENERIC(mm_bt0, &bt BT_SEL 0, &bt BT_DISC 0)
+		MOD_MORPH_GENERIC(mm_bt1, &bt BT_SEL 1, &bt BT_DISC 1)
+		MOD_MORPH_GENERIC(mm_bt2, &bt BT_SEL 2, &bt BT_DISC 2)
+		MOD_MORPH_GENERIC(mm_bt3, &bt BT_SEL 3, &bt BT_DISC 3)
+		MOD_MORPH_GENERIC(mm_bt4, &bt BT_SEL 4, &bt BT_DISC 4)
+
 		// Mod morph for nullptr / NULL macros
 		MOD_MORPH_GENERIC(np, &null_pointer, &null_capitals)
 
@@ -741,7 +747,7 @@ _name_: macro_##_name_ {					\
 //╭───────────────┬───────────────┬───────────────┬───────────────┬───────────────┬───────────────╮   ╭───────────────┬───────────────┬───────────────┬───────────────┬───────────────┬───────────────╮
 	&kp F1			&kp F2			&kp F3			&kp F4			&kp F5			&kp F6				&kp F7			&kp F8			&kp F9			&kp F10			&kp F11			&kp F12
 //├───────────────┼───────────────┼───────────────┼───────────────┼───────────────┼───────────────┤   ├───────────────┼───────────────┼───────────────┼───────────────┼───────────────┼───────────────┤
-	___				&kt HRM_L1		&kt HRM_L2		&kt HRM_L3		&kt HRM_L4		&kt HRM_L5			&bt BT_SEL 0	&bt BT_SEL 1	&bt BT_SEL 2	&bt BT_SEL 3	&bt BT_SEL 4	___
+	___				&kt HRM_L1		&kt HRM_L2		&kt HRM_L3		&kt HRM_L4		&kt HRM_L5			&mm_bt0			&mm_bt1			&mm_bt2			&mm_bt3			&mm_bt4			___
 //├───────────────┼───────────────┼───────────────┼───────────────┼───────────────┼───────────────┤   ├───────────────┼───────────────┼───────────────┼───────────────┼───────────────┼───────────────┤
 	___				___				___				___				___				&clr_mod			&tog QWER		&kp C_MUTE		&kp C_VOL_DN	&kp C_VOL_UP	&kp C_PP		___
 //╰───────────────┴───────────────┴───────────────┼───────────────┼───────────────┼───────────────┤   ├───────────────┼───────────────┼───────────────┼───────────────┴───────────────┴───────────────╯

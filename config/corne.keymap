@@ -536,23 +536,25 @@ _name_: macro_##_name_ {					\
 		// =>
 		MACRO(rearr, &kp EQUAL &kp GT)
 		// True
-		MACRO( m_true, &kp T &kp R &kp U &kp E)
+		MACRO(m_true, &kp T &kp R &kp U &kp E)
 		// False
-		MACRO( m_false, &kp F &kp A &kp L &kp S &kp E)
+		MACRO(m_false, &kp F &kp A &kp L &kp S &kp E)
 		// nullptr
-		MACRO( null_pointer, &kp N &kp U &kp L &kp L &kp P &kp T &kp R)
+		MACRO(null_pointer, &kp N &kp U &kp L &kp L &kp P &kp T &kp R)
 		// NULL
 		MACRO(null_capitals, &kp LS(N) &kp LS(U) &kp LS(L) &kp LS(L))
 		// #include
-		MACRO( hash_include, &kp HASH &kp I &kp N &kp C &kp L &kp U &kp D &kp E)
+		MACRO(hash_include, &kp HASH &kp I &kp N &kp C &kp L &kp U &kp D &kp E)
 		// #define
-		MACRO( hash_define, &kp HASH &kp D &kp E &kp F &kp I &kp N &kp E)
+		MACRO(hash_define, &kp HASH &kp D &kp E &kp F &kp I &kp N &kp E)
 		// Shebang : #!/
-		MACRO( shebang, &kp HASH &kp EXCL &kp SLASH)
+		MACRO(shebang, &kp HASH &kp EXCL &kp SLASH)
 		// Print email address
 		MACRO(email, &kp J &kp A &kp G &kp E &kp R &kp DOT &kp M &kp H &kp AT &kp G &kp M &kp A &kp I &kp L &kp DOT &kp C &kp O &kp M)
 		// sizeof
-		MACRO(sizeof_oper, &kp S &kp I &kp Z &kp E &kp O &kp F)
+		MACRO(sizeof_kw, &kp S &kp I &kp Z &kp E &kp O &kp F)
+		// const
+		MACRO(const_kw, &kp C &kp O &kp N &kp S &kp T)
 
 		clr_mod: clear_mods {
 			compatible = "zmk,behavior-macro";
@@ -718,11 +720,11 @@ _name_: macro_##_name_ {					\
 //╭───────────────┬───────────────┬───────────────┬───────────────┬───────────────┬───────────────╮   ╭───────────────┬───────────────┬───────────────┬───────────────┬───────────────┬───────────────╮
 	___				&kp QMARK		&kp EXCL		&kp MINUS		&kp BSLH		&kp AT				&kp HASH		&kp PRCNT		&kp PLUS		&kp EQUAL		&kp GRAVE		___
 //├───────────────┼───────────────┼───────────────┼───────────────┼───────────────┼───────────────┤   ├───────────────┼───────────────┼───────────────┼───────────────┼───────────────┼───────────────┤
-	&larr			HRM_L(N0,		N0,				N0,				N0,				N0)					(DOLLAR,	LS(N0),			RBRC,			RBKT,			GT)				&rarr
+	&larr			HRM_L(N2,		N3,				N4,				N5,				SEMI)				HRM_R(COLON,	N6,				N7,				N8,				N9)				&rarr
 //├───────────────┼───────────────┼───────────────┼───────────────┼───────────────┼───────────────┤   ├───────────────┼───────────────┼───────────────┼───────────────┼───────────────┼───────────────┤
-	&kp DQT			&kp COMMA		&kp TILDE		&kp CARET		&kp FSLH		&kp SEMI			&kp COLON		&kp STAR		&kp PIPE		&kp AMPS		&kp DOT			&kp SQT
+	&kp DQT			&kp COMMA		&kp TILDE		&kp CARET		&kp FSLH		&kp UNDER			&kp DOLLAR		&kp STAR		&kp PIPE		&kp AMPS		&kp DOT			&kp SQT
 //╰───────────────┴───────────────┴───────────────┼───────────────┼───────────────┼───────────────┤   ├───────────────┼───────────────┼───────────────┼───────────────┴───────────────┴───────────────╯
-													___				___				___					&EN0			___				___
+													___				___				___					___				___				___
 //                                                ╰───────────────┴───────────────┴───────────────╯   ╰───────────────┴───────────────┴───────────────╯
 			>;
 		};
@@ -733,9 +735,9 @@ _name_: macro_##_name_ {					\
 //╭───────────────┬───────────────┬───────────────┬───────────────┬───────────────┬───────────────╮   ╭───────────────┬───────────────┬───────────────┬───────────────┬───────────────┬───────────────╮
 	___				&kp QMARK		&kp EXCL		&kp MINUS		&kp BSLH		&kp AT				&kp HASH		&kp PRCNT		&kp PLUS		&kp EQUAL		&kp GRAVE		___
 //├───────────────┼───────────────┼───────────────┼───────────────┼───────────────┼───────────────┤   ├───────────────┼───────────────┼───────────────┼───────────────┼───────────────┼───────────────┤
-	&larr			HRM_L(LT,		LBKT,			LBRC,			RS(N9),			SPACE)				HRM_R(DOLLAR,	LS(N0),			RBRC,			RBKT,			GT)				&rarr
+	&larr			HRM_L(LT,		LBKT,			LBRC,			RS(N9),			SEMI)				HRM_R(COLON,	LS(N0),			RBRC,			RBKT,			GT)				&rarr
 //├───────────────┼───────────────┼───────────────┼───────────────┼───────────────┼───────────────┤   ├───────────────┼───────────────┼───────────────┼───────────────┼───────────────┼───────────────┤
-	&kp DQT			&kp COMMA		&kp TILDE		&kp CARET		&kp FSLH		&kp SEMI			&kp COLON		&kp STAR		&kp PIPE		&kp AMPS		&kp DOT			&kp SQT
+	&kp DQT			&kp COMMA		&kp TILDE		&kp CARET		&kp FSLH		&kp UNDER			&kp DOLLAR		&kp STAR		&kp PIPE		&kp AMPS		&kp DOT			&kp SQT
 //╰───────────────┴───────────────┴───────────────┼───────────────┼───────────────┼───────────────┤   ├───────────────┼───────────────┼───────────────┼───────────────┴───────────────┴───────────────╯
 													___				___				___					___				___				___
 //                                                ╰───────────────┴───────────────┴───────────────╯   ╰───────────────┴───────────────┴───────────────╯
@@ -748,9 +750,9 @@ _name_: macro_##_name_ {					\
 //╭───────────────┬───────────────┬───────────────┬───────────────┬───────────────┬───────────────╮   ╭───────────────┬───────────────┬───────────────┬───────────────┬───────────────┬───────────────╮
 	___				XXX				XXX				&m_false		XXX				&email				&shebang		XXX				XXX				XXX				XXX				___
 //├───────────────┼───────────────┼───────────────┼───────────────┼───────────────┼───────────────┤   ├───────────────┼───────────────┼───────────────┼───────────────┼───────────────┼───────────────┤
-	___				XXX				XXX				&sizeof_oper	&m_true			XXX					XXX				&np				XXX				&hash_include	XXX				___
+	___				XXX				XXX				&sizeof_kw		&m_true			XXX					XXX				&np				XXX				&hash_include	XXX				___
 //├───────────────┼───────────────┼───────────────┼───────────────┼───────────────┼───────────────┤   ├───────────────┼───────────────┼───────────────┼───────────────┼───────────────┼───────────────┤
-	___				XXX				XXX				XXX				&hash_define	XXX					XXX				XXX				XXX				XXX				XXX				___
+	___				XXX				XXX				&const_kw		&hash_define	XXX					XXX				XXX				XXX				XXX				XXX				___
 //╰───────────────┴───────────────┴───────────────┼───────────────┼───────────────┼───────────────┤   ├───────────────┼───────────────┼───────────────┼───────────────┴───────────────┴───────────────╯
 													___				___				___					___				___				___
 //                                                ╰───────────────┴───────────────┴───────────────╯   ╰───────────────┴───────────────┴───────────────╯
@@ -763,9 +765,9 @@ _name_: macro_##_name_ {					\
 //╭───────────────┬───────────────┬───────────────┬───────────────┬───────────────┬───────────────╮   ╭───────────────┬───────────────┬───────────────┬───────────────┬───────────────┬───────────────╮
 	___				&nc_oper		&aeq EXCL		&aeq MINUS		&aeq BSLH		&aeq AT				&aeq HASH		&aeq PRCNT		&aeq PLUS		&aeq EQUAL		&aeq GRAVE		___
 //├───────────────┼───────────────┼───────────────┼───────────────┼───────────────┼───────────────┤   ├───────────────┼───────────────┼───────────────┼───────────────┼───────────────┼───────────────┤
-	&learr			&aeq LT			&kp LBKT		&kp LBRC		&kp RS(N9)		&aeq SPACE			&aeq DOLLAR		&kp LS(N0)		&kp RBRC		&kp RBKT		&aeq GT			&rearr
+	&learr			&aeq LT			&kp LBKT		&kp LBRC		&kp RS(N9)		&aeq SEMI			&aeq COLON		&kp LS(N0)		&kp RBRC		&kp RBKT		&aeq GT			&rearr
 //├───────────────┼───────────────┼───────────────┼───────────────┼───────────────┼───────────────┤   ├───────────────┼───────────────┼───────────────┼───────────────┼───────────────┼───────────────┤
-	&aeq DQT		&aeq COMMA		&aeq TILDE		&aeq CARET		&aeq FSLH		&aeq SEMI			&aeq COLON		&aeq STAR		&aeq PIPE		&aeq AMPS		&aeq DOT		&aeq SQT
+	&aeq DQT		&aeq COMMA		&aeq TILDE		&aeq CARET		&aeq FSLH		&aeq UNDER			&aeq DOLLAR		&aeq STAR		&aeq PIPE		&aeq AMPS		&aeq DOT		&aeq SQT
 //╰───────────────┴───────────────┴───────────────┼───────────────┼───────────────┼───────────────┤   ├───────────────┼───────────────┼───────────────┼───────────────┴───────────────┴───────────────╯
 													___				___				___					___				___				___
 //                                                ╰───────────────┴───────────────┴───────────────╯   ╰───────────────┴───────────────┴───────────────╯

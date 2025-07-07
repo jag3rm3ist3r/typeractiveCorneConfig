@@ -339,7 +339,7 @@ hmr_##_name_: home_row_mod_right_##_name_ {					\
 				max-prior-idle-ms = <MAX_PRIOR_IDLE_MS>;
 				strict-modifiers;
 			};
-			// KN single finger bigram
+			// Single finger bigram prevention.
 			kn_bigram {
 				trigger-keys = <K>;
 				bindings = <&kp N>;

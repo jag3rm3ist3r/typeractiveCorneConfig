@@ -346,12 +346,14 @@ hmr_##_name_: home_row_mod_right_##_name_ {					\
 				max-prior-idle-ms = <MAX_PRIOR_IDLE_MS>;
 				strict-modifiers;
 			};
+			/*
 			nk_bigram {
 				trigger-keys = <N>;
 				bindings = <&kp K>;
 				max-prior-idle-ms = <MAX_PRIOR_IDLE_MS>;
 				strict-modifiers;
 			};
+			*/
 			qu_bigram {
 				trigger-keys = <Q>;
 				bindings = <&kp U>;

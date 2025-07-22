@@ -455,7 +455,7 @@ hmr_##_name_: home_row_mod_right_##_name_ {					\
 			bindings = <&adap_shift LSHFT TAB>, <&kp V>;
 			keep-mods = <(MOD_LCTL|MOD_RCTL|MOD_LGUI|MOD_RGUI)>;
 			mods = <(MOD_LCTL|MOD_RCTL|MOD_LGUI|MOD_RGUI)>;
-		}
+		};
 		magic: magic_shift_key {
 			compatible = "zmk,behavior-mod-morph";
 			#binding-cells = <0>;
@@ -469,14 +469,14 @@ hmr_##_name_: home_row_mod_right_##_name_ {					\
 			bindings = <&ltt FN_LB MINUS>, <&kp C>;
 			keep-mods = <(MOD_LCTL|MOD_RCTL|MOD_LGUI|MOD_RGUI)>;
 			mods = <(MOD_LCTL|MOD_RCTL|MOD_LGUI|MOD_RGUI)>;
-		}
+		};
 		mm_enter_x: mod_morph_enter_x {
 			compatible = "zmk,behavior-mod-morph";
 			#binding-cells = <0>;
 			bindings = <&kp RET>, <&kp X>;
 			keep-mods = <(MOD_LALT|MOD_RALT)>;
 			mods = <(MOD_LALT|MOD_RALT)>;
-		}
+		};
 
 		// , / ;
 		MOD_MORPH_GENERIC(c_scln, &kp COMMA, &kp SEMI)

@@ -619,7 +619,7 @@ _name_: macro_##_name_ {					\
 		// 16
 		MACRO(b16, &kp N1 &kp N6)
 		// Triple click
-		MACRO(triple_click, &mkp LCLK, &mkp LCLK, &mkp LCLK)
+		MACRO(triple_click, &mkp LCLK &mkp LCLK &mkp LCLK)
 
 
 		clr_mod: clear_mods {

@@ -8,11 +8,9 @@
 #include <dt-bindings/zmk/bt.h>
 
 // Mouse keys
-/*
 #include <dt-bindings/zmk/pointing.h>
 #define ZMK_POINTING_DEFAULT_MOVE_VAL 700  // default: 600
 #define ZMK_POINTING_DEFAULT_SCRL_VAL 10    // default: 10
-*/
 
 #define XXX &none
 #define ___ &trans

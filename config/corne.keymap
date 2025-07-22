@@ -618,6 +618,8 @@ _name_: macro_##_name_ {					\
 		MACRO(b32, &kp N3 &kp N2)
 		// 16
 		MACRO(b16, &kp N1 &kp N6)
+		// Triple click
+		MACRO(triple_click, &mkp LCLK, &mkp LCLK, &mkp LCLK)
 
 
 		clr_mod: clear_mods {
@@ -739,11 +741,11 @@ _name_: macro_##_name_ {					\
 			display-name = "Nav";
 			bindings = <
 //╭───────────────┬───────────────┬───────────────┬───────────────┬───────────────┬───────────────╮   ╭───────────────┬───────────────┬───────────────┬───────────────┬───────────────┬───────────────╮
-	&kp LC(LA(DEL))	&kp LA(F4)		&kp LA(LEFT)	&kp LC(LS(TAB))	&kp LA(RIGHT)	XXX					XXX				XXX				XXX				XXX				XXX				&kp DELETE
+	&kp LC(LA(DEL))	&kp LA(F4)		&mkp LCLK		&mkp MCLK		&mkp RCLK		&triple_click		XXX				XXX				XXX				XXX				XXX				&kp DELETE
 //├───────────────┼───────────────┼───────────────┼───────────────┼───────────────┼───────────────┤   ├───────────────┼───────────────┼───────────────┼───────────────┼───────────────┼───────────────┤
-	___				HRM_L(SPACE,	LG(LC(LEFT)),	LC(TAB),		LG(LC(RIGHT)),	SPACE)				XXX				&kp LEFT		&kp DOWN		&kp UP			&kp RIGHT		___
+	___				HRM_L(SPACE,	LG(LC(LEFT)),	LC(LS(TAB)),	LG(LC(RIGHT)),	SPACE)				XXX				&kp LEFT		&kp DOWN		&kp UP			&kp RIGHT		___
 //├───────────────┼───────────────┼───────────────┼───────────────┼───────────────┼───────────────┤   ├───────────────┼───────────────┼───────────────┼───────────────┼───────────────┼───────────────┤
-	___				XXX				XXX				XXX				XXX				XXX					XXX				&kp HOME		&kp PGDN		&kp PGUP		&kp END			___
+	___				XXX				&kp LA(LEFT)	&kp LC(TAB)		&kp LA(RIGHT)	XXX					XXX				&kp HOME		&kp PGDN		&kp PGUP		&kp END			___
 //╰───────────────┴───────────────┴───────────────┼───────────────┼───────────────┼───────────────┤   ├───────────────┼───────────────┼───────────────┼───────────────┴───────────────┴───────────────╯
 													&kp ESC			___				&kp BACKSPACE		&kp DELETE		___				&kp ENTER
 //                                                ╰───────────────┴───────────────┴───────────────╯   ╰───────────────┴───────────────┴───────────────╯

@@ -168,8 +168,8 @@ RGUI
 #define HRM_LM3 LGUI
 #define HRM_LM2 HRM_M2
 #define HRM_LM1 LCTL
-#define HRM_LM0 HRM_M0
-#define HRM_RM0 HRM_M0
+#define HRM_LM0 LSHFT
+#define HRM_RM0 RSHFT
 #define HRM_RM1 RCTL
 #define HRM_RM2 HRM_M2
 #define HRM_RM3 RGUI

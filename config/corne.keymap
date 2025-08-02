@@ -146,6 +146,74 @@ RCTRL
 RGUI
 
 
+/*
+╭─────────────────────────┬─────────────────────────╮
+│ LT5 LT4 LT3 LT2 LT1 LT0 │ RT0 RT1 RT2 RT3 RT4 RT5 │
+│ LM5 LM4 LM3 LM2 LM1 LM0 │ RM0 RM1 RM2 RM3 RM4 RM5 │
+│ LB5 LB4 LB3 LB2 LB1 LB0 │ RB0 RB1 RB2 RB3 RB4 RB5 │
+╰───────────╮ LH2 LH1 LH0 │ RH0 RH1 RH2 ╭───────────╯
+            ╰─────────────┴─────────────╯
+*/
+
+
+#define HRM_T5 XXX
+#define HRM_T4 XXX
+#define HRM_T3 XXX
+#define HRM_T2 NUM
+#define HRM_T1 XXX
+#define HRM_T0 XXX
+
+#define HRM_M5 XXX
+#define HRM_M4 XXX
+#define HRM_M3 XXX
+#define HRM_M2 SYM
+#define HRM_M1 XXX
+#define HRM_M0 XXX
+
+#define HRM_B5 XXX
+#define HRM_B4 XXX
+#define HRM_B3 XXX
+#define HRM_B2 XXX
+#define HRM_B1 XXX
+#define HRM_B0 XXX
+
+
+#define HRM_LT5 HRM_T5
+#define HRM_LT4 HRM_T4
+#define HRM_LT3 HRM_T3
+#define HRM_LT2 HRM_T2
+#define HRM_LT1 HRM_T1
+#define HRM_LT0 HRM_T0
+#define HRM_RT0 HRM_T0
+#define HRM_RT1 HRM_T1
+#define HRM_RT2 HRM_T2
+#define HRM_RT3 HRM_T3
+#define HRM_RT4 HRM_T4
+#define HRM_RT5 HRM_T5
+#define HRM_LM5 HRM_M5
+#define HRM_LM4 LALT
+#define HRM_LM3 LGUI
+#define HRM_LM2 HRM_M2
+#define HRM_LM1 LCTL
+#define HRM_LM0 HRM_M0
+#define HRM_RM0 HRM_M0
+#define HRM_RM1 RCTL
+#define HRM_RM2 HRM_M2
+#define HRM_RM3 RGUI
+#define HRM_RM4 RALT
+#define HRM_RM5 HRM_M5
+#define HRM_LB5 HRM_B5
+#define HRM_LB4 HRM_B4
+#define HRM_LB3 HRM_B3
+#define HRM_LB2 HRM_B2
+#define HRM_LB1 HRM_B1
+#define HRM_LB0 HRM_B0
+#define HRM_RB0 HRM_B0
+#define HRM_RB1 HRM_B1
+#define HRM_RB2 HRM_B2
+#define HRM_RB3 HRM_B3
+#define HRM_RB4 HRM_B4
+#define HRM_RB5 HRM_B5
 
 // Implement HRM order
 /*
@@ -163,14 +231,14 @@ RGUI
 	&hmr HRM_R4 _four_
 */
 // Left
-#define HRM_L(_one_, _two_, _three_, _four_, _five_)	\
+#define HRM_LM(_one_, _two_, _three_, _four_, _five_)	\
 	&hml	HRM_L1 _one_						\
 	&hml	HRM_L2 _two_						\
 	&hml_mo	HRM_L3 _three_						\
 	&hml	HRM_L4 _four_						\
 	&hml	HRM_L5 _five_
 // Right
-#define HRM_R(_one_, _two_, _three_, _four_, _five_)	\
+#define HRM_RM(_one_, _two_, _three_, _four_, _five_)	\
 	&hmr	HRM_R1 _one_						\
 	&hmr	HRM_R2 _two_						\
 	&hmr_mo	HRM_R3 _three_						\
@@ -708,9 +776,9 @@ _name_: macro_##_name_ {					\
 			display-name = "Base";
 			bindings = <
 //╭───────────────┬───────────────┬───────────────┬───────────────┬───────────────┬───────────────╮   ╭───────────────┬───────────────┬───────────────┬───────────────┬───────────────┬───────────────╮
-	&kp DELETE		&kp Q			&kp W			&hml_mo NUM F	&kp P			&kp B				&kp J			&kp L			&hmr_mo NUM U	&kp Y			&qmb			&kp BACKSPACE
+	&kp DELETE		&kp Q			&kp W		&hml_mo HRM_LT2 F	&kp P			&kp B				&kp J			&kp L		&hmr_mo HRM_RT2 U	&kp Y			&qmb			&kp BACKSPACE
 //├───────────────┼───────────────┼───────────────┼───────────────┼───────────────┼───────────────┤   ├───────────────┼───────────────┼───────────────┼───────────────┼───────────────┼───────────────┤
-	&mo FN_LT		HRM_L(A,		R,				S,				T,				G)					HRM_R(M,		N,				E,				I,				O)				&mo FN_RT
+	&mo FN_LT		HRM_LM(A,		R,				S,				T,				G)					HRM_RM(M,		N,				E,				I,				O)				&mo FN_RT
 //├───────────────┼───────────────┼───────────────┼───────────────┼───────────────┼───────────────┤   ├───────────────┼───────────────┼───────────────┼───────────────┼───────────────┼───────────────┤
 	&ss LSHFT 0		&kp Z			&kp X			&kp C			&kp D			&kp V				&kp K			&kp H			&c_scln			&dot_cln		&kp SQT			&kp CAPS
 //╰───────────────┴───────────────┴───────────────┼───────────────┼───────────────┼───────────────┤   ├───────────────┼───────────────┼───────────────┼───────────────┴───────────────┴───────────────╯
@@ -725,7 +793,7 @@ _name_: macro_##_name_ {					\
 //╭───────────────┬───────────────┬───────────────┬───────────────┬───────────────┬───────────────╮   ╭───────────────┬───────────────┬───────────────┬───────────────┬───────────────┬───────────────╮
 	___				&kp Q			&kp W			&hml_mo NUM E	&kp R			&kp T				&kp Y			&kp U			&hmr_mo NUM I	&kp O			&kp P			___
 //├───────────────┼───────────────┼───────────────┼───────────────┼───────────────┼───────────────┤   ├───────────────┼───────────────┼───────────────┼───────────────┼───────────────┼───────────────┤
-	___				HRM_L(A,		S,				D,				F,				G)					HRM_R(H,		J,				K,				L,				SEMI)			&ltr FN_RT SQT
+	___				HRM_LM(A,		S,				D,				F,				G)					HRM_RM(H,		J,				K,				L,				SEMI)			&ltr FN_RT SQT
 //├───────────────┼───────────────┼───────────────┼───────────────┼───────────────┼───────────────┤   ├───────────────┼───────────────┼───────────────┼───────────────┼───────────────┼───────────────┤
 	___				&kp Z			&kp X			&kp C			&kp V			&kp B				&kp N			&kp M			&kp COMMA		&kp DOT			&kp SLASH		___
 //╰───────────────┴───────────────┴───────────────┼───────────────┼───────────────┼───────────────┤   ├───────────────┼───────────────┼───────────────┼───────────────┴───────────────┴───────────────╯
@@ -740,7 +808,7 @@ _name_: macro_##_name_ {					\
 //╭───────────────┬───────────────┬───────────────┬───────────────┬───────────────┬───────────────╮   ╭───────────────┬───────────────┬───────────────┬───────────────┬───────────────┬───────────────╮
 	&kp LC(LA(DEL))	&kp LA(F4)		&mkp RCLK		&mkp MCLK		&mkp LCLK		&triple_click		XXX				XXX				XXX				XXX				XXX				&kp DELETE
 //├───────────────┼───────────────┼───────────────┼───────────────┼───────────────┼───────────────┤   ├───────────────┼───────────────┼───────────────┼───────────────┼───────────────┼───────────────┤
-	___				HRM_L(LG(TAB),	LG(LC(LEFT)),	LC(LS(TAB)),	LG(LC(RIGHT)),	SPACE)				XXX				&kp LEFT		&kp DOWN		&kp UP			&kp RIGHT		___
+	___				HRM_LM(LG(TAB),	LG(LC(LEFT)),	LC(LS(TAB)),	LG(LC(RIGHT)),	SPACE)				XXX				&kp LEFT		&kp DOWN		&kp UP			&kp RIGHT		___
 //├───────────────┼───────────────┼───────────────┼───────────────┼───────────────┼───────────────┤   ├───────────────┼───────────────┼───────────────┼───────────────┼───────────────┼───────────────┤
 	___				XXX				&kp LA(LEFT)	&kp LC(TAB)		&kp LA(RIGHT)	XXX					XXX				&kp HOME		&kp PGDN		&kp PGUP		&kp END			___
 //╰───────────────┴───────────────┴───────────────┼───────────────┼───────────────┼───────────────┤   ├───────────────┼───────────────┼───────────────┼───────────────┴───────────────┴───────────────╯
@@ -755,7 +823,7 @@ _name_: macro_##_name_ {					\
 //╭───────────────┬───────────────┬───────────────┬───────────────┬───────────────┬───────────────╮   ╭───────────────┬───────────────┬───────────────┬───────────────┬───────────────┬───────────────╮
 	___				&triple_zero	&kp N7			&hml_mo NUM N8	&kp N9			XXX					XXX				&kp N7			&hmr_mo NUM N8	&kp N9			&triple_zero	___
 //├───────────────┼───────────────┼───────────────┼───────────────┼───────────────┼───────────────┤   ├───────────────┼───────────────┼───────────────┼───────────────┼───────────────┼───────────────┤
-	___				HRM_L(N0,		N4,				N5,				N6,				N0)					HRM_R(N0,		N4,				N5,				N6,				N0)				___
+	___				HRM_LM(N0,		N4,				N5,				N6,				N0)					HRM_RM(N0,		N4,				N5,				N6,				N0)				___
 //├───────────────┼───────────────┼───────────────┼───────────────┼───────────────┼───────────────┤   ├───────────────┼───────────────┼───────────────┼───────────────┼───────────────┼───────────────┤
 	___				&kp N0			&kp N1			&kp N2			&kp N3			XXX					XXX				&kp N1			&kp N2			&kp N3			&kp N0			___
 //╰───────────────┴───────────────┴───────────────┼───────────────┼───────────────┼───────────────┤   ├───────────────┼───────────────┼───────────────┼───────────────┴───────────────┴───────────────╯
@@ -770,7 +838,7 @@ _name_: macro_##_name_ {					\
 //╭───────────────┬───────────────┬───────────────┬───────────────┬───────────────┬───────────────╮   ╭───────────────┬───────────────┬───────────────┬───────────────┬───────────────┬───────────────╮
 	___				&kp QMARK		&kp EXCL		&hml_mo NUM MINUS	&kp BSLH	&kp AT				&kp HASH		&kp PRCNT		&hmr_mo NUM PLUS	&kp EQUAL	&kp GRAVE		___
 //├───────────────┼───────────────┼───────────────┼───────────────┼───────────────┼───────────────┤   ├───────────────┼───────────────┼───────────────┼───────────────┼───────────────┼───────────────┤
-	&larr			HRM_L(LT,		LBKT,			LBRC,			RS(N9),			SEMI)				HRM_R(COLON,	LS(N0),			RBRC,			RBKT,			GT)				&rarr
+	&larr			HRM_LM(LT,		LBKT,			LBRC,			RS(N9),			SEMI)				HRM_RM(COLON,	LS(N0),			RBRC,			RBKT,			GT)				&rarr
 //├───────────────┼───────────────┼───────────────┼───────────────┼───────────────┼───────────────┤   ├───────────────┼───────────────┼───────────────┼───────────────┼───────────────┼───────────────┤
 	&kp DQT			&kp COMMA		&kp TILDE		&kp CARET		&kp FSLH		&kp UNDER			&kp DOLLAR		&kp STAR		&kp PIPE		&kp AMPS		&kp DOT			&kp SQT
 //╰───────────────┴───────────────┴───────────────┼───────────────┼───────────────┼───────────────┤   ├───────────────┼───────────────┼───────────────┼───────────────┴───────────────┴───────────────╯

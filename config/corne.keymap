@@ -115,35 +115,8 @@ RGUI
 */
 
 /*
- * Gui and Control are on the left so you can hit shortcuts with your left hand while using the mouse.
  * Symbols layer is bound to middle finger because that allows you to hit }; with the current position of ; on the symbols layer.
- * Alt is on the index finger because it's the least common to use with one hand.
- * Sadly this means that some of the more common mods are on the less strong fingers.
  */
-// GCmAS
-// Left
-#define HRM_L1 \
-LGUI
-#define HRM_L2 \
-LCTRL
-#define HRM_L3 \
-SYM
-#define HRM_L4 \
-LALT
-#define HRM_L5 \
-LSHFT
-
-// Right
-#define HRM_R1 \
-RSHIFT
-#define HRM_R2 \
-RALT
-#define HRM_R3 \
-SYM
-#define HRM_R4 \
-RCTRL
-#define HRM_R5 \
-RGUI
 
 
 /*
@@ -232,18 +205,18 @@ RGUI
 */
 // Left
 #define HRM_LM(_one_, _two_, _three_, _four_, _five_)	\
-	&hml	HRM_L1 _one_						\
-	&hml	HRM_L2 _two_						\
-	&hml_mo	HRM_L3 _three_						\
-	&hml	HRM_L4 _four_						\
-	&hml	HRM_L5 _five_
+	&hml	HRM_LM1 _one_						\
+	&hml	HRM_LM2 _two_						\
+	&hml_mo	HRM_LM3 _three_						\
+	&hml	HRM_LM4 _four_						\
+	&hml	HRM_LM5 _five_
 // Right
 #define HRM_RM(_one_, _two_, _three_, _four_, _five_)	\
-	&hmr	HRM_R1 _one_						\
-	&hmr	HRM_R2 _two_						\
-	&hmr_mo	HRM_R3 _three_						\
-	&hmr	HRM_R4 _four_						\
-	&hmr	HRM_R5 _five_
+	&hmr	HRM_RM1 _one_						\
+	&hmr	HRM_RM2 _two_						\
+	&hmr_mo	HRM_RM3 _three_						\
+	&hmr	HRM_RM4 _four_						\
+	&hmr	HRM_RM5 _five_
 
 
 // Num left | macr right : So that I can hold shift on macros.

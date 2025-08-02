@@ -512,9 +512,16 @@ hmr_##_name_: home_row_mod_right_##_name_ {					\
 		mm_enter_x: mod_morph_enter_x {
 			compatible = "zmk,behavior-mod-morph";
 			#binding-cells = <0>;
-			bindings = <&kp RET>, <&kp X>;
+			bindings = <&mm_enter_Ss>, <&kp X>;
 			keep-mods = <(MOD_LCTL|MOD_RCTL|MOD_LGUI|MOD_RGUI)>;
-			mods = <(MOD_LCTL|MOD_RCTL|MOD_LGUI|MOD_RGUI)>;
+			mods = <(MOD_LCTL|MOD_RCTL)>;
+		};
+		mm_enter_Ss: mod_morph_enter_win_shift_s {
+			compatible = "zmk,behavior-mod-morph";
+			#binding-cells = <0>;
+			bindings = <&kp RET>, <&kp LS(S)>;
+			keep-mods = <(MOD_LGUI|MOD_RGUI)>;
+			mods = <(MOD_LGUI|MOD_RGUI)>;
 		};
 
 		// , / ;

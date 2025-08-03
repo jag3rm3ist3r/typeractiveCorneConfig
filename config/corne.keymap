@@ -205,7 +205,7 @@ RGUI
 */
 // Left
 #define HRM_LM(_one_, _two_, _three_, _four_, _five_)	\
-	&hml	HRM_LM4 _one_						\
+	&hml_mo	HRM_LM4 _one_						\
 	&hml	HRM_LM3 _two_						\
 	&hml_mo	HRM_LM2 _three_						\
 	&hml	HRM_LM1 _four_						\
@@ -216,7 +216,7 @@ RGUI
 	&hmr	HRM_RM1 _two_						\
 	&hmr_mo	HRM_RM2 _three_						\
 	&hmr	HRM_RM3 _four_						\
-	&hmr	HRM_RM4 _five_
+	&hmr_mo	HRM_RM4 _five_
 
 
 // Num left | macr right : So that I can hold shift on macros.
@@ -756,7 +756,7 @@ _name_: macro_##_name_ {					\
 			display-name = "Base";
 			bindings = <
 //╭───────────────┬───────────────┬───────────────┬───────────────┬───────────────┬───────────────╮   ╭───────────────┬───────────────┬───────────────┬───────────────┬───────────────┬───────────────╮
-	&kp DELETE		&kp Q			&kp W		&hml_mo HRM_LT2 F	&kp P			&kp B				&kp J			&kp L		&hmr_mo HRM_RT2 U	&kp Y			&qmb			&kp BACKSPACE
+	&kp DELETE		&kp Q			&kp W			&hml HRM_LT2 F	&kp P			&kp B				&kp J			&kp L			&hmr HRM_RT2 U	&kp Y			&qmb			&kp BACKSPACE
 //├───────────────┼───────────────┼───────────────┼───────────────┼───────────────┼───────────────┤   ├───────────────┼───────────────┼───────────────┼───────────────┼───────────────┼───────────────┤
 	&mo FN_LT		HRM_LM(A,		R,				S,				T,				G)					HRM_RM(M,		N,				E,				I,				O)				&mo FN_RT
 //├───────────────┼───────────────┼───────────────┼───────────────┼───────────────┼───────────────┤   ├───────────────┼───────────────┼───────────────┼───────────────┼───────────────┼───────────────┤

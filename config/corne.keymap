@@ -139,7 +139,7 @@ RGUI
 #define HRM_M5 XXX
 #define HRM_M4 NUM
 #define HRM_M3 XXX
-#define HRM_M2 XXX
+#define HRM_M2 SYM
 #define HRM_M1 XXX
 #define HRM_M0 XXX
 

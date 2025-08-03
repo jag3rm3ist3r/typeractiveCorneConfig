@@ -120,26 +120,26 @@ RGUI
 
 
 /*
-╭─────────────────────────┬─────────────────────────╮
-│ LT5 LT4 LT3 LT2 LT1 LT0 │ RT0 RT1 RT2 RT3 RT4 RT5 │
-│ LM5 LM4 LM3 LM2 LM1 LM0 │ RM0 RM1 RM2 RM3 RM4 RM5 │
-│ LB5 LB4 LB3 LB2 LB1 LB0 │ RB0 RB1 RB2 RB3 RB4 RB5 │
-╰───────────╮ LH2 LH1 LH0 │ RH0 RH1 RH2 ╭───────────╯
-            ╰─────────────┴─────────────╯
+╭─────────────────────────────────────────────────┬─────────────────────────────────────────────────╮
+│ HRM_LT5 HRM_LT4 HRM_LT3 HRM_LT2 HRM_LT1 HRM_LT0 │ HRM_RT0 HRM_RT1 HRM_RT2 HRM_RT3 HRM_RT4 HRM_RT5 │
+│ HRM_LM5 HRM_LM4 HRM_LM3 HRM_LM2 HRM_LM1 HRM_LM0 │ HRM_RM0 HRM_RM1 HRM_RM2 HRM_RM3 HRM_RM4 HRM_RM5 │
+│ HRM_LB5 HRM_LB4 HRM_LB3 HRM_LB2 HRM_LB1 HRM_LB0 │ HRM_RB0 HRM_RB1 HRM_RB2 HRM_RB3 HRM_RB4 HRM_RB5 │
+╰───────────────────────╮ HRM_LH2 HRM_LH1 HRM_LH0 │ HRM_RH0 HRM_RH1 HRM_RH2 ╭───────────────────────╯
+                        ╰─────────────────────────┴─────────────────────────╯
 */
 
 
 #define HRM_T5 XXX
 #define HRM_T4 XXX
 #define HRM_T3 XXX
-#define HRM_T2 NUM
+#define HRM_T2 XXX
 #define HRM_T1 XXX
 #define HRM_T0 XXX
 
 #define HRM_M5 XXX
-#define HRM_M4 XXX
+#define HRM_M4 NUM
 #define HRM_M3 XXX
-#define HRM_M2 SYM
+#define HRM_M2 XXX
 #define HRM_M1 XXX
 #define HRM_M0 XXX
 
@@ -154,26 +154,26 @@ RGUI
 #define HRM_LT5 HRM_T5
 #define HRM_LT4 HRM_T4
 #define HRM_LT3 HRM_T3
-#define HRM_LT2 HRM_T2
+#define HRM_LT2 LGUI
 #define HRM_LT1 HRM_T1
 #define HRM_LT0 HRM_T0
 #define HRM_RT0 HRM_T0
 #define HRM_RT1 HRM_T1
-#define HRM_RT2 HRM_T2
+#define HRM_RT2 RGUI
 #define HRM_RT3 HRM_T3
 #define HRM_RT4 HRM_T4
 #define HRM_RT5 HRM_T5
 #define HRM_LM5 HRM_M5
-#define HRM_LM4 LALT
-#define HRM_LM3 LGUI
+#define HRM_LM4 HRM_M4
+#define HRM_LM3 LALT
 #define HRM_LM2 HRM_M2
 #define HRM_LM1 LCTL
 #define HRM_LM0 LSHFT
 #define HRM_RM0 RSHFT
 #define HRM_RM1 RCTL
 #define HRM_RM2 HRM_M2
-#define HRM_RM3 RGUI
-#define HRM_RM4 RALT
+#define HRM_RM3 RALT
+#define HRM_RM4 HRM_M4
 #define HRM_RM5 HRM_M5
 #define HRM_LB5 HRM_B5
 #define HRM_LB4 HRM_B4
@@ -801,11 +801,11 @@ _name_: macro_##_name_ {					\
 			display-name = "Num";
 			bindings = <
 //╭───────────────┬───────────────┬───────────────┬───────────────┬───────────────┬───────────────╮   ╭───────────────┬───────────────┬───────────────┬───────────────┬───────────────┬───────────────╮
-	___				&triple_zero	&kp N7			&hml_mo NUM N8	&kp N9			XXX					XXX				&kp N7			&hmr_mo NUM N8	&kp N9			&triple_zero	___
+	___				&triple_zero	&kp N7			&hml_mo NUM N8	&kp N9			&triple_zero		&triple_zero	&kp N7			&hmr_mo NUM N8	&kp N9			&triple_zero	___
 //├───────────────┼───────────────┼───────────────┼───────────────┼───────────────┼───────────────┤   ├───────────────┼───────────────┼───────────────┼───────────────┼───────────────┼───────────────┤
 	___				HRM_LM(N0,		N4,				N5,				N6,				N0)					HRM_RM(N0,		N4,				N5,				N6,				N0)				___
 //├───────────────┼───────────────┼───────────────┼───────────────┼───────────────┼───────────────┤   ├───────────────┼───────────────┼───────────────┼───────────────┼───────────────┼───────────────┤
-	___				&kp N0			&kp N1			&kp N2			&kp N3			XXX					XXX				&kp N1			&kp N2			&kp N3			&kp N0			___
+	___				&kp N0			&kp N1			&kp N2			&kp N3			&kp N0				&kp N0			&kp N1			&kp N2			&kp N3			&kp N0			___
 //╰───────────────┴───────────────┴───────────────┼───────────────┼───────────────┼───────────────┤   ├───────────────┼───────────────┼───────────────┼───────────────┴───────────────┴───────────────╯
 													___				___				___					___				___				___
 //                                                ╰───────────────┴───────────────┴───────────────╯   ╰───────────────┴───────────────┴───────────────╯

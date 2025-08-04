@@ -382,7 +382,7 @@ hmr_##_name_: home_row_mod_right_##_name_ {					\
 				max-prior-idle-ms = <MAX_PRIOR_IDLE_MS>;
 				strict-modifiers;
 			};
-			/*
+			/* This one was too annoying.
 			nk_bigram {
 				trigger-keys = <N>;
 				bindings = <&kp K>;
@@ -409,6 +409,7 @@ hmr_##_name_: home_row_mod_right_##_name_ {					\
 				strict-modifiers;
 			};
 			// i?_bigram
+			// The I bigram is disabled due to the frequency with which I use the key in VIM to start typing.
 		};
 
 		adap_shift: adaptive_shift {

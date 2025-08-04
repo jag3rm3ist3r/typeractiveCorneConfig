@@ -79,45 +79,8 @@
 
 
 // Define HRM order
-/*
-// SCGA
-// Left
-#define HRM_L1 LSHFT
-#define HRM_L2 LCTRL
-#define HRM_L3 LGUI
-#define HRM_L4 LALT
-// Right
-#define HRM_R1 RALT
-#define HRM_R2 RGUI
-#define HRM_R3 RCTRL
-#define HRM_R4 RSHFT
-*/
-/*
-// GCSA
-// Left
-#define HRM_L1 \
-LGUI
-#define HRM_L2 \
-LCTRL
-#define HRM_L3 \
-LSHFT
-#define HRM_L4 \
-LALT
-// Right
-#define HRM_R1 \
-RALT
-#define HRM_R2 \
-RSHFT
-#define HRM_R3 \
-RCTRL
-#define HRM_R4 \
-RGUI
-*/
 
-/*
- * Symbols layer is bound to middle finger because that allows you to hit }; with the current position of ; on the symbols layer.
- */
-
+// Symbols layer is bound to middle finger because that allows you to hit }; with the current position of ; on the symbols layer.
 
 /*
 ╭─────────────────────────────────────────────────┬─────────────────────────────────────────────────╮
@@ -204,12 +167,13 @@ RGUI
 	&hmr HRM_R4 _four_
 */
 
+
 // Top row
 // Left
 #define HRM_LT(_one_, _two_, _three_, _four_, _five_)	\
 	&kp	_one_						\
 	&kp	_two_						\
-	&hml	HRM_LT2 _three_				\
+	&hml	HRM_LT2 _three_			\
 	&kp	_four_						\
 	&kp	_five_
 // Right
@@ -223,33 +187,33 @@ RGUI
 // Middle row
 // Left
 #define HRM_LM(_one_, _two_, _three_, _four_, _five_)	\
-	&hml_mo	HRM_LM4 _one_						\
-	&hml	HRM_LM3 _two_						\
-	&hml_mo	HRM_LM2 _three_						\
-	&hml	HRM_LM1 _four_						\
+	&hml_mo	HRM_LM4 _one_		\
+	&hml	HRM_LM3 _two_		\
+	&hml_mo	HRM_LM2 _three_		\
+	&hml	HRM_LM1 _four_		\
 	&hml	HRM_LM0 _five_
 // Right
 #define HRM_RM(_one_, _two_, _three_, _four_, _five_)	\
-	&hmr	HRM_RM0 _one_						\
-	&hmr	HRM_RM1 _two_						\
-	&hmr_mo	HRM_RM2 _three_						\
-	&hmr	HRM_RM3 _four_						\
+	&hmr	HRM_RM0 _one_		\
+	&hmr	HRM_RM1 _two_		\
+	&hmr_mo	HRM_RM2 _three_		\
+	&hmr	HRM_RM3 _four_		\
 	&hmr_mo	HRM_RM4 _five_
 
 // Bottom row
 // Left
 #define HRM_LB(_one_, _two_, _three_, _four_, _five_)	\
-	&kp	_one_						\
-	&kp	_two_						\
-	&kp _three_						\
-	&kp	_four_						\
+	&kp	_one_					\
+	&kp	_two_					\
+	&kp _three_					\
+	&kp	_four_					\
 	&kp	_five_
 // Right
 #define HRM_RB(_one_, _two_, _three_, _four_, _five_)	\
-	&kp	_one_						\
-	&kp	_two_						\
-	&kp _three_						\
-	&kp	_four_						\
+	&kp	_one_					\
+	&kp	_two_					\
+	&kp _three_					\
+	&kp	_four_					\
 	&kp	_five_
 
 

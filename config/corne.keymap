@@ -151,22 +151,6 @@
 #define HRM_RB4 HRM_B4
 #define HRM_RB5 HRM_B5
 
-// Implement HRM order
-/*
-// Left
-#define HRM_L(_one_, _two_, _three_, _four_)	\
-	&hml HRM_L1 _one_							\
-	&hml HRM_L2 _two_							\
-	&hml HRM_L3 _three_							\
-	&hml HRM_L4 _four_
-// Right
-#define HRM_R(_one_, _two_, _three_, _four_)	\
-	&hmr HRM_R1 _one_							\
-	&hmr HRM_R2 _two_							\
-	&hmr HRM_R3 _three_							\
-	&hmr HRM_R4 _four_
-*/
-
 
 // Top row
 // Left

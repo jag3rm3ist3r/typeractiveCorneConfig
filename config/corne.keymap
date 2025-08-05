@@ -143,14 +143,14 @@
 #define HRM_LT(_one_, _two_, _three_, _four_, _five_)	\
 	&kp	_one_						\
 	&kp	_two_						\
-	&kp _three_						\
+	&hml_mo HRM_LT2 _three_			\
 	&kp	_four_						\
 	&kp	_five_
 // Right
 #define HRM_RT(_one_, _two_, _three_, _four_, _five_)	\
 	&kp	_one_						\
 	&kp	_two_						\
-	&hmr _three_					\
+	&hmr_mo HRM_RT2 _three_			\
 	&kp	_four_						\
 	&kp	_five_
 

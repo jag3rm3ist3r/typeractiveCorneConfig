@@ -93,6 +93,66 @@
 
 // Make this into a big 2d #define to map things just like the keymap below.
 
+#define HRMDEF_T(_one_, _two_, _three_, _four_, _five_, _six_, _seven_, _eight_, _nine_, _ten_, _eleven_, _twelve_) \
+#define HRM_LT5 XXX \
+#define HRM_LT4 XXX \
+#define HRM_LT3 XXX \
+#define HRM_LT2 XXX \
+#define HRM_LT1 XXX \
+#define HRM_LT0 XXX \
+#define HRM_RT0 XXX \
+#define HRM_RT1 XXX \
+#define HRM_RT2 XXX \
+#define HRM_RT3 XXX \
+#define HRM_RT4 XXX \
+#define HRM_RT5 XXX
+
+#define HRMDEF_M(_one_, _two_, _three_, _four_, _five_, _six_, _seven_, _eight_, _nine_, _ten_, _eleven_, _twelve_) \
+#define HRM_LM5 XXX \
+#define HRM_LM4 XXX \
+#define HRM_LM3 XXX \
+#define HRM_LM2 XXX \
+#define HRM_LM1 XXX \
+#define HRM_LM0 XXX \
+#define HRM_RM0 XXX \
+#define HRM_RM1 XXX \
+#define HRM_RM2 XXX \
+#define HRM_RM3 XXX \
+#define HRM_RM4 XXX \
+#define HRM_RM5 XXX
+
+#define HRMDEF_B(_one_, _two_, _three_, _four_, _five_, _six_, _seven_, _eight_, _nine_, _ten_, _eleven_, _twelve_) \
+#define HRM_LB5 XXX \
+#define HRM_LB4 XXX \
+#define HRM_LB3 XXX \
+#define HRM_LB2 XXX \
+#define HRM_LB1 XXX \
+#define HRM_LB0 XXX \
+#define HRM_RB0 XXX \
+#define HRM_RB1 XXX \
+#define HRM_RB2 XXX \
+#define HRM_RB3 XXX \
+#define HRM_RB4 XXX \
+#define HRM_RB5 XXX
+
+#define HRMDEF_H(_one_, _two_, _three_, _four_, _five_, _six_) \
+#define HRM_LH2 XXX \
+#define HRM_LH1 XXX \
+#define HRM_LH0 XXX \
+#define HRM_RH0 XXX \
+#define HRM_RH1 XXX \
+#define HRM_RH2 XXX
+
+
+//		╭─────────────────────────────────────────────────┬─────────────────────────────────────────────────╮
+//HRMDEF_T(HRM_LT5, HRM_LT4, HRM_LT3, HRM_LT2, HRM_LT1, HRM_LT0, HRM_RT0, HRM_RT1, HRM_RT2, HRM_RT3, HRM_RT4, HRM_RT5)
+//HRMDEF_M(HRM_LM5, HRM_LM4, HRM_LM3, HRM_LM2, HRM_LM1, HRM_LM0, HRM_RM0, HRM_RM1, HRM_RM2, HRM_RM3, HRM_RM4, HRM_RM5)
+//HRMDEF_B(HRM_LB5, HRM_LB4, HRM_LB3, HRM_LB2, HRM_LB1, HRM_LB0, HRM_RB0, HRM_RB1, HRM_RB2, HRM_RB3, HRM_RB4, HRM_RB5)
+//		╰───────────────────────╮													╭───────────────────────╯
+//HRMDEF_H(						HRM_LH2, HRM_LH1, HRM_LH0, HRM_RH0, HRM_RH1, HRM_RH2)
+//								╰─────────────────────────┴─────────────────────────╯
+
+
 #define HRM_T5 XXX
 #define HRM_T4 XXX
 #define HRM_T3 XXX

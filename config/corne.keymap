@@ -96,20 +96,20 @@
 #define HRM_LT5 XXX
 #define HRM_LT4 XXX
 #define HRM_LT3 XXX
-#define HRM_LT2 NUM
+#define HRM_LT2 LGUI
 #define HRM_LT1 XXX
 #define HRM_LT0 XXX
 // Right
 #define HRM_RT0 XXX
 #define HRM_RT1 XXX
-#define HRM_RT2 NUM
+#define HRM_RT2 RGUI
 #define HRM_RT3 XXX
 #define HRM_RT4 XXX
 #define HRM_RT5 XXX
 // Middle
 // Left
 #define HRM_LM5 XXX
-#define HRM_LM4 LGUI
+#define HRM_LM4 NUM
 #define HRM_LM3 LCTL
 #define HRM_LM2 SYM
 #define HRM_LM1 LALT
@@ -119,7 +119,7 @@
 #define HRM_RM1 RALT
 #define HRM_RM2 SYM
 #define HRM_RM3 RCTL
-#define HRM_RM4 RGUI
+#define HRM_RM4 NUM
 #define HRM_RM5 XXX
 // Bottom
 // Left
@@ -143,21 +143,21 @@
 #define HRM_LT(_one_, _two_, _three_, _four_, _five_)	\
 	&kp	_one_						\
 	&kp	_two_						\
-	&hml_mo HRM_LT2 _three_			\
+	&hml HRM_LT2 _three_			\
 	&kp	_four_						\
 	&kp	_five_
 // Right
 #define HRM_RT(_one_, _two_, _three_, _four_, _five_)	\
 	&kp	_one_						\
 	&kp	_two_						\
-	&hmr_mo HRM_RT2 _three_			\
+	&hmr HRM_RT2 _three_			\
 	&kp	_four_						\
 	&kp	_five_
 
 // Middle row
 // Left
 #define HRM_LM(_one_, _two_, _three_, _four_, _five_)	\
-	&hml	HRM_LM4 _one_		\
+	&hml_mo	HRM_LM4 _one_		\
 	&hml	HRM_LM3 _two_		\
 	&hml_mo	HRM_LM2 _three_		\
 	&hml	HRM_LM1 _four_		\
@@ -168,7 +168,7 @@
 	&hmr	HRM_RM1 _two_		\
 	&hmr_mo	HRM_RM2 _three_		\
 	&hmr	HRM_RM3 _four_		\
-	&hmr	HRM_RM4 _five_
+	&hmr_mo	HRM_RM4 _five_
 
 // Bottom row
 // Left
@@ -730,7 +730,7 @@ _name_: macro_##_name_ {					\
 //├───────────────┼───────────────┼───────────────┼───────────────┼───────────────┼───────────────┤   ├───────────────┼───────────────┼───────────────┼───────────────┼───────────────┼───────────────┤
 	&mo FN_LT		HRM_LM(A,		R,				S,				T,				G)					HRM_RM(M,		N,				E,				I,				O)				&mo FN_RT
 //├───────────────┼───────────────┼───────────────┼───────────────┼───────────────┼───────────────┤   ├───────────────┼───────────────┼───────────────┼───────────────┼───────────────┼───────────────┤
-	&ss LSHFT 0		HRM_LB(Z,		X,				C,				D,				V)					&kp K			&hmr HRM_RB1 H	&c_scln			&dot_cln		&kp SQT			&kp CAPS
+	&ss LSHFT 0		HRM_LB(Z,		X,				C,				D,				V)					&kp K			&kp H			&c_scln			&dot_cln		&kp SQT			&kp CAPS
 //╰───────────────┴───────────────┴───────────────┼───────────────┼───────────────┼───────────────┤   ├───────────────┼───────────────┼───────────────┼───────────────┴───────────────┴───────────────╯
 													&mm_enter_x		&ltt_ctrl		&magic				&kp SPACE	&ltt FN_RB UNDER	&kp ESC
 //                                                ╰───────────────┴───────────────┴───────────────╯   ╰───────────────┴───────────────┴───────────────╯
@@ -741,11 +741,11 @@ _name_: macro_##_name_ {					\
 			display-name = "QWERTY";
 			bindings = <
 //╭───────────────┬───────────────┬───────────────┬───────────────┬───────────────┬───────────────╮   ╭───────────────┬───────────────┬───────────────┬───────────────┬───────────────┬───────────────╮
-	___				HRM_LT(Q,		W,				E,				R,				T)					&kp Y			&kp U			&hmr HRM_RT2 I	&kp O			&kp P			___
+	___				HRM_LT(Q,		W,				E,				R,				T)					HRM_RT(Y,		U,				I,				O,				P)				___
 //├───────────────┼───────────────┼───────────────┼───────────────┼───────────────┼───────────────┤   ├───────────────┼───────────────┼───────────────┼───────────────┼───────────────┼───────────────┤
 	___				HRM_LM(A,		S,				D,				F,				G)					HRM_RM(H,		J,				K,				L,				SEMI)			&ltr FN_RT SQT
 //├───────────────┼───────────────┼───────────────┼───────────────┼───────────────┼───────────────┤   ├───────────────┼───────────────┼───────────────┼───────────────┼───────────────┼───────────────┤
-	___				HRM_LB(Z,		X,				C,				V,				B)					&kp N			&kp M			&kp COMMA		&kp DOT			&kp SLASH		___
+	___				HRM_LB(Z,		X,				C,				V,				B)					HRM_RB(N,		M,				COMMA,			DOT,			SLASH)			___
 //╰───────────────┴───────────────┴───────────────┼───────────────┼───────────────┼───────────────┤   ├───────────────┼───────────────┼───────────────┼───────────────┴───────────────┴───────────────╯
 													___				___				___					___				___				___
 //                                                ╰───────────────┴───────────────┴───────────────╯   ╰───────────────┴───────────────┴───────────────╯

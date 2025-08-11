@@ -141,17 +141,17 @@
 // Top row
 // Left
 #define HRM_LT(_one_, _two_, _three_, _four_, _five_)	\
-	&kp	_one_						\
-	&kp	_two_						\
-	&hml HRM_LT2 _three_			\
-	&kp	_four_						\
+	&kp	_one_					\
+	&kp	_two_					\
+	&hml HRM_LT2 _three_		\
+	&kp	_four_					\
 	&kp	_five_
 // Right
 #define HRM_RT(_one_, _two_, _three_, _four_, _five_)	\
-	&kp	_one_						\
-	&kp	_two_						\
-	&hmr HRM_RT2 _three_			\
-	&kp	_four_						\
+	&kp	_one_					\
+	&kp	_two_					\
+	&hmr HRM_RT2 _three_		\
+	&kp	_four_					\
 	&kp	_five_
 
 // Middle row
@@ -474,9 +474,16 @@ hmr_##_name_: home_row_mod_right_##_name_ {					\
 		ltt_ctrl: magic_layer_tap_thumb {
 			compatible = "zmk,behavior-mod-morph";
 			#binding-cells = <0>;
-			bindings = <&ltt FN_LB MINUS>, <&kp C>;
+			bindings = <&mm_ctrl_cl>, <&kp C>;
 			keep-mods = <(MOD_LCTL|MOD_RCTL|MOD_LGUI|MOD_RGUI)>;
-			mods = <(MOD_LCTL|MOD_RCTL|MOD_LGUI|MOD_RGUI)>;
+			mods = <(MOD_LCTL|MOD_RCTL)>;
+		};
+		mm_ctrl_cl: mod_morph_copy line {
+			compatible = "zmk,behavior-mod-morph";
+			#binding-cells = <0>;
+			bindings = <&ltt FN_LB MINUS>, <&copy_line>;
+			keep-mods = <(MOD_LGUI|MOD_RGUI)>;
+			mods = <(MOD_LGUI|MOD_RGUI)>;
 		};
 		mm_enter_x: mod_morph_enter_x {
 			compatible = "zmk,behavior-mod-morph";
@@ -635,6 +642,8 @@ _name_: macro_##_name_ {					\
 		MACRO(b16, &kp N1 &kp N6)
 		// Triple click
 		MACRO(triple_click, &mkp LCLK &mkp LCLK &mkp LCLK)
+		// Copy line
+		MACRO(copy_line, &triple_click &kp LC(C))
 
 
 		clr_mod: clear_mods {

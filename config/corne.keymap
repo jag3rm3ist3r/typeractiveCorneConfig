@@ -474,16 +474,17 @@ hmr_##_name_: home_row_mod_right_##_name_ {					\
 		ltt_ctrl: magic_layer_tap_thumb {
 			compatible = "zmk,behavior-mod-morph";
 			#binding-cells = <0>;
-			bindings = <&mm_ctrl_cl>, <&kp C>;
+			bindings = <&mm_ctrl_cl>, <&copy_line>;
 			keep-mods = <(MOD_LCTL|MOD_RCTL|MOD_LGUI|MOD_RGUI)>;
-			mods = <(MOD_LCTL|MOD_RCTL)>;
+			mods = <(MOD_LGUI|MOD_RGUI)>;
 		};
+		// Flip these.
 		mm_ctrl_cl: mod_morph_copy_line {
 			compatible = "zmk,behavior-mod-morph";
 			#binding-cells = <0>;
-			bindings = <&ltt FN_LB MINUS>, <&copy_line>;
+			bindings = <&ltt FN_LB MINUS>, <&kp C>;
 			//keep-mods = <(MOD_LGUI|MOD_RGUI)>;
-			mods = <(MOD_LGUI|MOD_RGUI)>;
+			mods = <(MOD_LCTL|MOD_RCTL)>;
 		};
 		mm_enter_x: mod_morph_enter_x {
 			compatible = "zmk,behavior-mod-morph";

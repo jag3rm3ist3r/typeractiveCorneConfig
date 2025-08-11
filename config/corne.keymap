@@ -650,8 +650,8 @@ _name_: macro_##_name_ {					\
 			wait-ms = <30>;
 			tap-ms = <40>;
 			bindings =
-				<&macro_release &kp LSHFT>,
-				<&macro_release &kp RSHFT>,
+				//<&macro_release &kp LSHFT>,
+				//<&macro_release &kp RSHFT>,
 				<&triple_click>,
 				<&kp LC(C)>;
 		};

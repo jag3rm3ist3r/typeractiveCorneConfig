@@ -482,7 +482,7 @@ hmr_##_name_: home_row_mod_right_##_name_ {					\
 			compatible = "zmk,behavior-mod-morph";
 			#binding-cells = <0>;
 			bindings = <&ltt FN_LB MINUS>, <&copy_line>;
-			keep-mods = <>;
+			//keep-mods = <(MOD_LGUI|MOD_RGUI)>;
 			mods = <(MOD_LGUI|MOD_RGUI)>;
 		};
 		mm_enter_x: mod_morph_enter_x {

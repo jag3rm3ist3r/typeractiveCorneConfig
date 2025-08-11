@@ -650,12 +650,8 @@ _name_: macro_##_name_ {					\
 			wait-ms = <30>;
 			tap-ms = <40>;
 			bindings =
-						<&macro_release &kp LGUI>,
-						<&macro_release &kp RGUI>,
 						<&triple_click>,
-						<&macro_press &kp LCTRL>,
-						<&kp C>,
-						<&macro_release &kp LCTRL>;
+						<&kp LC(C)>;
 		};
 
 		clr_mod: clear_mods {

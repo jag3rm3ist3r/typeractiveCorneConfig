@@ -643,8 +643,15 @@ _name_: macro_##_name_ {					\
 		// Triple click
 		MACRO(triple_click, &mkp LCLK &mkp LCLK &mkp LCLK)
 		// Copy line
-		MACRO(copy_line, &triple_click &kp LC(C))
-
+		//MACRO(copy_line, &triple_click &kp LC(C))
+		ZMK_MACRO(copy_line,
+			wait-ms = <30>;
+			tap-ms = <40>;
+			bindings =	<&triple_click>,
+						<&macro_press &kp LSHFT>,
+						<&kp C>,
+						<&macro_release &kp LSHFT>;
+		)
 
 		clr_mod: clear_mods {
 			compatible = "zmk,behavior-macro";

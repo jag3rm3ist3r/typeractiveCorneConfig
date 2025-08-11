@@ -474,16 +474,16 @@ hmr_##_name_: home_row_mod_right_##_name_ {					\
 		ltt_ctrl: magic_layer_tap_thumb {
 			compatible = "zmk,behavior-mod-morph";
 			#binding-cells = <0>;
-			bindings = <&mm_ctrl_cl>, <&copy_line>;
-			keep-mods = <(MOD_LCTL|MOD_RCTL)>;
-			mods = <(MOD_LGUI|MOD_RGUI)>;
+			bindings = <&ltt FN_LB MINUS>, <&ltt_ctrl_shft>;
+			keep-mods = <(MOD_LCTL|MOD_RCTL|MOD_LSFT|MOD_RSFT)>;
+			mods = <(MOD_LCTL|MOD_RCTL)>;
 		};
-		mm_ctrl_cl: mod_morph_copy_line {
+		ltt_ctrl_shft: magic_layer_tap_thumb_shifted {
 			compatible = "zmk,behavior-mod-morph";
 			#binding-cells = <0>;
-			bindings = <&ltt FN_LB MINUS>, <&kp C>;
+			bindings = <&kp C>, <&copy_line>;
 			keep-mods = <(MOD_LCTL|MOD_RCTL)>;
-			mods = <(MOD_LCTL|MOD_RCTL)>;
+			mods = <(MOD_LSFT|MOD_RSFT)>;
 		};
 		mm_enter_x: mod_morph_enter_x {
 			compatible = "zmk,behavior-mod-morph";
@@ -650,8 +650,10 @@ _name_: macro_##_name_ {					\
 			wait-ms = <30>;
 			tap-ms = <40>;
 			bindings =
-						<&triple_click>,
-						<&kp LC(C)>;
+				<&macro_release &kp LSHFT>,
+				<&macro_release &kp RSHFT>,
+				<&triple_click>,
+				<&kp LC(C)>;
 		};
 
 		clr_mod: clear_mods {

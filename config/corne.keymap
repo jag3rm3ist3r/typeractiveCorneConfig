@@ -481,8 +481,8 @@ hmr_##_name_: home_row_mod_right_##_name_ {					\
 		ltt_ctrl_shft: magic_layer_tap_thumb_shifted {
 			compatible = "zmk,behavior-mod-morph";
 			#binding-cells = <0>;
-			bindings = <&kp C>, <&copy_line>;
-			keep-mods = <(MOD_LCTL|MOD_RCTL)>;
+			bindings = <&kp LC(C)>, <&copy_line>;
+			//keep-mods = <(MOD_LCTL|MOD_RCTL)>;
 			mods = <(MOD_LSFT|MOD_RSFT)>;
 		};
 		mm_enter_x: mod_morph_enter_x {

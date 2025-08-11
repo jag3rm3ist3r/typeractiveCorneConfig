@@ -474,16 +474,9 @@ hmr_##_name_: home_row_mod_right_##_name_ {					\
 		ltt_ctrl: magic_layer_tap_thumb {
 			compatible = "zmk,behavior-mod-morph";
 			#binding-cells = <0>;
-			bindings = <&ltt FN_LB MINUS>, <&ltt_ctrl_shft>;
-			keep-mods = <(MOD_LCTL|MOD_RCTL|MOD_LSFT|MOD_RSFT)>;
+			bindings = <&ltt FN_LB MINUS>, <&kp C>;
+			keep-mods = <(MOD_LCTL|MOD_RCTL)>;
 			mods = <(MOD_LCTL|MOD_RCTL)>;
-		};
-		ltt_ctrl_shft: magic_layer_tap_thumb_shifted {
-			compatible = "zmk,behavior-mod-morph";
-			#binding-cells = <0>;
-			bindings = <&kp LC(C)>, <&copy_line>;
-			//keep-mods = <(MOD_LCTL|MOD_RCTL)>;
-			mods = <(MOD_LSFT|MOD_RSFT)>;
 		};
 		mm_enter_x: mod_morph_enter_x {
 			compatible = "zmk,behavior-mod-morph";
@@ -781,7 +774,7 @@ _name_: macro_##_name_ {					\
 //├───────────────┼───────────────┼───────────────┼───────────────┼───────────────┼───────────────┤   ├───────────────┼───────────────┼───────────────┼───────────────┼───────────────┼───────────────┤
 	___				XXX				&kp LA(LEFT)	&kp LC(TAB)		&kp LA(RIGHT)	XXX					XXX				&kp HOME		&kp PGDN		&kp PGUP		&kp END			___
 //╰───────────────┴───────────────┴───────────────┼───────────────┼───────────────┼───────────────┤   ├───────────────┼───────────────┼───────────────┼───────────────┴───────────────┴───────────────╯
-													&kp ESC			___				&kp BACKSPACE		&kp DELETE		___				&kp ENTER
+													&kp ESC			&copy_line		&kp BACKSPACE		&kp DELETE		___				&kp ENTER
 //                                                ╰───────────────┴───────────────┴───────────────╯   ╰───────────────┴───────────────┴───────────────╯
 			>;
 		};

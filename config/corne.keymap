@@ -478,7 +478,7 @@ hmr_##_name_: home_row_mod_right_##_name_ {					\
 			keep-mods = <(MOD_LCTL|MOD_RCTL|MOD_LGUI|MOD_RGUI)>;
 			mods = <(MOD_LCTL|MOD_RCTL)>;
 		};
-		mm_ctrl_cl: mod_morph_copy line {
+		mm_ctrl_cl: mod_morph_copy_line {
 			compatible = "zmk,behavior-mod-morph";
 			#binding-cells = <0>;
 			bindings = <&ltt FN_LB MINUS>, <&copy_line>;

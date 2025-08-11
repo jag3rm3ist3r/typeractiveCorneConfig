@@ -649,7 +649,10 @@ _name_: macro_##_name_ {					\
 			#binding-cells	= <0>;
 			wait-ms = <30>;
 			tap-ms = <40>;
-			bindings =	<&triple_click>,
+			bindings =
+						<&macro_release &kp LGUI>,
+						<&macro_release &kp RGUI>,
+						<&triple_click>,
 						<&macro_press &kp LCTRL>,
 						<&kp C>,
 						<&macro_release &kp LCTRL>;

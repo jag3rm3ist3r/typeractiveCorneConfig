@@ -768,11 +768,11 @@ _name_: macro_##_name_ {					\
 			display-name = "Nav";
 			bindings = <
 //╭───────────────┬───────────────┬───────────────┬───────────────┬───────────────┬───────────────╮   ╭───────────────┬───────────────┬───────────────┬───────────────┬───────────────┬───────────────╮
-	&kp LC(LA(DEL))	&kp LA(F4)		&mkp RCLK		&mkp MCLK		&mkp LCLK		&triple_click		XXX			&kp LC(BACKSPACE)	XXX				XXX				&kp LC(DELETE)	&kp DELETE
+	&kp LC(LA(DEL))	&kp LA(F4)		&mkp RCLK		&kp LC(LS(TAB))	&mkp LCLK		&triple_click		XXX			&kp LC(BACKSPACE)	XXX				XXX				&kp LC(DELETE)	&kp DELETE
 //├───────────────┼───────────────┼───────────────┼───────────────┼───────────────┼───────────────┤   ├───────────────┼───────────────┼───────────────┼───────────────┼───────────────┼───────────────┤
-	___				HRM_LM(LG(TAB),	LG(LC(LEFT)),	LC(LS(TAB)),	LG(LC(RIGHT)),	SPACE)				XXX				&kp LEFT		&kp DOWN		&kp UP			&kp RIGHT		___
+	___				HRM_LM(LG(TAB),	LG(LC(LEFT)),	LC(TAB),	LG(LC(RIGHT)),	SPACE)				XXX				&kp LEFT		&kp DOWN		&kp UP			&kp RIGHT		___
 //├───────────────┼───────────────┼───────────────┼───────────────┼───────────────┼───────────────┤   ├───────────────┼───────────────┼───────────────┼───────────────┼───────────────┼───────────────┤
-	___				XXX				&kp LA(LEFT)	&kp LC(TAB)		&kp LA(RIGHT)	XXX					XXX				&kp HOME		&kp PGDN		&kp PGUP		&kp END			___
+	___				XXX				&kp LA(LEFT)	&mkp MCLK		&kp LA(RIGHT)	XXX					XXX				&kp HOME		&kp PGDN		&kp PGUP		&kp END			___
 //╰───────────────┴───────────────┴───────────────┼───────────────┼───────────────┼───────────────┤   ├───────────────┼───────────────┼───────────────┼───────────────┴───────────────┴───────────────╯
 													&kp ESC			&copy_line		&kp BACKSPACE		&kp DELETE		___				&kp ENTER
 //                                                ╰───────────────┴───────────────┴───────────────╯   ╰───────────────┴───────────────┴───────────────╯

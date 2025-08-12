@@ -347,7 +347,7 @@ hmr_##_name_: home_row_mod_right_##_name_ {					\
 		adaptive_repeat: adaptive_repeat {
 			compatible = "zmk,behavior-adaptive-key";
 			#binding-cells = <0>;
-			bindings = <&kp TAB>;
+			bindings = <&adap_shift LSHFT TAB>;
 			repeat {
 				trigger-keys = <
 					A B C D E F G H J L M N O P R S T V X Y Z
@@ -460,7 +460,7 @@ hmr_##_name_: home_row_mod_right_##_name_ {					\
 		magic_ctrl: magic_shift_key_control {
 			compatible = "zmk,behavior-mod-morph";
 			#binding-cells = <0>;
-			bindings = <&adap_shift LSHFT TAB>, <&kp V>;
+			bindings = <&adaptive_repeat>, <&kp V>;
 			keep-mods = <(MOD_LCTL|MOD_RCTL|MOD_LGUI|MOD_RGUI)>;
 			mods = <(MOD_LCTL|MOD_RCTL|MOD_LGUI|MOD_RGUI)>;
 		};

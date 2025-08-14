@@ -456,13 +456,21 @@ hmr_##_name_: home_row_mod_right_##_name_ {					\
 		HML_GENERIC(EN6, &EN6)
 		*/
 
+
 		// Mod morphs
-		magic_ctrl: magic_shift_key_control {
+		magic_gui: magic_shift_key_gui {
 			compatible = "zmk,behavior-mod-morph";
 			#binding-cells = <0>;
 			bindings = <&adaptive_repeat>, <&kp V>;
-			keep-mods = <(MOD_LCTL|MOD_RCTL|MOD_LGUI|MOD_RGUI)>;
-			mods = <(MOD_LCTL|MOD_RCTL|MOD_LGUI|MOD_RGUI)>;
+			keep-mods = <(MOD_LGUI|MOD_RGUI)>;
+			mods = <(MOD_LGUI|MOD_RGUI)>;
+		};
+		magic_ctrl: magic_shift_key_control {
+			compatible = "zmk,behavior-mod-morph";
+			#binding-cells = <0>;
+			bindings = <&magic_gui>, <&kp LS(V)>;
+			keep-mods = <(MOD_LCTL|MOD_RCTL)>;
+			mods = <(MOD_LCTL|MOD_RCTL)>;
 		};
 		magic: magic_shift_key {
 			compatible = "zmk,behavior-mod-morph";
@@ -770,7 +778,7 @@ _name_: macro_##_name_ {					\
 //╭───────────────┬───────────────┬───────────────┬───────────────┬───────────────┬───────────────╮   ╭───────────────┬───────────────┬───────────────┬───────────────┬───────────────┬───────────────╮
 	&kp LC(LA(DEL))	&kp LA(F4)		&mkp RCLK		&kp LC(LS(TAB))	&mkp LCLK		&triple_click		XXX			&kp LC(BACKSPACE)	XXX				XXX				&kp LC(DELETE)	&kp DELETE
 //├───────────────┼───────────────┼───────────────┼───────────────┼───────────────┼───────────────┤   ├───────────────┼───────────────┼───────────────┼───────────────┼───────────────┼───────────────┤
-	___				HRM_LM(LG(TAB),	LG(LC(LEFT)),	LC(TAB),	LG(LC(RIGHT)),	SPACE)				XXX				&kp LEFT		&kp DOWN		&kp UP			&kp RIGHT		___
+	___				HRM_LM(LG(TAB),	LG(LC(LEFT)),	LC(TAB),		LG(LC(RIGHT)),	SPACE)				XXX				&kp LEFT		&kp DOWN		&kp UP			&kp RIGHT		___
 //├───────────────┼───────────────┼───────────────┼───────────────┼───────────────┼───────────────┤   ├───────────────┼───────────────┼───────────────┼───────────────┼───────────────┼───────────────┤
 	___				XXX				&kp LA(LEFT)	&mkp MCLK		&kp LA(RIGHT)	XXX					XXX				&kp HOME		&kp PGDN		&kp PGUP		&kp END			___
 //╰───────────────┴───────────────┴───────────────┼───────────────┼───────────────┼───────────────┤   ├───────────────┼───────────────┼───────────────┼───────────────┴───────────────┴───────────────╯

@@ -468,7 +468,7 @@ hmr_##_name_: home_row_mod_right_##_name_ {					\
 		magic_ctrl: magic_shift_key_control {
 			compatible = "zmk,behavior-mod-morph";
 			#binding-cells = <0>;
-			bindings = <&magic_gui>, <&kp LS(V)>;
+			bindings = <&magic_gui>, <&kp V>;
 			keep-mods = <(MOD_LCTL|MOD_RCTL)>;
 			mods = <(MOD_LCTL|MOD_RCTL)>;
 		};

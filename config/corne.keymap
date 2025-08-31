@@ -347,7 +347,8 @@ hmr_##_name_: home_row_mod_right_##_name_ {					\
 		adaptive_repeat: adaptive_repeat {
 			compatible = "zmk,behavior-adaptive-key";
 			#binding-cells = <0>;
-			bindings = <&adap_shift LSHFT TAB>;
+			//bindings = <&adap_shift LSHFT TAB>;
+			bindings = <&kp LSHFT>;
 			repeat {
 				trigger-keys = <
 					A B C D E F G H J L M N O P R S T V X Y Z
@@ -482,7 +483,8 @@ hmr_##_name_: home_row_mod_right_##_name_ {					\
 		ltt_ctrl: magic_layer_tap_thumb {
 			compatible = "zmk,behavior-mod-morph";
 			#binding-cells = <0>;
-			bindings = <&ltt FN_LB MINUS>, <&kp C>;
+			//bindings = <&ltt FN_LB MINUS>, <&kp C>;
+			bindings = <&ltt FN_LB TAB>, <&kp C>;
 			keep-mods = <(MOD_LCTL|MOD_RCTL)>;
 			mods = <(MOD_LCTL|MOD_RCTL)>;
 		};
@@ -752,7 +754,7 @@ _name_: macro_##_name_ {					\
 //├───────────────┼───────────────┼───────────────┼───────────────┼───────────────┼───────────────┤   ├───────────────┼───────────────┼───────────────┼───────────────┼───────────────┼───────────────┤
 	&ss LSHFT 0		HRM_LB(Z,		X,				C,				D,				V)					&kp K			&kp H			&c_scln			&dot_cln		&kp SQT			&kp CAPS
 //╰───────────────┴───────────────┴───────────────┼───────────────┼───────────────┼───────────────┤   ├───────────────┼───────────────┼───────────────┼───────────────┴───────────────┴───────────────╯
-													&mm_enter_x		&ltt_ctrl		&magic				&kp SPACE	&ltt FN_RB UNDER	&kp ESC
+													&mm_enter_x		&ltt_ctrl		&magic				&kp SPACE	&ltt FN_RB MINUS	&kp ESC
 //                                                ╰───────────────┴───────────────┴───────────────╯   ╰───────────────┴───────────────┴───────────────╯
 			>;
 		};

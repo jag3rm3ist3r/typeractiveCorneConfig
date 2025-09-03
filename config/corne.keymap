@@ -397,6 +397,13 @@ hmr_##_name_: home_row_mod_right_##_name_ {					\
 			};
 			// i?_bigram
 			// The I bigram is disabled due to the frequency with which I use the key in VIM to start typing.
+			// NK Bigram
+			nk_bigram {
+				trigger-keys = <H>;
+				bindings = <&bspc_nk>;
+				max-prior-idle-ms = <MAX_PRIOR_IDLE_MS>;
+				strict-modifiers;
+			}
 		};
 
 		adap_shift: adaptive_shift {
@@ -647,6 +654,9 @@ _name_: macro_##_name_ {					\
 		MACRO(triple_click, &mkp LCLK &mkp LCLK &mkp LCLK)
 		// Copy line
 		//MACRO(copy_line, &triple_click &kp LC(C))
+		// Backspace then N K bigram macro
+		MACRO(bspc_nk, &kp BACKSPACE &kp N &kp K)
+
 		copy_line: copy_line_macro {
 			compatible		= "zmk,behavior-macro";
 			#binding-cells	= <0>;

@@ -403,7 +403,7 @@ hmr_##_name_: home_row_mod_right_##_name_ {					\
 				bindings = <&bspc_nk>;
 				max-prior-idle-ms = <MAX_PRIOR_IDLE_MS>;
 				strict-modifiers;
-			}
+			};
 		};
 
 		adap_shift: adaptive_shift {

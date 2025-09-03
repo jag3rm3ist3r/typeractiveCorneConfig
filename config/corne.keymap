@@ -363,14 +363,12 @@ hmr_##_name_: home_row_mod_right_##_name_ {					\
 				strict-modifiers;
 			};
 			// Single finger bigram prevention.
-			/*
 			kn_bigram {
 				trigger-keys = <K>;
 				bindings = <&kp N>;
 				max-prior-idle-ms = <MAX_PRIOR_IDLE_MS>;
 				strict-modifiers;
 			};
-			*/
 			/* This one was too annoying.
 			nk_bigram {
 				trigger-keys = <N>;
@@ -400,15 +398,12 @@ hmr_##_name_: home_row_mod_right_##_name_ {					\
 			// i?_bigram
 			// The I bigram is disabled due to the frequency with which I use the key in VIM to start typing.
 			// NK Bigram
-			// But triggered off of the H key.
-			/*
 			nk_bigram {
 				trigger-keys = <H>;
 				bindings = <&bspc_nk>;
 				max-prior-idle-ms = <MAX_PRIOR_IDLE_MS>;
 				strict-modifiers;
 			};
-			*/
 		};
 
 		adap_shift: adaptive_shift {
@@ -660,7 +655,7 @@ _name_: macro_##_name_ {					\
 		// Copy line
 		//MACRO(copy_line, &triple_click &kp LC(C))
 		// Backspace then N K bigram macro
-		//MACRO(bspc_nk, &kp BACKSPACE &kp N &kp K)
+		MACRO(bspc_nk, &kp BACKSPACE &kp N &kp K)
 
 		copy_line: copy_line_macro {
 			compatible		= "zmk,behavior-macro";
@@ -767,7 +762,7 @@ _name_: macro_##_name_ {					\
 //├───────────────┼───────────────┼───────────────┼───────────────┼───────────────┼───────────────┤   ├───────────────┼───────────────┼───────────────┼───────────────┼───────────────┼───────────────┤
 	&mo FN_LT		HRM_LM(A,		R,				S,				T,				G)					HRM_RM(M,		N,				E,				I,				O)				&mo FN_RT
 //├───────────────┼───────────────┼───────────────┼───────────────┼───────────────┼───────────────┤   ├───────────────┼───────────────┼───────────────┼───────────────┼───────────────┼───────────────┤
-	&ss LSHFT 0		HRM_LB(Z,		X,				C,				D,				K)					&kp V			&kp H			&c_scln			&dot_cln		&kp SQT			&kp CAPS
+	&ss LSHFT 0		HRM_LB(Z,		X,				C,				D,				V)					&kp K			&kp H			&c_scln			&dot_cln		&kp SQT			&kp CAPS
 //╰───────────────┴───────────────┴───────────────┼───────────────┼───────────────┼───────────────┤   ├───────────────┼───────────────┼───────────────┼───────────────┴───────────────┴───────────────╯
 													&mm_enter_x		&ltt_ctrl		&magic				&kp SPACE	&ltt FN_RB MINUS	&kp ESC
 //                                                ╰───────────────┴───────────────┴───────────────╯   ╰───────────────┴───────────────┴───────────────╯

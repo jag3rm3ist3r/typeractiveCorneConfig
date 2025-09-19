@@ -487,7 +487,7 @@ hmr_##_name_: home_row_mod_right_##_name_ {					\
 			keep-mods = <(MOD_LALT|MOD_RALT)>;
 			mods = <(MOD_LALT|MOD_RALT)>;
 		};
-		ltt_ctrl: magic_layer_tap_thumb {
+		ltt_ctrl: magic_layer_tap_thumb-tab {
 			compatible = "zmk,behavior-mod-morph";
 			#binding-cells = <0>;
 			//bindings = <&ltt FN_LB MINUS>, <&kp C>;
@@ -495,7 +495,7 @@ hmr_##_name_: home_row_mod_right_##_name_ {					\
 			keep-mods = <(MOD_LCTL|MOD_RCTL)>;
 			mods = <(MOD_LCTL|MOD_RCTL)>;
 		};
-		ltt_n: magic_layer_tap_thumb {
+		ltt_n: magic_layer_tap_thumb-n {
 			compatible = "zmk,behavior-mod-morph";
 			#binding-cells = <0>;
 			//bindings = <&ltt FN_LB MINUS>, <&kp C>;

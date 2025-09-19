@@ -745,7 +745,7 @@ _name_: macro_##_name_ {					\
 		compatible = "zmk,conditional-layers";
 		symc_1 {
 			if-layers = <FN_LB FN_RB>;
-			then-layer = <SYMC>;
+			then-layer = <SYM>;
 		};
 	};
 };

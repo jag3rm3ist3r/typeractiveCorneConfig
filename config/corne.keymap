@@ -495,11 +495,11 @@ hmr_##_name_: home_row_mod_right_##_name_ {					\
 			keep-mods = <(MOD_LCTL|MOD_RCTL)>;
 			mods = <(MOD_LCTL|MOD_RCTL)>;
 		};
-		ltt_n: magic_layer_tap_thumb-n {
+		ltt_r: magic_layer_tap_thumb-r {
 			compatible = "zmk,behavior-mod-morph";
 			#binding-cells = <0>;
 			//bindings = <&ltt FN_LB MINUS>, <&kp C>;
-			bindings = <&ltt FN_LB A>, <&kp C>;
+			bindings = <&ltt FN_LB R>, <&kp C>;
 			keep-mods = <(MOD_LCTL|MOD_RCTL)>;
 			mods = <(MOD_LCTL|MOD_RCTL)>;
 		};
@@ -753,7 +753,7 @@ _name_: macro_##_name_ {					\
 		compatible = "zmk,conditional-layers";
 		symc_1 {
 			if-layers = <FN_LB FN_RB>;
-			then-layer = <SYM>;
+			then-layer = <META>;
 		};
 	};
 };
@@ -776,7 +776,7 @@ _name_: macro_##_name_ {					\
 //                                                ╰───────────────┴───────────────┴───────────────╯   ╰───────────────┴───────────────┴───────────────╯
 			>;
 		};
-
+	
 		qwerty {
 			display-name = "QWERTY";
 			bindings = <
@@ -796,13 +796,13 @@ _name_: macro_##_name_ {					\
 			display-name = "Custom";
 			bindings = <
 //╭───────────────┬───────────────┬───────────────┬───────────────┬───────────────┬───────────────╮   ╭───────────────┬───────────────┬───────────────┬───────────────┬───────────────┬───────────────╮
-	&kp DELETE		HRM_LT(Q,		W,				F,				P,				B)					&kp J			&kp L			&hmr HRM_RT2 U	&kp Y			&qmb			&kp BACKSPACE
+	&kp DELETE		HRM_LT(B,		F,				L,				K,				Q)					&kp P			&kp G			&hmr HRM_RT2 O	&kp U			&dot_cln			&kp BACKSPACE
 //├───────────────┼───────────────┼───────────────┼───────────────┼───────────────┼───────────────┤   ├───────────────┼───────────────┼───────────────┼───────────────┼───────────────┼───────────────┤
-	&mo FN_LT		HRM_LM(C,		R,				S,				T,				G)					HRM_RM(M,		N,				E,				I,				O)				&mo FN_RT
+	&mo FN_LT		HRM_LM(N,		S,				H,				T,				M)					HRM_RM(Y,		C,				A,				E,				I)				&mo FN_RT
 //├───────────────┼───────────────┼───────────────┼───────────────┼───────────────┼───────────────┤   ├───────────────┼───────────────┼───────────────┼───────────────┼───────────────┼───────────────┤
-	&ss LSHFT 0		HRM_LB(Z,		K,				X,				D,				V)					&kp TAB			&kp H			&c_scln			&dot_cln		&kp SQT			&kp CAPS
+	&ss LSHFT 0		HRM_LB(X,		V,				J,				D,				Z)					&SQT			&kp W			&qmb			&kp MINUS		&c_scln			&kp CAPS
 //╰───────────────┴───────────────┴───────────────┼───────────────┼───────────────┼───────────────┤   ├───────────────┼───────────────┼───────────────┼───────────────┴───────────────┴───────────────╯
-													&mm_enter_x		&ltt_n		&magic				&kp SPACE	&ltt FN_RB MINUS	&kp ESC
+													&mm_enter_x		&ltt_r			&magic				&kp SPACE	&ltt FN_RB MINUS	&kp ESC
 //                                                ╰───────────────┴───────────────┴───────────────╯   ╰───────────────┴───────────────┴───────────────╯
 			>;
 		};

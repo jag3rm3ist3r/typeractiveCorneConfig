@@ -24,9 +24,9 @@
 2
 #define NAV \
 3
-#define NUM \
-4
 #define SYM \
+4
+#define NUM \
 5
 #define MACR \
 6

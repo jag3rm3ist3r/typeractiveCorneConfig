@@ -745,7 +745,7 @@ _name_: macro_##_name_ {					\
 	continue-list = <UNDERSCORE MINUS>;
 };
 
-&sl nclude{
+&sl {
 	release-after-ms = <2000>;
 };
 

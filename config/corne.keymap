@@ -111,13 +111,15 @@
 #define HRM_LM5 XXX
 #define HRM_LM4 LGUI
 #define HRM_LM3 LALT
-#define HRM_LM2 SYM
+//#define HRM_LM2 SYM
+#define HRM_LM2 LSHFT
 #define HRM_LM1 LCTRL
 #define HRM_LM0 LSHFT
 // Right
 #define HRM_RM0 RSHFT
 #define HRM_RM1 RCTRL
-#define HRM_RM2 SYM
+//#define HRM_RM2 SYM
+#define HRM_RM2 RSHFT
 #define HRM_RM3 RALT
 #define HRM_RM4 RGUI
 #define HRM_RM5 XXX

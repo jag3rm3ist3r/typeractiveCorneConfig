@@ -161,14 +161,14 @@
 #define HRM_LM(_one_, _two_, _three_, _four_, _five_)	\
 	&hml	HRM_LM4 _one_		\
 	&hml	HRM_LM3 _two_		\
-	&hml_mo	HRM_LM2 _three_		\
+	&hml	HRM_LM2 _three_		\
 	&hml	HRM_LM1 _four_		\
 	&hml	HRM_LM0 _five_
 // Right
 #define HRM_RM(_one_, _two_, _three_, _four_, _five_)	\
 	&hmr	HRM_RM0 _one_		\
 	&hmr	HRM_RM1 _two_		\
-	&hmr_mo	HRM_RM2 _three_		\
+	&hmr	HRM_RM2 _three_		\
 	&hmr	HRM_RM3 _four_		\
 	&hmr	HRM_RM4 _five_
 

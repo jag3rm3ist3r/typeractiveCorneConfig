@@ -475,6 +475,13 @@ hmr_##_name_: home_row_mod_right_##_name_ {					\
 			keep-mods = <(MOD_LGUI|MOD_RGUI)>;
 			mods = <(MOD_LGUI|MOD_RGUI)>;
 		};
+		magic_ctrl_c: magic_key_control_c {
+			compatible = "zmk,behavior-mod-morph";
+			#binding-cells = <0>;
+			bindings = <&adaptive_repeat>, <&kp C>;
+			keep-mods = <(MOD_LCTL|MOD_RCTL)>;
+			mods = <(MOD_LCTL|MOD_RCTL)>;
+		};
 		magic_ctrl: magic_shift_key_control {
 			compatible = "zmk,behavior-mod-morph";
 			#binding-cells = <0>;
@@ -501,7 +508,7 @@ hmr_##_name_: home_row_mod_right_##_name_ {					\
 			compatible = "zmk,behavior-mod-morph";
 			#binding-cells = <0>;
 			//bindings = <&ltt FN_LB MINUS>, <&kp C>;
-			bindings = <&ltt FN_LB R>, <&kp C>;
+			bindings = <&ltt FN_LB R>, <&kp V>;
 			keep-mods = <(MOD_LCTL|MOD_RCTL)>;
 			mods = <(MOD_LCTL|MOD_RCTL)>;
 		};
@@ -804,7 +811,7 @@ _name_: macro_##_name_ {					\
 //├───────────────┼───────────────┼───────────────┼───────────────┼───────────────┼───────────────┤   ├───────────────┼───────────────┼───────────────┼───────────────┼───────────────┼───────────────┤
 	&ss LSHFT 0		HRM_LB(X,		V,				J,				D,				Z)					&kp SQT			&kp W			&qmb			&kp MINUS		&c_scln			&kp CAPS
 //╰───────────────┴───────────────┴───────────────┼───────────────┼───────────────┼───────────────┤   ├───────────────┼───────────────┼───────────────┼───────────────┴───────────────┴───────────────╯
-													&mm_enter_x		&ltt_r			&magic				&kp SPACE	&ltt FN_RB MINUS	&kp ESC
+													&mm_enter_x		&ltt NUM C		&ltt_r				&kp SPACE		&kp RSHIFT		&kp ESC
 //                                                ╰───────────────┴───────────────┴───────────────╯   ╰───────────────┴───────────────┴───────────────╯
 			>;
 		};

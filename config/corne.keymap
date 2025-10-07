@@ -28,7 +28,7 @@
 4
 #define NUM \
 5
-#define MACR \
+#define MACRO \
 6
 #define META \
 7

@@ -408,6 +408,40 @@ hmr_##_name_: home_row_mod_right_##_name_ {					\
 			};
 		};
 
+		// Magic shift / adaptive key
+		adaptive_repeat_custom: adaptive_repeat_custom {
+			compatible = "zmk,behavior-adaptive-key";
+			#binding-cells = <0>;
+			//bindings = <&adap_shift LSHFT TAB>;
+			bindings = <&kp LSHFT>;
+			repeat {
+				trigger-keys = <
+					A B C D E F G J L M N O P R S T V X Y Z
+					N1 N2 N3 N4 N5 N6 N7 N8 N9 N0
+					TAB
+					//EXCL MINUS BSLH AT HASH PRCNT PLUS EQUAL GRAVE
+					//LT LBKT LBRC RS(N9) SPACE DOLLAR LS(N0) RBRC RBKT GT
+					//DQT COMMA TILDE CARET FSLH SEMI COLON STAR PIPE AMPS DOT SQT
+				>;
+				bindings = <&key_repeat>;
+				max-prior-idle-ms = <MAX_PRIOR_IDLE_MS>;
+				strict-modifiers;
+			};
+			// Single finger bigram prevention.
+			qu_bigram {
+				trigger-keys = <Q>;
+				bindings = <&kp U>;
+				max-prior-idle-ms = <MAX_PRIOR_IDLE_MS>;
+				strict-modifiers;
+			};
+			ue_bigram {
+				trigger-keys = <U>;
+				bindings = <&kp E>;
+				max-prior-idle-ms = <MAX_PRIOR_IDLE_MS>;
+				strict-modifiers;
+			};
+		};
+
 		adap_shift: adaptive_shift {
 			compatible = "zmk,behavior-hold-tap";
 			#binding-cells = <2>;
@@ -478,7 +512,7 @@ hmr_##_name_: home_row_mod_right_##_name_ {					\
 		magic_ctrl_c: magic_key_control_c {
 			compatible = "zmk,behavior-mod-morph";
 			#binding-cells = <0>;
-			bindings = <&adaptive_repeat>, <&kp C>;
+			bindings = <&adaptive_repeat_custom>, <&kp C>;
 			keep-mods = <(MOD_LCTL|MOD_RCTL)>;
 			mods = <(MOD_LCTL|MOD_RCTL)>;
 		};
@@ -509,8 +543,16 @@ hmr_##_name_: home_row_mod_right_##_name_ {					\
 			#binding-cells = <0>;
 			//bindings = <&ltt FN_LB MINUS>, <&kp C>;
 			bindings = <&kp R>, <&kp V>;
-			keep-mods = <(MOD_LCTL|MOD_RCTL)>;
-			mods = <(MOD_LCTL|MOD_RCTL)>;
+			keep-mods = <(MOD_LCTL|MOD_RCTL|MOD_LGUI|MOD_RGUI)>;
+			mods = <(MOD_LCTL|MOD_RCTL|MOD_LGUI|MOD_RGUI)>;
+		};
+		magic_r: magic_thumb_R_key {
+			compatible = "zmk,behavior-mod-morph";
+			#binding-cells = <0>;
+			//bindings = <&ltt FN_LB MINUS>, <&kp C>;
+			bindings = <&ltt_r>, <&kp C>;
+			keep-mods = <(MOD_LALT|MOD_RALT)>;
+			mods = <(MOD_LALT|MOD_RALT)>;
 		};
 		mm_enter_x: mod_morph_enter_x {
 			compatible = "zmk,behavior-mod-morph";
@@ -811,7 +853,7 @@ _name_: macro_##_name_ {					\
 //├───────────────┼───────────────┼───────────────┼───────────────┼───────────────┼───────────────┤   ├───────────────┼───────────────┼───────────────┼───────────────┼───────────────┼───────────────┤
 	&ss LSHFT 0		HRM_LB(X,		V,				J,				D,				Z)					&kp SQT			&kp W			&qmb			&kp MINUS		&c_scln			&kp CAPS
 //╰───────────────┴───────────────┴───────────────┼───────────────┼───────────────┼───────────────┤   ├───────────────┼───────────────┼───────────────┼───────────────┴───────────────┴───────────────╯
-													&mm_enter_x		&magic_ctrl_c	&ltt_r				&kp SPACE		&kp RSHIFT		&kp ESC
+													&mm_enter_x		&magic_ctrl_c	&magic_r				&kp SPACE		&kp RSHIFT		&kp ESC
 //                                                ╰───────────────┴───────────────┴───────────────╯   ╰───────────────┴───────────────┴───────────────╯
 			>;
 		};

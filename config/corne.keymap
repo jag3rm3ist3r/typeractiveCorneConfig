@@ -804,7 +804,7 @@ _name_: macro_##_name_ {					\
 		compatible = "zmk,conditional-layers";
 		combo_layer {
 			if-layers = <FN_LB FN_RB>;
-			then-layer = <NUM>;
+			then-layer = <META>;
 		};
 	};
 };

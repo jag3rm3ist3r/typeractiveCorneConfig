@@ -550,7 +550,7 @@ hmr_##_name_: home_row_mod_right_##_name_ {					\
 			compatible = "zmk,behavior-mod-morph";
 			#binding-cells = <0>;
 			//bindings = <&ltt FN_LB MINUS>, <&kp C>;
-			bindings = <&ltt_r>, <&kp C>;
+			bindings = <&ltt_r>, <&kp TAB>;
 			keep-mods = <(MOD_LALT|MOD_RALT)>;
 			mods = <(MOD_LALT|MOD_RALT)>;
 		};

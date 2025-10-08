@@ -350,7 +350,7 @@ hmr_##_name_: home_row_mod_right_##_name_ {					\
 			compatible = "zmk,behavior-adaptive-key";
 			#binding-cells = <0>;
 			//bindings = <&adap_shift LSHFT TAB>;
-			bindings = <&kp SPACE>;
+			bindings = <___>;
 			repeat {
 				trigger-keys = <
 					A B C D E F G J L M N O P R S T V X Y Z
@@ -413,7 +413,7 @@ hmr_##_name_: home_row_mod_right_##_name_ {					\
 			compatible = "zmk,behavior-adaptive-key";
 			#binding-cells = <0>;
 			//bindings = <&adap_shift LSHFT TAB>;
-			bindings = <&kp SPACE>;
+			bindings = <___>;
 			repeat {
 				trigger-keys = <
 					A B C D E F G J L M N O P R S T V X Y Z

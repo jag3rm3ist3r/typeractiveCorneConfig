@@ -841,7 +841,7 @@ _name_: macro_##_name_ {					\
 	&ss LSHFT 0		HRM_LB(Z,		X,				C,				D,				V)					&kp K			&kp H			&c_scln			&dot_cln		&kp SQT			&kp CAPS
 //╰───────────────┴───────────────┴───────────────┼───────────────┼───────────────┼───────────────┤   ├───────────────┼───────────────┼───────────────┼───────────────┴───────────────┴───────────────╯
 													//&mm_enter_x		&ltt_ctrl		&shift_contextual	&kp SPACE	&ltt FN_RB MINUS	&kp ESC
-													&mt LSHFT ENTER		&ltt_ctrl		&magic          	&kp SPACE	&ltt FN_RB MINUS	&kp ESC
+													&mt LSHFT ENTER		&ltt_ctrl		&magic          	&kp SPACE	&ltt FN_RB MINUS	&mt RSHFT ESC
 //                                                ╰───────────────┴───────────────┴───────────────╯   ╰───────────────┴───────────────┴───────────────╯
 			>;
 		};

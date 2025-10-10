@@ -350,7 +350,8 @@ hmr_##_name_: home_row_mod_right_##_name_ {					\
 			compatible = "zmk,behavior-adaptive-key";
 			#binding-cells = <0>;
 			//bindings = <&adap_shift LSHFT TAB>;
-			bindings = <___>;
+			//bindings = <___>;
+			bindings = <&mo FN_LB>;
 			repeat {
 				trigger-keys = <
 					A B C D E F G J L M N O P R S T V X Y Z
@@ -534,7 +535,7 @@ hmr_##_name_: home_row_mod_right_##_name_ {					\
 			compatible = "zmk,behavior-mod-morph";
 			#binding-cells = <0>;
 			//bindings = <&ltt FN_LB MINUS>, <&kp C>;
-			bindings = <&ltt FN_LB TAB>, <&kp C>;
+			bindings = <&adaptive_repeat>, <&kp C>;
 			keep-mods = <(MOD_LCTL|MOD_RCTL)>;
 			mods = <(MOD_LCTL|MOD_RCTL)>;
 		};
@@ -567,6 +568,22 @@ hmr_##_name_: home_row_mod_right_##_name_ {					\
 			bindings = <&kp RET>, <&kp LS(S)>;
 			keep-mods = <(MOD_LGUI|MOD_RGUI)>;
 			mods = <(MOD_LGUI|MOD_RGUI)>;
+		};
+
+		shift_contextual: contextual_shift_lthumb {
+			compatible = "zmk,behavior-mod-morph";
+			#binding-cells = <0>;
+			bindings = <&sh_con_copypaste>, <&kp TAB>;
+			keep-mods = <(MOD_LALT|MOD_RALT)>;
+			mods = <(MOD_LALT|MOD_RALT)>;
+		};
+		sh_con_copypaste: shift_contextual_copypaste {
+			compatible = "zmk,behavior-mod-morph";
+			#binding-cells = <0>;
+			//bindings = <&ltt FN_LB MINUS>, <&kp C>;
+			bindings = <&kp LSHIFT>, <&kp V>;
+			keep-mods = <(MOD_LCTL|MOD_RCTL|MOD_LGUI|MOD_RGUI)>;
+			mods = <(MOD_LCTL|MOD_RCTL|MOD_LGUI|MOD_RGUI)>;
 		};
 
 		// , / ;
@@ -823,7 +840,7 @@ _name_: macro_##_name_ {					\
 //├───────────────┼───────────────┼───────────────┼───────────────┼───────────────┼───────────────┤   ├───────────────┼───────────────┼───────────────┼───────────────┼───────────────┼───────────────┤
 	&ss LSHFT 0		HRM_LB(Z,		X,				C,				D,				V)					&kp K			&kp H			&c_scln			&dot_cln		&kp SQT			&kp CAPS
 //╰───────────────┴───────────────┴───────────────┼───────────────┼───────────────┼───────────────┤   ├───────────────┼───────────────┼───────────────┼───────────────┴───────────────┴───────────────╯
-													&mm_enter_x		&ltt_ctrl		&magic				&kp SPACE	&ltt FN_RB MINUS	&kp ESC
+													&mm_enter_x		&ltt_ctrl		&shift_contextual	&kp SPACE	&ltt FN_RB MINUS	&kp ESC
 //                                                ╰───────────────┴───────────────┴───────────────╯   ╰───────────────┴───────────────┴───────────────╯
 			>;
 		};

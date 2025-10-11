@@ -565,7 +565,7 @@ hmr_##_name_: home_row_mod_right_##_name_ {					\
 		mm_enter_Ss: mod_morph_enter_win_shift_s {
 			compatible = "zmk,behavior-mod-morph";
 			#binding-cells = <0>;
-			bindings = <&kmt LSHFT RET>, <&kp LS(S)>;
+			bindings = <&mt LSHFT RET>, <&kp LS(S)>;
 			keep-mods = <(MOD_LGUI|MOD_RGUI)>;
 			mods = <(MOD_LGUI|MOD_RGUI)>;
 		};

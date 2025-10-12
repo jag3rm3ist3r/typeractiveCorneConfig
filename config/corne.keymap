@@ -235,7 +235,8 @@
 		// < / >
 		//combo_l_abk { timeout-ms = <50>; key-positions = <RB2 RB1>; bindings = <&kp LT>; };
 		//combo_r_abk { timeout-ms = <50>; key-positions = <RB3 RB2>; bindings = <&kp GT>; };
-		combo_shift_thumbs { timeout-ms = <50>; key-positions = <LH0 RH0>; bindings = <&kp LSHFT>; };
+		// Both thumbs produces shift.
+		//combo_shift_thumbs { timeout-ms = <50>; key-positions = <LH0 RH0>; bindings = <&kp LSHFT>; };
 	};
 };
 
@@ -356,7 +357,7 @@ hmr_##_name_: home_row_mod_right_##_name_ {					\
 			repeat {
 				trigger-keys = <
 					A B C D E F G J L M N O P R S T V X Y Z
-					N1 N2 N3 N4 N5 N6 N7 N8 N9 N0
+					//N1 N2 N3 N4 N5 N6 N7 N8 N9 N0
 					TAB
 					//EXCL MINUS BSLH AT HASH PRCNT PLUS EQUAL GRAVE
 					//LT LBKT LBRC RS(N9) SPACE DOLLAR LS(N0) RBRC RBKT GT
@@ -843,7 +844,7 @@ _name_: macro_##_name_ {					\
 //├───────────────┼───────────────┼───────────────┼───────────────┼───────────────┼───────────────┤   ├───────────────┼───────────────┼───────────────┼───────────────┼───────────────┼───────────────┤
 	&ss LSHFT 0		HRM_LB(Z,		X,				C,				D,				V)					&kp K			&kp H			&c_scln			&dot_cln		&kp SQT			&kp CAPS
 //╰───────────────┴───────────────┴───────────────┼───────────────┼───────────────┼───────────────┤   ├───────────────┼───────────────┼───────────────┼───────────────┴───────────────┴───────────────╯
-													&mm_enter_x		&ltt_ctrl		&magic          	&kp SPACE	&ltt FN_RB MINUS	&mt RSHFT ESC
+													&mm_enter_x		&ltt_ctrl		&magic			&mt RSHFT SPACE	&ltt FN_RB MINUS	&mt RSHFT ESC
 //                                                ╰───────────────┴───────────────┴───────────────╯   ╰───────────────┴───────────────┴───────────────╯
 			>;
 		};

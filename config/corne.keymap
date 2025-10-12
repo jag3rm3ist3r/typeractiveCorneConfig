@@ -355,7 +355,7 @@ hmr_##_name_: home_row_mod_right_##_name_ {					\
 			#binding-cells = <0>;
 			//bindings = <&adap_shift LSHFT TAB>;
 			//bindings = <___>;
-			bindings = <___>;
+			bindings = <&kp LSHFT>;
 			repeat {
 				trigger-keys = <
 					A B C D E F G J L M N O P R S T V X Y Z

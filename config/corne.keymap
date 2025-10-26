@@ -528,7 +528,7 @@ hmr_##_name_: home_row_mod_right_##_name_ {					\
 		magic_ctrl_c: magic_key_control_c {
 			compatible = "zmk,behavior-mod-morph";
 			#binding-cells = <0>;
-			bindings = <&kp TAB>, <&kp C>;
+			bindings = <&ltt FN_LB FN_LB_BIND>, <&kp C>;
 			keep-mods = <(MOD_LCTL|MOD_RCTL)>;
 			mods = <(MOD_LCTL|MOD_RCTL)>;
 		};

@@ -499,12 +499,12 @@ hmr_##_name_: home_row_mod_right_##_name_ {					\
 		};
 		ltt_rhs_repeat: layerTapThumbRHSRepeat {
 			compatible = "zmk,behavior-hold-tap";
-			#binding-cells = <0>;
+			#binding-cells = <2>;
 			flavor = "balanced";
 			//require-prior-idle-ms = <150>;
 			tapping-term-ms = <TAPPING_TERM_MS>;
 			quick-tap-ms = <QUICK_TAP_MS>;
-			bindings = <&kp FN_RB>, <&adaptive_repeat_custom>;
+			bindings = <&kp>, <&adaptive_repeat_custom>;
 			//hold-trigger-key-positions = <RC5 KEYS_L THUMBS>; /* LHS */
 			//hold-trigger-on-release;
 		};
@@ -896,7 +896,7 @@ _name_: macro_##_name_ {					\
 //├───────────────┼───────────────┼───────────────┼───────────────┼───────────────┼───────────────┤   ├───────────────┼───────────────┼───────────────┼───────────────┼───────────────┼───────────────┤
 	&ss LSHFT 0		HRM_LB(P,		V,				J,				G,				Z)					&kp X			&kp W			&qmb			&kp TAB			&c_scln			&kp CAPS
 //╰───────────────┴───────────────┴───────────────┼───────────────┼───────────────┼───────────────┤   ├───────────────┼───────────────┼───────────────┼───────────────┴───────────────┴───────────────╯
-													___				&magic_ctrl_c	&magic_r			___				&ltt_rhs_repeat	___
+													___				&magic_ctrl_c	&magic_r			___		&ltt_rhs_repeat FN_RB 0	___
 //                                                ╰───────────────┴───────────────┴───────────────╯   ╰───────────────┴───────────────┴───────────────╯
 			>;
 		};

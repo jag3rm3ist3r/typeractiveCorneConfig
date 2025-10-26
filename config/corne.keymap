@@ -497,6 +497,17 @@ hmr_##_name_: home_row_mod_right_##_name_ {					\
 			//hold-trigger-key-positions = <RC5 KEYS_L THUMBS>; /* LHS */
 			//hold-trigger-on-release;
 		};
+		ltt_rhs_repeat: layerTapThumbRHSRepeat {
+			compatible = "zmk,behavior-hold-tap";
+			#binding-cells = <2>;
+			flavor = "balanced";
+			//require-prior-idle-ms = <150>;
+			tapping-term-ms = <TAPPING_TERM_MS>;
+			quick-tap-ms = <QUICK_TAP_MS>;
+			bindings = <&mo FN_RB>, <&adaptive_repeat_custom>;
+			//hold-trigger-key-positions = <RC5 KEYS_L THUMBS>; /* LHS */
+			//hold-trigger-on-release;
+		};
 
 		/*
 		HML_GENERIC(dot_cln, &dot_cln)
@@ -517,7 +528,7 @@ hmr_##_name_: home_row_mod_right_##_name_ {					\
 		magic_ctrl_c: magic_key_control_c {
 			compatible = "zmk,behavior-mod-morph";
 			#binding-cells = <0>;
-			bindings = <&adaptive_repeat_custom>, <&kp C>;
+			bindings = <&kp TAB>, <&kp C>;
 			keep-mods = <(MOD_LCTL|MOD_RCTL)>;
 			mods = <(MOD_LCTL|MOD_RCTL)>;
 		};
@@ -885,7 +896,7 @@ _name_: macro_##_name_ {					\
 //├───────────────┼───────────────┼───────────────┼───────────────┼───────────────┼───────────────┤   ├───────────────┼───────────────┼───────────────┼───────────────┼───────────────┼───────────────┤
 	&ss LSHFT 0		HRM_LB(P,		V,				J,				G,				Z)					&kp X			&kp W			&qmb			&kp TAB		&c_scln			&kp CAPS
 //╰───────────────┴───────────────┴───────────────┼───────────────┼───────────────┼───────────────┤   ├───────────────┼───────────────┼───────────────┼───────────────┴───────────────┴───────────────╯
-													___				&magic_ctrl_c	&magic_r			___				___				___
+													___				&magic_ctrl_c	&magic_r			___				&ltt_rhs_repeat	___
 //                                                ╰───────────────┴───────────────┴───────────────╯   ╰───────────────┴───────────────┴───────────────╯
 			>;
 		};
@@ -911,9 +922,9 @@ _name_: macro_##_name_ {					\
 //╭───────────────┬───────────────┬───────────────┬───────────────┬───────────────┬───────────────╮   ╭───────────────┬───────────────┬───────────────┬───────────────┬───────────────┬───────────────╮
 	&kp DELETE		HRM_LT(QMARK,	EXCL,			MINUS,			BSLH,			AT)					HRM_RT(HASH,	PRCNT,			PLUS,			EQUAL,			GRAVE)			&kp BACKSPACE
 //├───────────────┼───────────────┼───────────────┼───────────────┼───────────────┼───────────────┤   ├───────────────┼───────────────┼───────────────┼───────────────┼───────────────┼───────────────┤
-	&larr			HRM_LM(LT,		LBKT,			LBRC,			RS(N9),			SEMI)				HRM_RM(COLON,	LS(N0),			RBRC,			RBKT,			GT)				&rarr
+	&kp DQT			HRM_LM(LT,		LBKT,			LBRC,			RS(N9),			SEMI)				HRM_RM(COLON,	LS(N0),			RBRC,			RBKT,			GT)				&kp SQT
 //├───────────────┼───────────────┼───────────────┼───────────────┼───────────────┼───────────────┤   ├───────────────┼───────────────┼───────────────┼───────────────┼───────────────┼───────────────┤
-	&kp DQT			HRM_LB(COMMA,	TILDE,			CARET,			FSLH,			UNDER)				HRM_LB(DOLLAR,	STAR,			PIPE,			AMPS,			DOT)			&kp SQT
+	&larr			HRM_LB(COMMA,	TILDE,			CARET,			FSLH,			UNDER)				HRM_LB(DOLLAR,	STAR,			PIPE,			AMPS,			DOT)			&rarr
 //╰───────────────┴───────────────┴───────────────┼───────────────┼───────────────┼───────────────┤   ├───────────────┼───────────────┼───────────────┼───────────────┴───────────────┴───────────────╯
 													___				___				___					___				___				___
 //                                                ╰───────────────┴───────────────┴───────────────╯   ╰───────────────┴───────────────┴───────────────╯

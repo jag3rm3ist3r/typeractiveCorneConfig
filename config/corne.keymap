@@ -521,16 +521,14 @@ hmr_##_name_: home_row_mod_right_##_name_ {					\
 		magic_gui: magic_shift_key_gui {
 			compatible = "zmk,behavior-mod-morph";
 			#binding-cells = <0>;
-			//bindings = <&adaptive_repeat>, <&kp V>;
-			bindings = <&ltt FN_LB FN_LB_BIND>, <&kp V>;
+			bindings = <&adaptive_repeat>, <&kp V>;
 			keep-mods = <(MOD_LGUI|MOD_RGUI)>;
 			mods = <(MOD_LGUI|MOD_RGUI)>;
 		};
 		magic_ctrl_c: magic_key_control_c {
 			compatible = "zmk,behavior-mod-morph";
 			#binding-cells = <0>;
-			//bindings = <&ltt FN_LB FN_LB_BIND>, <&kp C>;
-			bindings = <&kp R>, <&kp C>;
+			bindings = <&ltt FN_LB FN_LB_BIND>, <&kp C>;
 			keep-mods = <(MOD_LCTL|MOD_RCTL)>;
 			mods = <(MOD_LCTL|MOD_RCTL)>;
 		};
@@ -552,8 +550,7 @@ hmr_##_name_: home_row_mod_right_##_name_ {					\
 			compatible = "zmk,behavior-mod-morph";
 			#binding-cells = <0>;
 			//bindings = <&ltt FN_LB MINUS>, <&kp C>;
-			//bindings = <&ltt FN_LB FN_LB_BIND>, <&kp C>;
-			bindings = <&adaptive_repeat>, <&kp C>;
+			bindings = <&ltt FN_LB FN_LB_BIND>, <&kp C>;
 			keep-mods = <(MOD_LCTL|MOD_RCTL)>;
 			mods = <(MOD_LCTL|MOD_RCTL)>;
 		};
@@ -561,8 +558,7 @@ hmr_##_name_: home_row_mod_right_##_name_ {					\
 			compatible = "zmk,behavior-mod-morph";
 			#binding-cells = <0>;
 			//bindings = <&ltt FN_LB MINUS>, <&kp C>;
-			//bindings = <&kp R>, <&kp V>;
-			bindings = <&ltt FN_LB FN_LB_BIND>, <&kp V>;
+			bindings = <&kp R>, <&kp V>;
 			keep-mods = <(MOD_LCTL|MOD_RCTL|MOD_LGUI|MOD_RGUI)>;
 			mods = <(MOD_LCTL|MOD_RCTL|MOD_LGUI|MOD_RGUI)>;
 		};

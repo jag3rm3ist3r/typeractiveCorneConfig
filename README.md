@@ -9,4 +9,4 @@ P V J G Z  X W ; ? ,
      \t R \s _
 ```
 
-<img width="1039" height="785" alt="image" src="cyanophage.png" />
+<img width="1039" height="785" alt="image" src="./cyanophage.png" />

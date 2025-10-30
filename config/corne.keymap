@@ -513,7 +513,7 @@ wy_bigram {\
 			//require-prior-idle-ms = <150>;
 			tapping-term-ms = <TAPPING_TERM_MS>;
 			quick-tap-ms = <QUICK_TAP_MS>;
-			bindings = <&kp>, <&arc>;
+			bindings = <&kp>, <&adaptive_repeat>;
 			//hold-trigger-key-positions = <RC5 KEYS_L THUMBS>; /* LHS */
 			//hold-trigger-on-release;
 		};

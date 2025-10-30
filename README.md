@@ -3,9 +3,9 @@
 ## Custom Layout reference
 
 ```text
-B F L D K  Q Y O U .
+B F L G K  Q Y O U .
 N S H T M  ' C A E I
-P V J G Z  X W ; ? ,
+P V J D Z  X W ; ? ,
      \t R \s _
 ```
 

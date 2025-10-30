@@ -359,11 +359,11 @@ hmr_##_name_: home_row_mod_right_##_name_ {					\
 			repeat {
 				trigger-keys = <
 					A B C D E F G J L M N O P R S T V X Y Z
-					//N1 N2 N3 N4 N5 N6 N7 N8 N9 N0
+					N1 N2 N3 N4 N5 N6 N7 N8 N9 N0
 					TAB
-					//EXCL MINUS BSLH AT HASH PRCNT PLUS EQUAL GRAVE
-					//LT LBKT LBRC RS(N9) SPACE DOLLAR LS(N0) RBRC RBKT GT
-					//DQT COMMA TILDE CARET FSLH SEMI COLON STAR PIPE AMPS DOT SQT
+					EXCL MINUS BSLH AT HASH PRCNT PLUS EQUAL GRAVE
+					LT LBKT LBRC RS(N9) SPACE DOLLAR LS(N0) RBRC RBKT GT
+					DQT COMMA TILDE CARET FSLH SEMI COLON STAR PIPE AMPS DOT SQT
 				>;
 				bindings = <&key_repeat>;
 				max-prior-idle-ms = <MAX_PRIOR_IDLE_MS>;
@@ -413,38 +413,47 @@ hmr_##_name_: home_row_mod_right_##_name_ {					\
 			};
 		};
 
+#define ARC_COMMON_CONFIG \
+repeat {\
+	trigger-keys = <\
+		A B C D E F G J L M N O P R S T V X Y Z\
+		N1 N2 N3 N4 N5 N6 N7 N8 N9 N0\
+		TAB\
+		EXCL MINUS BSLH AT HASH PRCNT PLUS EQUAL GRAVE\
+		LT LBKT LBRC RS(N9) SPACE DOLLAR LS(N0) RBRC RBKT GT\
+		DQT COMMA TILDE CARET FSLH SEMI COLON STAR PIPE AMPS DOT SQT\
+	>;\
+	bindings = <&key_repeat>;\
+	max-prior-idle-ms = <MAX_PRIOR_IDLE_MS>;\
+	strict-modifiers;\
+};\
+ue_bigram {\
+	trigger-keys = <U>;\
+	bindings = <&kp E>;\
+	max-prior-idle-ms = <MAX_PRIOR_IDLE_MS>;\
+	strict-modifiers;\
+};\
+wy_bigram {\
+	trigger-keys = <W>;\
+	bindings = <&kp Y>;\
+	max-prior-idle-ms = <MAX_PRIOR_IDLE_MS>;\
+	strict-modifiers;\
+};
+
 		// Magic shift / adaptive key
-		arc: adaptive_repeat_custom {
+		arc_l: adaptive_repeat_custom_left {
 			compatible = "zmk,behavior-adaptive-key";
-			#binding-cells = <1>;
+			#binding-cells = <0>;
 			//bindings = <&adap_shift LSHFT TAB>;
-			bindings = <&mo>;
-			repeat {
-				trigger-keys = <
-					A B C D E F G J L M N O P R S T V X Y Z
-					N1 N2 N3 N4 N5 N6 N7 N8 N9 N0
-					TAB
-					//EXCL MINUS BSLH AT HASH PRCNT PLUS EQUAL GRAVE
-					//LT LBKT LBRC RS(N9) SPACE DOLLAR LS(N0) RBRC RBKT GT
-					//DQT COMMA TILDE CARET FSLH SEMI COLON STAR PIPE AMPS DOT SQT
-				>;
-				bindings = <&key_repeat>;
-				max-prior-idle-ms = <MAX_PRIOR_IDLE_MS>;
-				strict-modifiers;
-			};
-			// Single finger bigram prevention.
-			qu_bigram {
-				trigger-keys = <Q>;
-				bindings = <&kp U>;
-				max-prior-idle-ms = <MAX_PRIOR_IDLE_MS>;
-				strict-modifiers;
-			};
-			ue_bigram {
-				trigger-keys = <U>;
-				bindings = <&kp E>;
-				max-prior-idle-ms = <MAX_PRIOR_IDLE_MS>;
-				strict-modifiers;
-			};
+			bindings = <&mo FN_LT>;
+			ARC_COMMON_CONFIG
+		};
+		arc_r: adaptive_repeat_custom_right {
+			compatible = "zmk,behavior-adaptive-key";
+			#binding-cells = <0>;
+			//bindings = <&adap_shift LSHFT TAB>;
+			bindings = <&mo FN_RT>;
+			ARC_COMMON_CONFIG
 		};
 
 		adap_shift: adaptive_shift {
@@ -504,7 +513,7 @@ hmr_##_name_: home_row_mod_right_##_name_ {					\
 			//require-prior-idle-ms = <150>;
 			tapping-term-ms = <TAPPING_TERM_MS>;
 			quick-tap-ms = <QUICK_TAP_MS>;
-			bindings = <&kp>, <&arc UNDER>;
+			bindings = <&kp>, <&arc>;
 			//hold-trigger-key-positions = <RC5 KEYS_L THUMBS>; /* LHS */
 			//hold-trigger-on-release;
 		};
@@ -892,7 +901,7 @@ _name_: macro_##_name_ {					\
 //╭───────────────┬───────────────┬───────────────┬───────────────┬───────────────┬───────────────╮   ╭───────────────┬───────────────┬───────────────┬───────────────┬───────────────┬───────────────╮
 	&kp DELETE		HRM_LT(B,		F,				L,				G,				K)					&kp Q			&kp Y			&hmr HRM_RT2 O	&kp U			&c_scln		&kp BACKSPACE
 //├───────────────┼───────────────┼───────────────┼───────────────┼───────────────┼───────────────┤   ├───────────────┼───────────────┼───────────────┼───────────────┼───────────────┼───────────────┤
-	&arc FN_LT		HRM_LM(N,		S,				H,				T,				M)					HRM_RM(SQT,		C,				A,				E,				I)				&arc FN_RT
+	&arc_l			HRM_LM(N,		S,				H,				T,				M)					HRM_RM(SQT,		C,				A,				E,				I)				&arc_r
 //├───────────────┼───────────────┼───────────────┼───────────────┼───────────────┼───────────────┤   ├───────────────┼───────────────┼───────────────┼───────────────┼───────────────┼───────────────┤
 	&ss LSHFT 0		HRM_LB(P,		V,				J,				D,				Z)					&kp X			&kp W			&kp COLN		&qmb			&dot_cln		&kp CAPS
 //╰───────────────┴───────────────┴───────────────┼───────────────┼───────────────┼───────────────┤   ├───────────────┼───────────────┼───────────────┼───────────────┴───────────────┴───────────────╯

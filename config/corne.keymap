@@ -416,7 +416,7 @@ hmr_##_name_: home_row_mod_right_##_name_ {					\
 #define ARC_COMMON_CONFIG \
 repeat {\
 	trigger-keys = <\
-		A B C D E F G J L M N O P R S T V X Y Z\
+		A B C D E F G I J K L M N O P Q R S T V X Y Z\
 		N1 N2 N3 N4 N5 N6 N7 N8 N9 N0\
 		TAB\
 		EXCL MINUS BSLH AT HASH PRCNT PLUS EQUAL GRAVE\
@@ -438,8 +438,13 @@ wy_bigram {\
 	bindings = <&kp Y>;\
 	max-prior-idle-ms = <MAX_PRIOR_IDLE_MS>;\
 	strict-modifiers;\
+};\
+hl_bigram {\
+	trigger-keys = <H>;\
+	bindings = <&kp L>;\
+	max-prior-idle-ms = <MAX_PRIOR_IDLE_MS>;\
+	strict-modifiers;\
 };
-
 		// Magic shift / adaptive key
 		arc_l: adaptive_repeat_custom_left {
 			compatible = "zmk,behavior-adaptive-key";

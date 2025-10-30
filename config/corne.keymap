@@ -413,52 +413,44 @@ hmr_##_name_: home_row_mod_right_##_name_ {					\
 			};
 		};
 
-#define ARC_COMMON_CONFIG \
-repeat {\
-	trigger-keys = <\
-		A B C D E F G I J K L M N O P Q R S T V X Y Z\
-		N1 N2 N3 N4 N5 N6 N7 N8 N9 N0\
-		TAB\
-		EXCL MINUS BSLH AT HASH PRCNT PLUS EQUAL GRAVE\
-		LT LBKT LBRC RS(N9) SPACE DOLLAR LS(N0) RBRC RBKT GT\
-		DQT COMMA TILDE CARET FSLH SEMI COLON STAR PIPE AMPS DOT SQT\
-	>;\
-	bindings = <&key_repeat>;\
-	max-prior-idle-ms = <MAX_PRIOR_IDLE_MS>;\
-	strict-modifiers;\
-};\
-ue_bigram {\
-	trigger-keys = <U>;\
-	bindings = <&kp E>;\
-	max-prior-idle-ms = <MAX_PRIOR_IDLE_MS>;\
-	strict-modifiers;\
-};\
-wy_bigram {\
-	trigger-keys = <W>;\
-	bindings = <&kp Y>;\
-	max-prior-idle-ms = <MAX_PRIOR_IDLE_MS>;\
-	strict-modifiers;\
-};\
-hl_bigram {\
-	trigger-keys = <H>;\
-	bindings = <&kp L>;\
-	max-prior-idle-ms = <MAX_PRIOR_IDLE_MS>;\
-	strict-modifiers;\
-};
 		// Magic shift / adaptive key
-		arc_l: adaptive_repeat_custom_left {
+		arc: adaptive_repeat_custom_left {
 			compatible = "zmk,behavior-adaptive-key";
 			#binding-cells = <0>;
 			//bindings = <&adap_shift LSHFT TAB>;
-			bindings = <&mo FN_LT>;
-			ARC_COMMON_CONFIG
-		};
-		arc_r: adaptive_repeat_custom_right {
-			compatible = "zmk,behavior-adaptive-key";
-			#binding-cells = <0>;
-			//bindings = <&adap_shift LSHFT TAB>;
-			bindings = <&mo FN_RT>;
-			ARC_COMMON_CONFIG
+			bindings = <XXX>;
+			repeat {
+				trigger-keys = <
+					A B C D E F G I J K L M N O P Q R S T V X Y Z
+					N1 N2 N3 N4 N5 N6 N7 N8 N9 N0
+					TAB
+					EXCL MINUS BSLH AT HASH PRCNT PLUS EQUAL GRAVE
+					LT LBKT LBRC RS(N9) SPACE DOLLAR LS(N0) RBRC RBKT GT
+					DQT COMMA TILDE CARET FSLH SEMI COLON STAR PIPE AMPS DOT SQT
+				>;
+				bindings = <&key_repeat>;
+				max-prior-idle-ms = <MAX_PRIOR_IDLE_MS>;
+				strict-modifiers;
+			};
+			// Single finger bigram prevention.
+			ue_bigram {
+				trigger-keys = <U>;
+				bindings = <&kp E>;
+				max-prior-idle-ms = <MAX_PRIOR_IDLE_MS>;
+				strict-modifiers;
+			};
+			wy_bigram {
+				trigger-keys = <W>;
+				bindings = <&kp Y>;
+				max-prior-idle-ms = <MAX_PRIOR_IDLE_MS>;
+				strict-modifiers;
+			};
+			hl_bigram {
+				trigger-keys = <H>;
+				bindings = <&kp L>;
+				max-prior-idle-ms = <MAX_PRIOR_IDLE_MS>;
+				strict-modifiers;
+			};
 		};
 
 		adap_shift: adaptive_shift {
@@ -681,6 +673,15 @@ hl_bigram {\
 			bindings = <&kp>, <&caps_word>;
 			display-name = "smartShift";
 		};
+		// Layer tap for smart_shift
+		ssl: smart_shift_layer {
+			compatible = "zmk,behavior-hold-tap";
+			#binding-cells = <2>;
+			flavor = "hold-preferred";
+			tapping-term-ms = <TAPPING_TERM_MS>;
+			bindings = <&mo>, <&caps_word>;
+			display-name = "smartShift";
+		};
 		// Shift / Repeat
 		mr: mod_repeat {
 			compatible = "zmk,behavior-hold-tap";
@@ -878,7 +879,7 @@ _name_: macro_##_name_ {					\
 //├───────────────┼───────────────┼───────────────┼───────────────┼───────────────┼───────────────┤   ├───────────────┼───────────────┼───────────────┼───────────────┼───────────────┼───────────────┤
 	&mo FN_LT		HRM_LM(A,		R,				S,				T,				G)					HRM_RM(M,		N,				E,				I,				O)				&mo FN_RT
 //├───────────────┼───────────────┼───────────────┼───────────────┼───────────────┼───────────────┤   ├───────────────┼───────────────┼───────────────┼───────────────┼───────────────┼───────────────┤
-	&ss LSHFT 0		HRM_LB(Z,		X,				C,				D,				V)					&kp K			&kp H			&c_scln			&dot_cln		&kp SQT			&kp CAPS
+	&ssl MACR 0		HRM_LB(Z,		X,				C,				D,				V)					&kp K			&kp H			&c_scln			&dot_cln		&kp SQT			&lt FN_RT CAPS
 //╰───────────────┴───────────────┴───────────────┼───────────────┼───────────────┼───────────────┤   ├───────────────┼───────────────┼───────────────┼───────────────┴───────────────┴───────────────╯
 													&mm_enter_x		&ltt_ctrl		&magic			&mt_b RSHFT SPACE &ltt FN_RB FN_RB_BIND &mt_b RSHFT ESC
 //                                                ╰───────────────┴───────────────┴───────────────╯   ╰───────────────┴───────────────┴───────────────╯
@@ -904,11 +905,11 @@ _name_: macro_##_name_ {					\
 			display-name = "Custom";
 			bindings = <
 //╭───────────────┬───────────────┬───────────────┬───────────────┬───────────────┬───────────────╮   ╭───────────────┬───────────────┬───────────────┬───────────────┬───────────────┬───────────────╮
-	&kp DELETE		HRM_LT(B,		F,				L,				G,				K)					&kp Q			&kp Y			&hmr HRM_RT2 O	&kp U			&c_scln		&kp BACKSPACE
+	___				HRM_LT(B,		F,				L,				G,				K)					&kp Q			&kp Y			&hmr HRM_RT2 O	&kp U			&c_scln			___
 //├───────────────┼───────────────┼───────────────┼───────────────┼───────────────┼───────────────┤   ├───────────────┼───────────────┼───────────────┼───────────────┼───────────────┼───────────────┤
-	&arc_l			HRM_LM(N,		S,				H,				T,				M)					HRM_RM(SQT,		C,				A,				E,				I)				&arc_r
+	&arc			HRM_LM(N,		S,				H,				T,				M)					HRM_RM(SQT,		C,				A,				E,				I)				&arc
 //├───────────────┼───────────────┼───────────────┼───────────────┼───────────────┼───────────────┤   ├───────────────┼───────────────┼───────────────┼───────────────┼───────────────┼───────────────┤
-	&ss LSHFT 0		HRM_LB(P,		V,				J,				D,				Z)					&kp X			&kp W			&kp COLN		&qmb			&dot_cln		&kp CAPS
+	___				HRM_LB(P,		V,				J,				D,				Z)					&kp X			&kp W			&kp COLN		&qmb			&dot_cln		___
 //╰───────────────┴───────────────┴───────────────┼───────────────┼───────────────┼───────────────┤   ├───────────────┼───────────────┼───────────────┼───────────────┴───────────────┴───────────────╯
 													___				&magic_ctrl_c	&magic_r			___				___				___
 //                                                ╰───────────────┴───────────────┴───────────────╯   ╰───────────────┴───────────────┴───────────────╯

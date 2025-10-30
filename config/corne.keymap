@@ -414,11 +414,11 @@ hmr_##_name_: home_row_mod_right_##_name_ {					\
 		};
 
 		// Magic shift / adaptive key
-		adaptive_repeat_custom: adaptive_repeat_custom {
+		arc: adaptive_repeat_custom {
 			compatible = "zmk,behavior-adaptive-key";
-			#binding-cells = <0>;
+			#binding-cells = <1>;
 			//bindings = <&adap_shift LSHFT TAB>;
-			bindings = <___>;
+			bindings = <&mo>;
 			repeat {
 				trigger-keys = <
 					A B C D E F G J L M N O P R S T V X Y Z
@@ -892,7 +892,7 @@ _name_: macro_##_name_ {					\
 //╭───────────────┬───────────────┬───────────────┬───────────────┬───────────────┬───────────────╮   ╭───────────────┬───────────────┬───────────────┬───────────────┬───────────────┬───────────────╮
 	&kp DELETE		HRM_LT(B,		F,				L,				G,				K)					&kp Q			&kp Y			&hmr HRM_RT2 O	&kp U			&c_scln		&kp BACKSPACE
 //├───────────────┼───────────────┼───────────────┼───────────────┼───────────────┼───────────────┤   ├───────────────┼───────────────┼───────────────┼───────────────┼───────────────┼───────────────┤
-	&mo FN_LT		HRM_LM(N,		S,				H,				T,				M)					HRM_RM(SQT,		C,				A,				E,				I)				&mo FN_RT
+	&arc FN_LT		HRM_LM(N,		S,				H,				T,				M)					HRM_RM(SQT,		C,				A,				E,				I)				&arc FN_RT
 //├───────────────┼───────────────┼───────────────┼───────────────┼───────────────┼───────────────┤   ├───────────────┼───────────────┼───────────────┼───────────────┼───────────────┼───────────────┤
 	&ss LSHFT 0		HRM_LB(P,		V,				J,				D,				Z)					&kp X			&kp W			&kp COLN		&qmb			&dot_cln		&kp CAPS
 //╰───────────────┴───────────────┴───────────────┼───────────────┼───────────────┼───────────────┤   ├───────────────┼───────────────┼───────────────┼───────────────┴───────────────┴───────────────╯

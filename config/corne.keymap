@@ -874,7 +874,7 @@ _name_: macro_##_name_ {					\
 	keymap {
 		compatible = "zmk,keymap";
 		base_layer {
-			display-name = "Base";
+			display-name = "Colemak-DH";
 			bindings = <
 //╭───────────────┬───────────────┬───────────────┬───────────────┬───────────────┬───────────────╮   ╭───────────────┬───────────────┬───────────────┬───────────────┬───────────────┬───────────────╮
 	&kp DELETE		HRM_LT(Q,		W,				F,				P,				B)					&kp J			&kp L			&hmr HRM_RT2 U	&kp Y			&qmb			&kp BACKSPACE
@@ -904,7 +904,7 @@ _name_: macro_##_name_ {					\
 		};
 
 		custom_layout {
-			display-name = "Custom";
+			display-name = "Night (Modified)";
 			bindings = <
 //╭───────────────┬───────────────┬───────────────┬───────────────┬───────────────┬───────────────╮   ╭───────────────┬───────────────┬───────────────┬───────────────┬───────────────┬───────────────╮
 	___				HRM_LT(B,		F,				L,				G,				Z)					&kp Q			&kp Y			&hmr HRM_RT2 O	&kp U			&c_scln			___

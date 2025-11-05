@@ -1,6 +1,12 @@
 # Typeractive Corne Config
 
-## Custom Layout reference
+## Layouts
+
+### Colemak DH
+
+### QWERTY
+
+### Custom Layout
 
 ```text
 B F L G Z  Q Y O U .
@@ -10,3 +16,5 @@ P V J D K  X W ; ? ,
 ```
 
 <img width="1039" height="785" alt="image" src="./cyanophage.png" />
+
+### Enthium

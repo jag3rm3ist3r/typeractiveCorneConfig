@@ -872,6 +872,7 @@ _name_: macro_##_name_ {					\
 };
 
 
+/*
 / {
 	conditional_layers {
 		compatible = "zmk,conditional-layers";
@@ -881,6 +882,7 @@ _name_: macro_##_name_ {					\
 		};
 	};
 };
+*/
 
 
 / {

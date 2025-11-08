@@ -564,7 +564,7 @@ hmr_##_name_: home_row_mod_right_##_name_ {					\
 			#binding-cells = <0>;
 			//bindings = <&ltt FN_LB MINUS>, <&kp C>;
 			// Hardcoded to avoid conflict with other layers.
-			bindings = <&ltt NAV TAB>, <&kp C>;
+			bindings = <&lt_b NAV TAB>, <&kp C>;
 			keep-mods = <(MOD_LCTL|MOD_RCTL)>;
 			mods = <(MOD_LCTL|MOD_RCTL)>;
 		};
@@ -896,7 +896,7 @@ _name_: macro_##_name_ {					\
 //├───────────────┼───────────────┼───────────────┼───────────────┼───────────────┼───────────────┤   ├───────────────┼───────────────┼───────────────┼───────────────┼───────────────┼───────────────┤
 	&ssl MACR 0		HRM_LB(Z,		X,				C,				D,				V)					&kp K			&kp H			&c_scln			&dot_cln		&kp SQT			&lt FN_RT CAPS
 //╰───────────────┴───────────────┴───────────────┼───────────────┼───────────────┼───────────────┤   ├───────────────┼───────────────┼───────────────┼───────────────┴───────────────┴───────────────╯
-													&mm_enter_x		&ltt_ctrl		&magic			&mt_b RSHFT SPACE &ltt SYM MINUS &mt_b RSHFT ESC
+													&mm_enter_x		&ltt_ctrl		&magic			&mt_b RSHFT SPACE &lt_b SYM MINUS &mt_b RSHFT ESC
 //                                                ╰───────────────┴───────────────┴───────────────╯   ╰───────────────┴───────────────┴───────────────╯
 			>;
 		};

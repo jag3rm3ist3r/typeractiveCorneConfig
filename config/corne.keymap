@@ -201,10 +201,14 @@
 //├───────────────┼───────────────┼───────────────┼───────────────┼───────────────┼───────────────┤   ├───────────────┼───────────────┼───────────────┼───────────────┼───────────────┼───────────────┤
 //	___				___				___				___				___				___					___				___				___				___				___				___
 //╰───────────────┴───────────────┴───────────────┼───────────────┼───────────────┼───────────────┤   ├───────────────┼───────────────┼───────────────┼───────────────┴───────────────┴───────────────╯
-																#define FN_LB NAV
-																#define FN_LB_BIND TAB
-																													#define FN_RB SYM
-																													#define FN_RB_BIND MINUS
+																#define FN_LB LSHIFT
+																#define FN_LB_BIND &arc
+																				#define FN_LBI NAV
+																				#define FN_LBI_BIND R
+																									#define FN_RBI SYM
+																									#define FN_RBI_BIND SPACE
+																													#define FN_RB RSHIFT
+																													#define FN_RB_BIND TAB
 //                                                ╰───────────────┴───────────────┴───────────────╯   ╰───────────────┴───────────────┴───────────────╯
 
 
@@ -420,7 +424,7 @@ hmr_##_name_: home_row_mod_right_##_name_ {					\
 			compatible = "zmk,behavior-adaptive-key";
 			#binding-cells = <0>;
 			//bindings = <&adap_shift LSHFT TAB>;
-			bindings = <XXX>;
+			bindings = <&kp FN_LB>;
 			repeat {
 				trigger-keys = <
 					A B C D E F G I J K L M N O P Q R S T V X Y Z
@@ -536,7 +540,8 @@ hmr_##_name_: home_row_mod_right_##_name_ {					\
 		magic_ctrl_c: magic_key_control_c {
 			compatible = "zmk,behavior-mod-morph";
 			#binding-cells = <0>;
-			bindings = <&ltt FN_LB FN_LB_BIND>, <&kp C>;
+			//bindings = <&mt_b FN_LB FN_LB_BIND>, <&kp C>;
+			bindings = <FN_LB_BIND>, <&kp C>;
 			keep-mods = <(MOD_LCTL|MOD_RCTL)>;
 			mods = <(MOD_LCTL|MOD_RCTL)>;
 		};
@@ -566,7 +571,7 @@ hmr_##_name_: home_row_mod_right_##_name_ {					\
 			compatible = "zmk,behavior-mod-morph";
 			#binding-cells = <0>;
 			//bindings = <&ltt FN_LB MINUS>, <&kp C>;
-			bindings = <&mt_b LSHFT R>, <&kp V>;
+			bindings = <&mt_b FN_LBI FN_LBI_BIND>, <&kp V>;
 			keep-mods = <(MOD_LCTL|MOD_RCTL|MOD_LGUI|MOD_RGUI)>;
 			mods = <(MOD_LCTL|MOD_RCTL|MOD_LGUI|MOD_RGUI)>;
 		};
@@ -709,9 +714,16 @@ hmr_##_name_: home_row_mod_right_##_name_ {					\
             flavor = "balanced";
             tapping-term-ms = <TAPPING_TERM_MS>;
             bindings = <&kp>, <&kp>;
-            display-name = "Mod-Tap-balanced";
+            display-name = "Mod_Tap-balanced";
         };
-
+        lt_b: layer_tap-balanced {
+            compatible = "zmk,behavior-hold-tap";
+            #binding-cells = <2>;
+            flavor = "balanced";
+            tapping-term-ms = <TAPPING_TERM_MS>;
+            bindings = <&mo>, <&kp>;
+            display-name = "Layer_Tap-balanced";
+        };
 
     };
 };
@@ -913,7 +925,7 @@ _name_: macro_##_name_ {					\
 //├───────────────┼───────────────┼───────────────┼───────────────┼───────────────┼───────────────┤   ├───────────────┼───────────────┼───────────────┼───────────────┼───────────────┼───────────────┤
 	___				HRM_LB(P,		V,				J,				D,				K)					&kp X			&kp W			&kp COLN		&qmb			&dot_cln		___
 //╰───────────────┴───────────────┴───────────────┼───────────────┼───────────────┼───────────────┤   ├───────────────┼───────────────┼───────────────┼───────────────┴───────────────┴───────────────╯
-													___				&magic_ctrl_c	&magic_r			___				___				___
+													___				&magic_ctrl_c	&magic_r		&lt_b FN_RBI FN_RBI_BIND &lt_b FN_RB FN_RB_BIND ___
 //                                                ╰───────────────┴───────────────┴───────────────╯   ╰───────────────┴───────────────┴───────────────╯
 			>;
 		};

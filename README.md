@@ -25,3 +25,9 @@ w c i a e ; k h t n s f
   ' - , . / j m g b v
      \t R \s _
 ```
+```text
+  x p d l q = u o y z
+f s n t h k ; e a i c w
+  v b g m j / . , - '
+     \t R \s _
+```

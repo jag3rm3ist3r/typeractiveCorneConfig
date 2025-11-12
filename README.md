@@ -10,8 +10,8 @@
 
 ```text
   z f l d k  / u o , x
-b n s h t m  ; e a i c w
-  p v j g q  - T ? . y
+b n s h t m  ; e a i c y
+  p v j g q  T - ? . w
         r R  S '
 ```
 

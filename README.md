@@ -9,9 +9,9 @@
 ### Tressym
 
 ```text
-  z f l d k  / u o , x
-b n s h t m  ; e a i c y
-  p v j g q  T - ? . w
+  x p d l k  / u o , j
+v s n t h m  ; e a i c y
+  f b g q z  T - ? . w
         r R  S '
 ```
 

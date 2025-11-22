@@ -4,14 +4,26 @@
 
 ### Colemak DH
 
+```
+q w f p b  j l u y ?
+a r s t g  m n e i o
+z x c d v  k h , . '
+```
+
 ### QWERTY
+
+```
+q w e r t  y u i o p
+a s d f g  h j k l ;
+z x c v b  n m , . /
+```
 
 ### Tressym
 
 ```text
   j p d x q  / - a , z
-w c n t h m  ; e o i s v
-  y b g l z  T u ? . f
+w c n t h m  T e o i s v
+  y b g l z  ; u ? . f
         r R  S '
 ```
 

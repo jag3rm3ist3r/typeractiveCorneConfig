@@ -445,9 +445,15 @@ hmr_##_name_: home_row_mod_right_##_name_ {					\
 				max-prior-idle-ms = <MAX_PRIOR_IDLE_MS>;
 				strict-modifiers;
 			};
-			wy_bigram {
+			wn_bigram {
 				trigger-keys = <W>;
-				bindings = <&kp Y>;
+				bindings = <&kp N>;
+				max-prior-idle-ms = <MAX_PRIOR_IDLE_MS>;
+				strict-modifiers;
+			};
+			vi_bigram {
+				trigger-keys = <V>;
+				bindings = <&kp I>;
 				max-prior-idle-ms = <MAX_PRIOR_IDLE_MS>;
 				strict-modifiers;
 			};

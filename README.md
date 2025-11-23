@@ -2,6 +2,17 @@
 
 ## Layouts
 
+### Tressym
+
+```text
+  j p d x q  / - a , z
+w c n t h m  T e o i s v
+  y b g l z  ; u ? . f
+        r R  S '
+```
+
+<img width="1039" height="785" alt="image" src="./Tressym.png" />
+
 ### Colemak DH
 
 ```
@@ -21,17 +32,6 @@ z x c v b  n m , . /
 ```
 
 <img width="1039" height="785" alt="image" src="./QWERTY.png" />
-
-### Tressym
-
-```text
-  j p d x q  / - a , z
-w c n t h m  T e o i s v
-  y b g l z  ; u ? . f
-        r R  S '
-```
-
-<img width="1039" height="785" alt="image" src="./Tressym.png" />
 
 ### Enthium v11
 

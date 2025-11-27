@@ -5,8 +5,8 @@
 ### Tressym
 
 ```text
-  j p d x q  / - a , z
-w c n t h m  T e o i s v
+  j p d x q  / T a , z
+w c n t h m  - e o i s v
   y b g l z  ; u ? . f
         r R  S '
 ```

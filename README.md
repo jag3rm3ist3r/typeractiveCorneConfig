@@ -1,19 +1,29 @@
 # Typeractive Corne Config
 
-## Layouts
+## Layers
 
-### Tressym
+### Symbols
+
+```text
+  ? ! - \ @  # % + = `
+" < [ { ( ;  : ) } ] > '
+  , ~ ^ / _  $ * | & .
+```
+
+### Layouts
+
+#### Tressym
 
 ```text
   j p d x q  / T a , z
 w c n t h m  - e o i s v
-  y b g l z  ; u ? . f
+  y b g l z  _ u ? . f
         R r  S '
 ```
 
 <img width="1039" height="785" alt="image" src="./Tressym.png" />
 
-### Colemak DH
+#### Colemak DH
 
 ```
 q w f p b  j l u y ?
@@ -23,7 +33,7 @@ z x c d v  k h , . '
 
 <img width="1039" height="785" alt="image" src="./Colemak-DH.png" />
 
-### QWERTY
+#### QWERTY
 
 ```
 q w e r t  y u i o p
@@ -33,7 +43,7 @@ z x c v b  n m , . /
 
 <img width="1039" height="785" alt="image" src="./QWERTY.png" />
 
-### Enthium v11
+#### Enthium v11
 
 ```text
   x p d l q / u o y z

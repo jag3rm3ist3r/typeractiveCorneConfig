@@ -10,6 +10,15 @@
 <- , ~ ^ / _  $ * | & . ->
 ```
 
+The symbols layer is designed with programming in mind.
+The middle row is for brackets and quotes.
+Top row logical operators are mirrored with bottom row bitwise operators.
+Above and below the index fingers are the division and multiplication symbols.
+The remaining symbols have been packed into the corners and in the inner columns.
+The dollar symbol is on the right hand side of the keyboard as it indicates the end of the line in REGEX and VIm.
+The caret is on the left for the same reason.
+The semicolon ``;`` symbol is on the left because is is almost never typed after a left bracket.
+
 ### Layouts
 
 #### Tressym
@@ -22,6 +31,8 @@ w c n t h m  - e o i s v
 ```
 
 <img width="1039" height="785" alt="image" src="./Tressym.png" />
+
+This is my own custom layout, it's based loosely off of Night and Enthium.
 
 #### Colemak DH
 

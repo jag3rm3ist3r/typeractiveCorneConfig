@@ -588,16 +588,20 @@ hmr_##_name_: home_row_mod_right_##_name_ {					\
 			#binding-cells = <0>;
 			//bindings = <&ltt FN_LB MINUS>, <&kp C>;
 			bindings = <&mt_b FN_LBI FN_LBI_BIND>, <&kp V>;
-			keep-mods = <(MOD_LCTL|MOD_RCTL|MOD_LGUI|MOD_RGUI)>;
-			mods = <(MOD_LCTL|MOD_RCTL|MOD_LGUI|MOD_RGUI)>;
+			//keep-mods = <(MOD_LCTL|MOD_RCTL|MOD_LGUI|MOD_RGUI)>;
+			keep-mods = <(MOD_LCTL|MOD_LGUI)>;
+			//mods = <(MOD_LCTL|MOD_RCTL|MOD_LGUI|MOD_RGUI)>;
+			mods = <(MOD_LCTL|MOD_LGUI)>;
 		};
 		magic_r: magic_thumb_key {
 			compatible = "zmk,behavior-mod-morph";
 			#binding-cells = <0>;
 			//bindings = <&ltt FN_LB MINUS>, <&kp C>;
 			bindings = <&ltt_r>, <&kp TAB>;
-			keep-mods = <(MOD_LALT|MOD_RALT)>;
-			mods = <(MOD_LALT|MOD_RALT)>;
+			//keep-mods = <(MOD_LALT|MOD_RALT)>;
+			keep-mods = <(MOD_LALT)>;
+			//mods = <(MOD_LALT|MOD_RALT)>;
+			mods = <(MOD_LALT)>;
 		};
 		mm_enter_x: mod_morph_enter_x {
 			compatible = "zmk,behavior-mod-morph";

@@ -43,7 +43,8 @@ w c n t h m  - e o i s v
 
 <img width="1039" height="785" alt="image" src="./Tressym.png" />
 
-This is my own custom layout, it's based loosely off of Night and Enthium.
+This is my own custom layout.
+I used [cyanophage](https://cyanophage.github.io) to optimise it.
 
 #### Colemak DH
 

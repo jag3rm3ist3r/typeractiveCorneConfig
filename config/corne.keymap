@@ -291,6 +291,7 @@ hmr_##_name_: home_row_mod_right_##_name_ {					\
 
 
 #define MAX_PRIOR_IDLE_MS 350
+#define ARC_MAX_PRIOR_IDLE_MS 1000
 
 // Non-macro setup
 / {
@@ -435,32 +436,32 @@ hmr_##_name_: home_row_mod_right_##_name_ {					\
 					DQT COMMA TILDE CARET FSLH SEMI COLON STAR PIPE AMPS DOT SQT
 				>;
 				bindings = <&key_repeat>;
-				max-prior-idle-ms = <MAX_PRIOR_IDLE_MS>;
+				max-prior-idle-ms = <ARC_MAX_PRIOR_IDLE_MS>;
 				strict-modifiers;
 			};
 			// Single finger bigram prevention.
 			ue_bigram {
 				trigger-keys = <U>;
 				bindings = <&kp E>;
-				max-prior-idle-ms = <MAX_PRIOR_IDLE_MS>;
+				max-prior-idle-ms = <ARC_MAX_PRIOR_IDLE_MS>;
 				strict-modifiers;
 			};
 			wn_bigram {
 				trigger-keys = <W>;
 				bindings = <&kp N>;
-				max-prior-idle-ms = <MAX_PRIOR_IDLE_MS>;
+				max-prior-idle-ms = <ARC_MAX_PRIOR_IDLE_MS>;
 				strict-modifiers;
 			};
 			vi_bigram {
 				trigger-keys = <V>;
 				bindings = <&kp I>;
-				max-prior-idle-ms = <MAX_PRIOR_IDLE_MS>;
+				max-prior-idle-ms = <ARC_MAX_PRIOR_IDLE_MS>;
 				strict-modifiers;
 			};
 			hl_bigram {
 				trigger-keys = <H>;
 				bindings = <&kp L>;
-				max-prior-idle-ms = <MAX_PRIOR_IDLE_MS>;
+				max-prior-idle-ms = <ARC_MAX_PRIOR_IDLE_MS>;
 				strict-modifiers;
 			};
 		};

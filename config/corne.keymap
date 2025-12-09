@@ -987,12 +987,11 @@ _name_: macro_##_name_ {					\
 			>;
 		};
 
-
 		navLayer {
 			display-name = "Nav";
 			bindings = <
 //╭───────────────┬───────────────┬───────────────┬───────────────┬───────────────┬───────────────╮   ╭───────────────┬───────────────┬───────────────┬───────────────┬───────────────┬───────────────╮
-	&kp BACKSPACE	&kp LA(F4)		&kp LG(LC(LEFT)) &mmv MOVE_UP &kp LG(LC(RIGHT))	&paste_line			HRM_RT(SPACE,	LC(BACKSPACE),	SPACE,			SPACE,			LC(DELETE))		&kp DELETE
+	&kp BACKSPACE	&kp LA(F4)		&kp LG(LC(LEFT)) &mmv MOVE_UP &kp LG(LC(RIGHT))	&paste_line			&kp SPACE	&kp LC(BACKSPACE)	&msc SCRL_DOWN	&msc SCRL_UP	&kp LC(DELETE)	&kp DELETE
 //├───────────────┼───────────────┼───────────────┼───────────────┼───────────────┼───────────────┤   ├───────────────┼───────────────┼───────────────┼───────────────┼───────────────┼───────────────┤
 	&kp LC(LA(DELETE)) &kp LC(LS(TAB)) &mmv MOVE_LEFT &mmv MOVE_DOWN &mmv MOVE_RIGHT &copy_line			&kp SPACE		&kp LEFT		&kp DOWN		&kp UP			&kp RIGHT		___
 //├───────────────┼───────────────┼───────────────┼───────────────┼───────────────┼───────────────┤   ├───────────────┼───────────────┼───────────────┼───────────────┼───────────────┼───────────────┤

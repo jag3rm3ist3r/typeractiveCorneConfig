@@ -820,6 +820,18 @@ _name_: macro_##_name_ {					\
 				<&kp LC(C)>;
 		};
 
+		paste_line: paste_line_macro {
+			compatible		= "zmk,behavior-macro";
+			#binding-cells	= <0>;
+			wait-ms = <30>;
+			tap-ms = <40>;
+			bindings =
+				//<&macro_release &kp LSHFT>,
+				//<&macro_release &kp RSHFT>,
+				<&triple_click>,
+				<&kp LC(V)>;
+		};
+
 		clr_mod: clear_mods {
 			compatible = "zmk,behavior-macro";
 			#binding-cells = <0>;
@@ -974,11 +986,11 @@ _name_: macro_##_name_ {					\
 			display-name = "Nav";
 			bindings = <
 //╭───────────────┬───────────────┬───────────────┬───────────────┬───────────────┬───────────────╮   ╭───────────────┬───────────────┬───────────────┬───────────────┬───────────────┬───────────────╮
-	&kp BACKSPACE	&kp LA(F4)		&mkp RCLK		&kp LC(LS(TAB))	&mkp LCLK		&triple_click		XXX			&kp LC(BACKSPACE)	XXX				XXX				&kp LC(DELETE)	&kp DELETE
+	&kp BACKSPACE	&kp LA(F4)		&kp LG(LC(LEFT)) &mmv MOVE_UP &kp LG(LC(RIGHT))	&triple_click		HRM_RT(SPACE,	LC(BACKSPACE),	SPACE,			SPACE,			LC(DELETE))		&kp DELETE
 //├───────────────┼───────────────┼───────────────┼───────────────┼───────────────┼───────────────┤   ├───────────────┼───────────────┼───────────────┼───────────────┼───────────────┼───────────────┤
-	___				HRM_LM(LG(TAB),	LG(LC(LEFT)),	LC(TAB),		LG(LC(RIGHT)),	SPACE)				XXX				&kp LEFT		&kp DOWN		&kp UP			&kp RIGHT		___
+	&kp LC(LA(DELETE)) &msc SCRL_UP	&mmv MOVE_LEFT	&mmv MOVE_DOWN	&mmv MOVE_RIGHT	&copy_line			HRM_RM(SPACE,	LEFT,			DOWN,			UP,				RIGHT)			___
 //├───────────────┼───────────────┼───────────────┼───────────────┼───────────────┼───────────────┤   ├───────────────┼───────────────┼───────────────┼───────────────┼───────────────┼───────────────┤
-	___				XXX				&kp LA(LEFT)	&mkp MCLK		&kp LA(RIGHT)	&copy_line			XXX				&kp HOME		&kp PGDN		&kp PGUP		&kp END			___
+	___				&msc SCRL_DOWN	&mkp RCLK		&mkp MCLK		&mkp LCLK		&paste_line			HRM_RB(SPACE,	HOME,			PGDN,			PGUP,			END)			___
 //╰───────────────┴───────────────┴───────────────┼───────────────┼───────────────┼───────────────┤   ├───────────────┼───────────────┼───────────────┼───────────────┴───────────────┴───────────────╯
 													&kp ESC			___				___					___				___				&kp ENTER
 //                                                ╰───────────────┴───────────────┴───────────────╯   ╰───────────────┴───────────────┴───────────────╯

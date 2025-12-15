@@ -37,7 +37,7 @@ Now that I'm used to it I'm able to alternate hands while typing in numbers.
 ```text
   j p d x q  / T a , z
 w c n t h m  - e o i s v
-  y b g l z  _ u ? . f
+  y b g l k  _ u ? . f
         R r  S '
 ```
 

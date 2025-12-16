@@ -70,7 +70,7 @@ z x c v b  n m , . /
 
 ```text
   z w d l x = u o y q
-f s n t h k - e a i c w
+f s n t h k - e a i c b
   v p g m j / ; . , '
       r R     S '
 ```

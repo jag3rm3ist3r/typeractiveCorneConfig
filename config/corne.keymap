@@ -245,8 +245,8 @@
 		//combo_r_abk { timeout-ms = <50>; key-positions = <RB3 RB2>; bindings = <&kp GT>; };
 		// Both thumbs produces shift.
 		//combo_shift_thumbs { timeout-ms = <50>; key-positions = <LH0 RH0>; bindings = <&kp LSHFT>; };
-		// Repeat key combo
-		combo_arc_thumbs { timeout-ms = <50>; key-positions = <LH0 RH0>; bindings = <&arc>; };
+		// Double l combo
+		combo_l_thumbs { timeout-ms = <50>; key-positions = <LH0 RH0 LB1>; bindings = <&kp l &kp l>; };
 	};
 };
 

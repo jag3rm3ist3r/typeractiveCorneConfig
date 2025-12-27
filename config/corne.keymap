@@ -588,7 +588,7 @@ hmr_##_name_: home_row_mod_right_##_name_ {					\
 			compatible = "zmk,behavior-mod-morph";
 			#binding-cells = <0>;
 			//bindings = <&ltt FN_LB MINUS>, <&kp C>;
-			bindings = <&mt_b FN_LBI FN_LBI_BIND>, <&kp V>;
+			bindings = <&mt_b_leftthumb FN_LBI FN_LBI_BIND>, <&kp V>;
 			//keep-mods = <(MOD_LCTL|MOD_RCTL|MOD_LGUI|MOD_RGUI)>;
 			keep-mods = <(MOD_LCTL|MOD_LGUI)>;
 			//mods = <(MOD_LCTL|MOD_RCTL|MOD_LGUI|MOD_RGUI)>;
@@ -744,6 +744,15 @@ hmr_##_name_: home_row_mod_right_##_name_ {					\
 			tapping-term-ms = <TAPPING_TERM_MS>;
 			bindings = <&mo>, <&kp>;
 			display-name = "Layer_Tap-balanced";
+		};
+
+		mt_b_leftthumb: modtapbalancedleftthumb {
+			compatible = "zmk,behavior-hold-tap";
+			#binding-cells = <2>;
+			flavor = "balanced";
+			tapping-term-ms = <TAPPING_TERM_MS>;
+			bindings = <&sk>, <&kp>;
+			display-name = "Mod_Tap-balanced";
 		};
 	};
 };
@@ -908,6 +917,9 @@ _name_: macro_##_name_ {					\
 	release-after-ms = <2000>;
 };
 
+&sk {
+	quick-release;
+};
 
 / {
 	conditional_layers {

@@ -588,7 +588,7 @@ hmr_##_name_: home_row_mod_right_##_name_ {					\
 			compatible = "zmk,behavior-mod-morph";
 			#binding-cells = <0>;
 			//bindings = <&ltt FN_LB MINUS>, <&kp C>;
-			bindings = <&mt_b_leftthumb FN_LBI FN_LBI_BIND>, <&kp V>;
+			bindings = <&mt_b_t FN_LBI FN_LBI_BIND>, <&kp V>;
 			//keep-mods = <(MOD_LCTL|MOD_RCTL|MOD_LGUI|MOD_RGUI)>;
 			keep-mods = <(MOD_LCTL|MOD_LGUI)>;
 			//mods = <(MOD_LCTL|MOD_RCTL|MOD_LGUI|MOD_RGUI)>;
@@ -746,7 +746,7 @@ hmr_##_name_: home_row_mod_right_##_name_ {					\
 			display-name = "Layer_Tap-balanced";
 		};
 
-		mt_b_leftthumb: modtapbalancedleftthumb {
+		mt_b_t: modtapbalancedleftthumb {
 			compatible = "zmk,behavior-hold-tap";
 			#binding-cells = <2>;
 			flavor = "balanced";
@@ -946,7 +946,7 @@ _name_: macro_##_name_ {					\
 //├───────────────┼───────────────┼───────────────┼───────────────┼───────────────┼───────────────┤   ├───────────────┼───────────────┼───────────────┼───────────────┼───────────────┼───────────────┤
 	&ssl MACR 0		HRM_LB(Y,		B,				G,				L,				K)					&kp UNDER		&kp U			&qmb			&dot_cln		&kp F			&lt FN_RT CAPS
 //╰───────────────┴───────────────┴───────────────┼───────────────┼───────────────┼───────────────┤   ├───────────────┼───────────────┼───────────────┼───────────────┴───────────────┴───────────────╯
-													&mm_enter_x		&magic_ctrl_c	&magic_r	&mt_b FN_RBI FN_RBI_BIND &lt_b FN_RB FN_RB_BIND &mt_b RSHIFT ESC
+													&mm_enter_x		&magic_ctrl_c	&magic_r	&mt_b_t FN_RBI FN_RBI_BIND &lt_b FN_RB FN_RB_BIND &mt_b RSHIFT ESC
 //                                                ╰───────────────┴───────────────┴───────────────╯   ╰───────────────┴───────────────┴───────────────╯
 			>;
 		};

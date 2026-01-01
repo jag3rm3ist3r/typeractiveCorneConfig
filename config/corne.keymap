@@ -754,6 +754,15 @@ hmr_##_name_: home_row_mod_right_##_name_ {					\
 			bindings = <&sk>, <&kp>;
 			display-name = "Mod_Tap-balanced";
 		};
+
+		lt_tog: layer_tap-balanced {
+			compatible = "zmk,behavior-hold-tap";
+			#binding-cells = <2>;
+			flavor = "balanced";
+			tapping-term-ms = <TAPPING_TERM_MS>;
+			bindings = <&mo>, <&kt>;
+			display-name = "Layer_Tap-balanced";
+		};
 	};
 };
 
@@ -944,7 +953,7 @@ _name_: macro_##_name_ {					\
 //├───────────────┼───────────────┼───────────────┼───────────────┼───────────────┼───────────────┤   ├───────────────┼───────────────┼───────────────┼───────────────┼───────────────┼───────────────┤
 	&kp W			HRM_LM(C,		N,				T,				H,				M)					HRM_RM(MINUS,	E,				O,				I,				S)				&kp V
 //├───────────────┼───────────────┼───────────────┼───────────────┼───────────────┼───────────────┤   ├───────────────┼───────────────┼───────────────┼───────────────┼───────────────┼───────────────┤
-	&ssl MACR 0		HRM_LB(Y,		B,				G,				L,				K)					&kp UNDER		&kp U			&qmb			&dot_cln		&kp F			&lt FN_RT CAPS
+	&ssl MACR 0		HRM_LB(Y,		B,				G,				L,				K)					&kp UNDER		&kp U			&qmb			&dot_cln		&kp F			&lt_tog FN_RT RSHIFT
 //╰───────────────┴───────────────┴───────────────┼───────────────┼───────────────┼───────────────┤   ├───────────────┼───────────────┼───────────────┼───────────────┴───────────────┴───────────────╯
 													&mm_enter_x		&magic_ctrl_c	&magic_r	&mt_b_t FN_RBI FN_RBI_BIND &lt_b FN_RB FN_RB_BIND &mt_b RSHIFT ESC
 //                                                ╰───────────────┴───────────────┴───────────────╯   ╰───────────────┴───────────────┴───────────────╯

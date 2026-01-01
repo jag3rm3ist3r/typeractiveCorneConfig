@@ -755,7 +755,7 @@ hmr_##_name_: home_row_mod_right_##_name_ {					\
 			display-name = "Mod_Tap-balanced";
 		};
 
-		lt_tog: layer_tap-balanced {
+		lt_tog: layer_tap-toggle {
 			compatible = "zmk,behavior-hold-tap";
 			#binding-cells = <2>;
 			flavor = "balanced";

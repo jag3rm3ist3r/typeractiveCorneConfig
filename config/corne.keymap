@@ -912,7 +912,7 @@ _name_: macro_##_name_ {					\
 			#binding-cells = <1>;
 			wait-ms = <1>;
 			tap-ms = <1>;
-			bindings =	<macro_param_1to1>,
+			bindings =	<&macro_param_1to1>,
 						<&sk MACRO_PLACEHOLDER>,
 						<&macro_pause_for_release>;
 		};

@@ -697,7 +697,7 @@ hmr_##_name_: home_row_mod_right_##_name_ {					\
 
 		btHoldClr: bt_hold_to_clear {
 			compatible = "zmk,behavior-hold-tap";
-			#binding-cells = <0>;
+			#binding-cells = <2>;
 			flavor = "tap-preferred";
 			tapping-term-ms = <TAPPING_TERM_MS>;
 			bindings = <XXX>, <&btclrmacro>;

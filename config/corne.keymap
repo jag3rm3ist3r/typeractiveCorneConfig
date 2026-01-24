@@ -683,14 +683,25 @@ hmr_##_name_: home_row_mod_right_##_name_ {					\
 		MOD_MORPH_GENERIC(mm_transF12, &trans, &kp F12)
 		//MOD_MORPH_GENERIC(mm_transF12, &kp BSPC, &kp F12)
 
+		/*
 		MOD_MORPH_GENERIC(mm_bt0, &bt BT_SEL 0, &bt BT_DISC 0)
 		MOD_MORPH_GENERIC(mm_bt1, &bt BT_SEL 1, &bt BT_DISC 1)
 		MOD_MORPH_GENERIC(mm_bt2, &bt BT_SEL 2, &bt BT_DISC 2)
 		MOD_MORPH_GENERIC(mm_bt3, &bt BT_SEL 3, &bt BT_DISC 3)
 		MOD_MORPH_GENERIC(mm_bt4, &bt BT_SEL 4, &bt BT_DISC 4)
+		*/
 
 		// Mod morph for nullptr / NULL macros
 		MOD_MORPH_GENERIC(np, &null_pointer, &null_capitals)
+
+		btht: bluetooth_hold_tap {
+			compatible = "zmk,behavior-hold-tap";
+			#binding-cells = <2>;
+			flavor = "hold-preferred";
+			tapping-term-ms = <TAPPING_TERM_MS>;
+			bindings = <&bt BT_SEL>, <&btswclr>;
+			display-name = "BluetoothSwitchClear";
+		};
 
 		// Hold tap for smart_shift
 		ss: smart_shift {
@@ -826,6 +837,7 @@ _name_: macro_##_name_ {					\
 		// Backspace then N K bigram macro
 		MACRO(bspc_nk, &kp BACKSPACE &kp N &kp K)
 
+
 		copy_line: copy_line_macro {
 			compatible		= "zmk,behavior-macro";
 			#binding-cells	= <0>;
@@ -915,6 +927,17 @@ _name_: macro_##_name_ {					\
 			bindings =	<&macro_param_1to1>,
 						<&sk MACRO_PLACEHOLDER>,
 						<&macro_pause_for_release>;
+		};
+		// Bluetooth switch to number then clear it.
+		btswclr: bluetooth_indexed_clear {
+			compatible = "zmk,behavior-macro-one-param";
+			#binding-cells = <1>;
+			wait-ms = <1>;
+			tap-ms = <1>;
+			bindings =	<&macro_param_1to1>,
+						<&bt BT_SEL MACRO_PLACEHOLDER>,
+						<&macro_wait_time 20>
+						<&bt BT_CLR>;
 		};
 	};
 };
@@ -1088,7 +1111,7 @@ _name_: macro_##_name_ {					\
 //├───────────────┼───────────────┼───────────────┼───────────────┼───────────────┼───────────────┤   ├───────────────┼───────────────┼───────────────┼───────────────┼───────────────┼───────────────┤
 	___				&to BASE		&to QWER		&to COLEMAK		&to ENTH		&clr_mod			___				&kp C_MUTE		&kp C_VOL_DN	&kp C_VOL_UP	&kp C_PP		___
 //╰───────────────┴───────────────┴───────────────┼───────────────┼───────────────┼───────────────┤   ├───────────────┼───────────────┼───────────────┼───────────────┴───────────────┴───────────────╯
-													&sys_reset		&bt BT_CLR		&bootloader			&bootloader		&bt BT_CLR		&sys_reset
+													&sys_reset		XXX				&bootloader			&bootloader		XXX				&sys_reset
 //                                                ╰───────────────┴───────────────┴───────────────╯   ╰───────────────┴───────────────┴───────────────╯
 			>;
 		};

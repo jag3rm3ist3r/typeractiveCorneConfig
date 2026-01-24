@@ -694,15 +694,47 @@ hmr_##_name_: home_row_mod_right_##_name_ {					\
 		// Mod morph for nullptr / NULL macros
 		MOD_MORPH_GENERIC(np, &null_pointer, &null_capitals)
 
-
-		btHoldClr: bt_hold_to_clear {
+		btht0: bluetooth_hold_tap0 {
 			compatible = "zmk,behavior-hold-tap";
 			#binding-cells = <0>;
-			flavor = "tap-preferred";
+			flavor = "hold-preferred";
 			tapping-term-ms = <TAPPING_TERM_MS>;
-			bindings = <XXX>, <&bt BT_CLR>;
-			display-name = "bt_hold_to_clear";
-		}
+			bindings = <&bt BT_SEL 0>, <&btswclr 0>;
+			display-name = "BluetoothSwitchClear0";
+		};
+		btht1: bluetooth_hold_tap1 {
+			compatible = "zmk,behavior-hold-tap";
+			#binding-cells = <0>;
+			flavor = "hold-preferred";
+			tapping-term-ms = <TAPPING_TERM_MS>;
+			bindings = <&bt BT_SEL 1>, <&btswclr 1>;
+			display-name = "BluetoothSwitchClear1";
+		};
+		btht2: bluetooth_hold_tap2 {
+			compatible = "zmk,behavior-hold-tap";
+			#binding-cells = <0>;
+			flavor = "hold-preferred";
+			tapping-term-ms = <TAPPING_TERM_MS>;
+			bindings = <&bt BT_SEL 2>, <&btswclr 2>;
+			display-name = "BluetoothSwitchClear2";
+		};
+		btht3: bluetooth_hold_tap3 {
+			compatible = "zmk,behavior-hold-tap";
+			#binding-cells = <0>;
+			flavor = "hold-preferred";
+			tapping-term-ms = <TAPPING_TERM_MS>;
+			bindings = <&bt BT_SEL 3>, <&btswclr 3>;
+			display-name = "BluetoothSwitchClear2";
+		};
+		btht4: bluetooth_hold_tap4 {
+			compatible = "zmk,behavior-hold-tap";
+			#binding-cells = <0>;
+			flavor = "hold-preferred";
+			tapping-term-ms = <TAPPING_TERM_MS>;
+			bindings = <&bt BT_SEL 4>, <&btswclr 4>;
+			display-name = "BluetoothSwitchClear2";
+		};
+
 		// Hold tap for smart_shift
 		ss: smart_shift {
 			compatible = "zmk,behavior-hold-tap";
@@ -928,6 +960,17 @@ _name_: macro_##_name_ {					\
 						<&sk MACRO_PLACEHOLDER>,
 						<&macro_pause_for_release>;
 		};
+		// Bluetooth switch to number then clear it.
+		btswclr: bluetooth_indexed_clear {
+			compatible = "zmk,behavior-macro-one-param";
+			#binding-cells = <1>;
+			wait-ms = <1>;
+			tap-ms = <1>;
+			bindings =	<&macro_param_1to1>,
+						<&bt BT_SEL MACRO_PLACEHOLDER>,
+						<&macro_wait_time 20>,
+						<&bt BT_CLR>;
+		};
 	};
 };
 
@@ -1100,7 +1143,7 @@ _name_: macro_##_name_ {					\
 //├───────────────┼───────────────┼───────────────┼───────────────┼───────────────┼───────────────┤   ├───────────────┼───────────────┼───────────────┼───────────────┼───────────────┼───────────────┤
 	___				&to BASE		&to QWER		&to COLEMAK		&to ENTH		&clr_mod			___				&kp C_MUTE		&kp C_VOL_DN	&kp C_VOL_UP	&kp C_PP		___
 //╰───────────────┴───────────────┴───────────────┼───────────────┼───────────────┼───────────────┤   ├───────────────┼───────────────┼───────────────┼───────────────┴───────────────┴───────────────╯
-													&sys_reset		&btHoldClr		&bootloader			&bootloader		&btHoldClr		&sys_reset
+													&sys_reset		XXX				&bootloader			&bootloader		XXX				&sys_reset
 //                                                ╰───────────────┴───────────────┴───────────────╯   ╰───────────────┴───────────────┴───────────────╯
 			>;
 		};

@@ -700,7 +700,7 @@ hmr_##_name_: home_row_mod_right_##_name_ {					\
 			#binding-cells = <2>;
 			flavor = "tap-preferred";
 			tapping-term-ms = <TAPPING_TERM_MS>;
-			bindings = <___>, <&btclrmacro>;
+			bindings = <XXX>, <&btclrmacro>;
 			display-name = "bt_hold_to_clear";
 		};
 		// Hold tap for smart_shift

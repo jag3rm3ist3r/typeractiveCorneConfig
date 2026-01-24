@@ -700,7 +700,7 @@ hmr_##_name_: home_row_mod_right_##_name_ {					\
 			#binding-cells = <0>;
 			flavor = "tap-preferred";
 			tapping-term-ms = <TAPPING_TERM_MS>;
-			bindings = <XXX>, <&bt BT_CLR>;
+			bindings = <XXX>, <&btclrmacro>;
 			display-name = "bt_hold_to_clear";
 		};
 		// Hold tap for smart_shift
@@ -836,6 +836,8 @@ _name_: macro_##_name_ {					\
 		//MACRO(copy_line, &triple_click &kp LC(C))
 		// Backspace then N K bigram macro
 		MACRO(bspc_nk, &kp BACKSPACE &kp N &kp K)
+		// bluetooth clear bindable
+		MACRO(btclrmacro, &bt BT_CLR)
 
 
 		copy_line: copy_line_macro {

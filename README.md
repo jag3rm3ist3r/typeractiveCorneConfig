@@ -25,10 +25,17 @@ The minus ``-`` and underscore ``_`` keys are both on the left because I have th
 
 ### Numbers
 
-The numbers layer is a dual numpad with ``0`` on the pinkie fingers.
+```text
+O 7 8 9 A  D 7 8 9 O
+0 4 5 6 B  E 4 5 6 0
+0 1 2 3 C  F 1 2 3 0
+```
+
+The numbers layer is a dual numpad with ``0`` on the pinkie fingers. (``000`` in the top corners)
 This lets you avoid the problem of only having 8-9 fingers for 10 numbers while holding layer keys with your thumbs.
-This also allows you to use a standard numpad you're already used to without the same finger bigrams. ``147``, ``258``, ``369``
+This also allows you to use a standard numpad you're already used to without the same finger bigrams. (``147``, ``258``, ``369``)
 Now that I'm used to it I'm able to alternate hands while typing in numbers.
+There are letters on the inner columns for typing hex numbers.
 
 ### Layouts
 

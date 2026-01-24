@@ -69,9 +69,9 @@ z x c v b  n m , . /
 #### [Enthium](https://github.com/sunaku/enthium/tree/main)
 
 ```text
-  z w d l x = u o y q
-f s n t h k - e a i c b
-  v p g m j / ; . , '
+  z p d l x = u o y q
+w s n t h k - e a i c b
+  v f g m j ; / . , '
       r R     S '
 ```
 

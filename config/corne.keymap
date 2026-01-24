@@ -702,7 +702,7 @@ hmr_##_name_: home_row_mod_right_##_name_ {					\
 			tapping-term-ms = <TAPPING_TERM_MS>;
 			bindings = <XXX>, <&bt BT_CLR>;
 			display-name = "bt_hold_to_clear";
-		}
+		};
 		// Hold tap for smart_shift
 		ss: smart_shift {
 			compatible = "zmk,behavior-hold-tap";

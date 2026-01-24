@@ -694,45 +694,13 @@ hmr_##_name_: home_row_mod_right_##_name_ {					\
 		// Mod morph for nullptr / NULL macros
 		MOD_MORPH_GENERIC(np, &null_pointer, &null_capitals)
 
-		btht0: bluetooth_hold_tap0 {
+		btht: bluetooth_hold_tap {
 			compatible = "zmk,behavior-hold-tap";
-			#binding-cells = <0>;
+			#binding-cells = <2>;
 			flavor = "hold-preferred";
 			tapping-term-ms = <TAPPING_TERM_MS>;
-			bindings = <&bt BT_SEL 0>, <&btswclr 0>;
-			display-name = "BluetoothSwitchClear0";
-		};
-		btht1: bluetooth_hold_tap1 {
-			compatible = "zmk,behavior-hold-tap";
-			#binding-cells = <0>;
-			flavor = "hold-preferred";
-			tapping-term-ms = <TAPPING_TERM_MS>;
-			bindings = <&bt BT_SEL 1>, <&btswclr 1>;
-			display-name = "BluetoothSwitchClear1";
-		};
-		btht2: bluetooth_hold_tap2 {
-			compatible = "zmk,behavior-hold-tap";
-			#binding-cells = <0>;
-			flavor = "hold-preferred";
-			tapping-term-ms = <TAPPING_TERM_MS>;
-			bindings = <&bt BT_SEL 2>, <&btswclr 2>;
-			display-name = "BluetoothSwitchClear2";
-		};
-		btht3: bluetooth_hold_tap3 {
-			compatible = "zmk,behavior-hold-tap";
-			#binding-cells = <0>;
-			flavor = "hold-preferred";
-			tapping-term-ms = <TAPPING_TERM_MS>;
-			bindings = <&bt BT_SEL 3>, <&btswclr 3>;
-			display-name = "BluetoothSwitchClear2";
-		};
-		btht4: bluetooth_hold_tap4 {
-			compatible = "zmk,behavior-hold-tap";
-			#binding-cells = <0>;
-			flavor = "hold-preferred";
-			tapping-term-ms = <TAPPING_TERM_MS>;
-			bindings = <&bt BT_SEL 4>, <&btswclr 4>;
-			display-name = "BluetoothSwitchClear2";
+			bindings = <&bt BT_SEL>, <&btswclr>;
+			display-name = "BluetoothSwitchClear";
 		};
 
 		// Hold tap for smart_shift

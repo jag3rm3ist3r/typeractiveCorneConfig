@@ -12,15 +12,13 @@
  <-  ,  ~  ^  /  _    $  *  |  &  . ->
 ```
 
-The symbols layer is designed with programming in mind.
-The middle row is for brackets and quotes.
+The symbols layer is designed with programming in mind. The middle row is for brackets and quotes.
 I tried to keep things that add on the right and things that subtract on the left.
 Top row logical operators ``! - + =`` are mirrored with bottom row bitwise operators ``~ ^ | &``.
 Above and below the index fingers are the division ``/ %`` and multiplication symbols ``*``, as well as the backslash ``\`` above the forwardslash ``/`` for symmetry.
 Having the slash ``/`` and asterisk ``*`` symbols on opposite fingers makes ``C++`` block comments easy to type.
 The remaining symbols have been packed into the corners and in the inner columns in positions that make the most sense for my usage.
-The dollar symbol ``$`` is on the right hand side of the keyboard as it indicates the end of the line in REGEX and VIm.
-The caret ``^`` is on the left with the same reasoning.
+The dollar symbol ``$`` is on the right hand side of the keyboard as it indicates the end of the line in REGEX and VIm. The caret ``^`` is on the left with the same reasoning.
 The hash ``#`` symbol is on the right so that block comments in ``<# powershell #>`` are easier to open than close. The editor will probably add the ``#>`` after your cursor when you open one, depending on which one you use.
 The semicolon ``;`` symbol is on the left because it is often typed after a right bracket.
 The minus ``-`` and underscore ``_`` keys are both on the left because I have those keys on the top layer on the right hand side for typing strings that can't have spaces.

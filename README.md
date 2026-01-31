@@ -5,9 +5,11 @@
 ### Symbols
 
 ```text
-   ? ! - \ @  # % + = `
- " < [ { ( ;  : ) } ] > '
-<- , ~ ^ / _  $ * | & . ->
+     ?  !  -  \  @    #  %  +  =  `
+
+  "  <  [  {  (  ;    :  )  }  ]  > '
+
+ <-  ,  ~  ^  /  _    $  *  |  &  . ->
 ```
 
 The symbols layer is designed with programming in mind.
@@ -26,9 +28,11 @@ The minus ``-`` and underscore ``_`` keys are both on the left because I have th
 ### Numbers
 
 ```text
-O 7 8 9 A  D 7 8 9 O
-0 4 5 6 B  E 4 5 6 0
-0 1 2 3 C  F 1 2 3 0
+     O  7  8  9  A    D  7  8  9   O
+
+     0  4  5  6  B    E  4  5  6   0
+
+     0  1  2  3  C    F  1  2  3   0
 ```
 
 The numbers layer is a dual numpad with ``0`` on the pinkie fingers. (``000`` in the top corners)
@@ -42,10 +46,13 @@ There are letters on the inner columns for typing hex numbers.
 #### Tressym
 
 ```text
-  j p d x q  / T a , z
-w c n t h m  - e o i s v
-  y b g l k  _ u ? . f
-        R r  S '
+     j  p  d  x  q    /  T  a  ,  z
+
+  w  c  n  t  h  m    -  e  o  i  s v
+
+     y  b  g  l  k    _  u  ?  .  f
+
+              R  r    S  '
 ```
 
 <img width="1039" height="785" alt="image" src="./Tressym.png" />
@@ -56,9 +63,11 @@ I used [cyanophage](https://cyanophage.github.io) to optimise it.
 #### Colemak DH
 
 ```
-q w f p b  j l u y ?
-a r s t g  m n e i o
-z x c d v  k h , . '
+     q  w  f  p  b    j l  u  y   ?
+
+     a  r  s  t  g    m n  e  i   o
+
+     z  x  c  d  v    k h  ,  .   '
 ```
 
 <img width="1039" height="785" alt="image" src="./Colemak-DH.png" />
@@ -66,9 +75,11 @@ z x c d v  k h , . '
 #### QWERTY
 
 ```
-q w e r t  y u i o p
-a s d f g  h j k l ;
-z x c v b  n m , . /
+     q  w  e  r  t    y  u  i  o   p
+
+     a  s  d  f  g    h  j  k  l   ;
+
+     z  x  c  v  b    n  m  ,  .   /
 ```
 
 <img width="1039" height="785" alt="image" src="./QWERTY.png" />
@@ -76,10 +87,13 @@ z x c v b  n m , . /
 #### [Enthium](https://github.com/sunaku/enthium/tree/main)
 
 ```text
-  z p d l x = u o y q
-w s n t h k - e a i c b
-  v f g m j ; / . , '
-      r R     S '
+     z  p  d  l  x    =  u  o  y  q
+
+  w  s  n  t  h  k    -  e  a  i  c b
+
+     v  f  g  m  j    ;  /  .  ,  '
+
+              r  R    S  '
 ```
 
 <img width="1039" height="785" alt="image" src="https://github.com/sunaku/enthium/blob/main/cyanophage.png" />

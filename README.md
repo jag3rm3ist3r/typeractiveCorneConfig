@@ -28,11 +28,11 @@ The minus ``-`` and underscore ``_`` keys are both on the left because I have th
 ### Numbers
 
 ```text
-     O  7  8  9  A    D  7  8  9   O
+     O  7  8  9  A    D  7  8  9  O
 
-     0  4  5  6  B    E  4  5  6   0
+     0  4  5  6  B    E  4  5  6  0
 
-     0  1  2  3  C    F  1  2  3   0
+     0  1  2  3  C    F  1  2  3  0
 ```
 
 The numbers layer is a dual numpad with ``0`` on the pinkie fingers. (``000`` in the top corners)
@@ -63,11 +63,11 @@ I used [cyanophage](https://cyanophage.github.io) to optimise it.
 #### Colemak DH
 
 ```
-     q  w  f  p  b    j l  u  y   ?
+     q  w  f  p  b    j  l  u  y  ?
 
-     a  r  s  t  g    m n  e  i   o
+     a  r  s  t  g    m  n  e  i  o
 
-     z  x  c  d  v    k h  ,  .   '
+     z  x  c  d  v    k  h  ,  .  '
 ```
 
 <img width="1039" height="785" alt="image" src="./Colemak-DH.png" />
@@ -75,11 +75,11 @@ I used [cyanophage](https://cyanophage.github.io) to optimise it.
 #### QWERTY
 
 ```
-     q  w  e  r  t    y  u  i  o   p
+     q  w  e  r  t    y  u  i  o  p
 
-     a  s  d  f  g    h  j  k  l   ;
+     a  s  d  f  g    h  j  k  l  ;
 
-     z  x  c  v  b    n  m  ,  .   /
+     z  x  c  v  b    n  m  ,  .  /
 ```
 
 <img width="1039" height="785" alt="image" src="./QWERTY.png" />

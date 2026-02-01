@@ -51,14 +51,8 @@ There are letters on the inner columns for typing hex numbers.
      y  b  g  l  j    _  u  ?  .  f
 
            E  M  r    S  '  R
-```
 
-```text
-  T - Tab
-  E - Escape
-  M - Magic key (repeat)
-  S - Space
-  R - Return
+T - Tab | E - Escape | M - Magic key (repeat) | S - Space | R - Return
 ```
 
 <img width="1039" height="785" alt="image" src="./Tressym.png" />

@@ -50,7 +50,15 @@ There are letters on the inner columns for typing hex numbers.
 
      y  b  g  l  j    _  u  ?  .  f
 
-              R  r    S  '
+           E  M  r    S  '  R
+```
+
+```text
+  T - Tab
+  E - Escape
+  M - Magic key (repeat)
+  S - Space
+  R - Return
 ```
 
 <img width="1039" height="785" alt="image" src="./Tressym.png" />
@@ -91,7 +99,7 @@ I used [cyanophage](https://cyanophage.github.io) to optimise it.
 
      v  f  g  m  j    ;  /  .  ,  '
 
-              r  R    S  '
+           E  M  r    S  '  R
 ```
 
 <img width="1039" height="785" alt="image" src="https://github.com/sunaku/enthium/blob/main/cyanophage.png" />

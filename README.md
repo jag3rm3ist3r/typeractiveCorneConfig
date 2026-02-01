@@ -44,11 +44,11 @@ There are letters on the inner columns for typing hex numbers.
 #### Tressym
 
 ```text
-     j  p  d  x  q    /  T  a  ,  z
+     q  p  d  k  x    /  T  a  ,  z
 
   w  c  n  t  h  m    -  e  o  i  s v
 
-     y  b  g  l  k    _  u  ?  .  f
+     y  b  g  l  j    _  u  ?  .  f
 
               R  r    S  '
 ```

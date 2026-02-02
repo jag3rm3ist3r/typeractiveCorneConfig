@@ -60,40 +60,16 @@ T - Tab | E - Escape | M - Magic key (repeat) | S - Space | R - Return
 This is my own custom layout.
 I used [cyanophage](https://cyanophage.github.io) to optimise it.
 
-#### Colemak DH
-
-```
-     q  w  f  p  b    j  l  u  y  ?
-
-     a  r  s  t  g    m  n  e  i  o
-
-     z  x  c  d  v    k  h  ,  .  '
-```
-
-<img width="1039" height="785" alt="image" src="./Colemak-DH.png" />
-
 #### QWERTY
 
 ```
      q  w  e  r  t    y  u  i  o  p
 
-     a  s  d  f  g    h  j  k  l  ;
+  T  a  s  d  f  g    h  j  k  l  ;  '
 
      z  x  c  v  b    n  m  ,  .  /
-```
-
-<img width="1039" height="785" alt="image" src="./QWERTY.png" />
-
-#### [Enthium](https://github.com/sunaku/enthium/tree/main)
-
-```text
-     z  p  d  l  x    =  u  o  y  q
-
-  w  s  n  t  h  k    -  e  a  i  c b
-
-     v  f  g  m  j    ;  /  .  ,  '
 
            E  M  r    S  '  R
 ```
 
-<img width="1039" height="785" alt="image" src="https://github.com/sunaku/enthium/blob/main/cyanophage.png" />
+<img width="1039" height="785" alt="image" src="./QWERTY.png" />

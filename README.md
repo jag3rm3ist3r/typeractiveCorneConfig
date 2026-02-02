@@ -46,7 +46,7 @@ There are letters on the inner columns for typing hex numbers.
 ```text
      q  p  d  k  x    /  T  a  ,  z
 
-  w  c  n  t  h  m    -  e  o  i  s v
+  w  c  n  t  h  m    -  e  o  i  s  v
 
      y  b  g  l  j    _  u  ?  .  f
 

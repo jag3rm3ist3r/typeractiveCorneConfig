@@ -7,9 +7,9 @@
 ```text
      ?  !  -  \  @    #  %  +  =  `
 
-  "  <  [  {  (  ;    :  )  }  ]  > '
+  "  <  [  {  (  ;    :  )  }  ]  >  '
 
- <-  ,  ~  ^  /  _    $  *  |  &  . ->
+ <-  ,  ~  ^  /  _    $  *  |  &  .  ->
 ```
 
 The symbols layer is designed with programming in mind. The middle row is for brackets and quotes.
@@ -28,7 +28,7 @@ The minus ``-`` and underscore ``_`` keys are both on the left because I have th
 ```text
      O  7  8  9  A    D  7  8  9  O
 
-     0  4  5  6  B    E  4  5  6  0
+  O  0  4  5  6  B    E  4  5  6  0  O
 
      0  1  2  3  C    F  1  2  3  0
 ```

@@ -1029,11 +1029,11 @@ _name_: macro_##_name_ {					\
 			display-name = "Nav";
 			bindings = <
 //╭───────────────┬───────────────┬───────────────┬───────────────┬───────────────┬───────────────╮   ╭───────────────┬───────────────┬───────────────┬───────────────┬───────────────┬───────────────╮
-	&kp BACKSPACE	___				&kp LG(LC(LEFT)) &mmv MOVE_UP &kp LG(LC(RIGHT))	&paste_line			&kp SPACE	&kp LC(BACKSPACE)	&msc SCRL_DOWN	&msc SCRL_UP	&kp LC(DELETE)	&kp DELETE
+	&kp BACKSPACE	&kp SPACE		&kp LG(LC(LEFT)) &mmv MOVE_UP &kp LG(LC(RIGHT))	&kp SPACE			&msc SCRL_UP	&mkp LCLK		&mkp MCLK		&mkp RCLK		&triple_click	&kp DELETE
 //├───────────────┼───────────────┼───────────────┼───────────────┼───────────────┼───────────────┤   ├───────────────┼───────────────┼───────────────┼───────────────┼───────────────┼───────────────┤
-	___				&kp LC(LS(TAB)) &mmv MOVE_LEFT &mmv MOVE_DOWN &mmv MOVE_RIGHT &copy_line			&kp SPACE		&kp LEFT		&kp DOWN		&kp UP			&kp RIGHT		___
+	___				&kp LC(LS(TAB)) &mmv MOVE_LEFT &mmv MOVE_DOWN &mmv MOVE_RIGHT	&kp SPACE			&msc SCRL_DOWN	&kp LEFT		&kp DOWN		&kp UP			&kp RIGHT		___
 //├───────────────┼───────────────┼───────────────┼───────────────┼───────────────┼───────────────┤   ├───────────────┼───────────────┼───────────────┼───────────────┼───────────────┼───────────────┤
-	___				&kp LC(TAB)		&mkp RCLK		&mkp MCLK		&mkp LCLK		&triple_click		HRM_RB(SPACE,	HOME,			PGDN,			PGUP,			END)			___
+	___				&kp LC(TAB)		&kp LC(X)		&kp LC(C)		&kp LC(V)		&triple_click		HRM_RB(SPACE,	HOME,			PGDN,			PGUP,			END)			___
 //╰───────────────┴───────────────┴───────────────┼───────────────┼───────────────┼───────────────┤   ├───────────────┼───────────────┼───────────────┼───────────────┴───────────────┴───────────────╯
 													&kp ESC			___				&mt_b FN_LBI SPACE	___				___				&kp ENTER
 //                                                ╰───────────────┴───────────────┴───────────────╯   ╰───────────────┴───────────────┴───────────────╯

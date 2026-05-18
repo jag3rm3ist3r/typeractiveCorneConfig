@@ -315,7 +315,7 @@ hmr_##_name_: home_row_mod_right_##_name_ {					\
 			quick-tap-ms = <QUICK_TAP_MS>;
 			bindings = <&kp>, <&kp>;
 			// List of keys on the right side of the keyboard
-			hold-trigger-key-positions = <LC5 KEYS_R THUMBS>;
+			hold-trigger-key-positions = <KEYS_R THUMBS>;
 			hold-trigger-on-release;
 		};
 		hmr: home_row_mod_right {
@@ -327,7 +327,7 @@ hmr_##_name_: home_row_mod_right_##_name_ {					\
 			quick-tap-ms = <QUICK_TAP_MS>;
 			bindings = <&kp>, <&kp>;
 			// List of keys on the left side of the keyboard
-			hold-trigger-key-positions = <RC5 KEYS_L THUMBS>;
+			hold-trigger-key-positions = <KEYS_L THUMBS>;
 			hold-trigger-on-release;
 		};
 		// Home row momentary layer keys
@@ -340,7 +340,7 @@ hmr_##_name_: home_row_mod_right_##_name_ {					\
 			quick-tap-ms = <QUICK_TAP_MS>;
 			bindings = <&mo>, <&kp>;
 			// List of keys on the right side of the keyboard
-			hold-trigger-key-positions = <LC5 KEYS_R THUMBS>;
+			hold-trigger-key-positions = <KEYS_R THUMBS>;
 			hold-trigger-on-release;
 		};
 		hmr_mo: home_row_mod_right_momentary_layer {
@@ -352,7 +352,7 @@ hmr_##_name_: home_row_mod_right_##_name_ {					\
 			quick-tap-ms = <QUICK_TAP_MS>;
 			bindings = <&mo>, <&kp>;
 			// List of keys on the left side of the keyboard
-			hold-trigger-key-positions = <RC5 KEYS_L THUMBS>;
+			hold-trigger-key-positions = <KEYS_L THUMBS>;
 			hold-trigger-on-release;
 		};
 

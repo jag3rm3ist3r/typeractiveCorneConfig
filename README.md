@@ -58,7 +58,7 @@ T - Tab | E - Escape | M - Magic key (repeat) | S - Space | R - Return
 <img width="1039" height="785" alt="image" src="./Tressym.png" />
 
 This is my own custom layout.
-I used [cyanophage](https://cyanophage.github.io) to optimise it.
+I used [cyanophage](https://cyanophage.github.io/playground.html?layout=qpdkx%5C%3Da%2Cz*cnthm-eoisvybglj%3Bu%2F.f%27rw&mode=ergo&lan=english&thumb=l) to optimise it.
 
 #### QWERTY
 

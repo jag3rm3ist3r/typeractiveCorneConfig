@@ -2,7 +2,11 @@
 
 ```text
 Legend for layouts below.
-T - Tab | E - Escape | M - Magic key (repeat) | S - Space | R - Return
+T - Tab
+E - Escape
+M - Magic key (repeat)
+S - Space
+R - Return
 Letters in the middle of numbers layer are actually those letters as capitals.
 ```
 

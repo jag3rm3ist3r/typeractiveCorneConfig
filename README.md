@@ -50,7 +50,7 @@ There are letters on the inner columns for typing hex numbers.
 
      y  b  g  l  j    _  u  ?  .  f
 
-           E  M  r    S  '  R
+           R  M  r    S  '  E
 
 T - Tab | E - Escape | M - Magic key (repeat) | S - Space | R - Return
 ```

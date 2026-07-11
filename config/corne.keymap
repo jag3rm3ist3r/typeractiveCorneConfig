@@ -721,7 +721,7 @@ hmr_##_name_: home_row_mod_right_##_name_ {					\
 			#binding-cells = <2>;
 			flavor = "hold-preferred";
 			tapping-term-ms = <TAPPING_TERM_MS>;
-			bindings = <&sl>, <&kt>;
+			bindings = <&mo>, <&kt>;
 			display-name = "smartShift";
 		};
 		// Shift / Repeat
@@ -769,12 +769,12 @@ hmr_##_name_: home_row_mod_right_##_name_ {					\
 			display-name = "Mod_Tap-balanced";
 		};
 
-		sl_kp: sticky-layer-kp {
+		mo_kp: sticky-layer-kp {
 			compatible = "zmk,behavior-hold-tap";
 			#binding-cells = <2>;
 			flavor = "balanced";
 			tapping-term-ms = <TAPPING_TERM_MS>;
-			bindings = <&sl>, <&kp>;
+			bindings = <&mo>, <&kp>;
 			display-name = "Layer_Tap-balanced";
 		};
 	};
@@ -977,7 +977,7 @@ _name_: macro_##_name_ {					\
 //├───────────────┼───────────────┼───────────────┼───────────────┼───────────────┼───────────────┤   ├───────────────┼───────────────┼───────────────┼───────────────┼───────────────┼───────────────┤
 	&kp W			HRM_LM(C,		N,				T,				H,				M)					HRM_RM(MINUS,	E,				O,				I,				S)				&kp V
 //├───────────────┼───────────────┼───────────────┼───────────────┼───────────────┼───────────────┤   ├───────────────┼───────────────┼───────────────┼───────────────┼───────────────┼───────────────┤
-	&ssl FN_LT LSHFT HRM_LB(Y,		B,				G,				L,				J)					&kp UNDER		&kp U			&qmb			&dot_cln		&kp F			&sl_kp FN_RT CAPS
+	&ssl FN_LT LSHFT HRM_LB(Y,		B,				G,				L,				J)					&kp UNDER		&kp U			&qmb			&dot_cln		&kp F			&mo_kp FN_RT CAPS
 //╰───────────────┴───────────────┴───────────────┼───────────────┼───────────────┼───────────────┤   ├───────────────┼───────────────┼───────────────┼───────────────┴───────────────┴───────────────╯
 													&mm_enter_x		&magic_ctrl_c	&magic_r	&mt_b_t FN_RBI FN_RBI_BIND &lt_b FN_RB FN_RB_BIND &mt_b RSHIFT ESC
 //                                                ╰───────────────┴───────────────┴───────────────╯   ╰───────────────┴───────────────┴───────────────╯

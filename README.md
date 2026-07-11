@@ -1,5 +1,11 @@
 # Typeractive Corne Config
 
+```text
+Legend for layouts below.
+T - Tab | E - Escape | M - Magic key (repeat) | S - Space | R - Return
+Letters in the middle of numbers layer are actually those letters as capitals.
+```
+
 ## Layers
 
 ### Symbols
@@ -10,6 +16,9 @@
   '  <  [  {  (  ;    :  )  }  ]  >  "
 
  <-  ,  ~  ^  /  _    $  *  |  &  .  ->
+
+           R  M  r    S  '  E
+
 ```
 
 The symbols layer is designed with programming in mind. The middle row is for brackets and quotes.
@@ -31,6 +40,8 @@ The minus ``-`` and underscore ``_`` keys are both on the left because I have th
   O  0  4  5  6  B    E  4  5  6  0  O
 
      0  1  2  3  C    F  1  2  3  0
+
+           R  M  r    S  '  E
 ```
 
 The numbers layer is a dual numpad with ``0`` on the pinkie fingers. (``000`` in the top corners)
@@ -51,8 +62,6 @@ There are letters on the inner columns for typing hex numbers.
      y  b  g  l  j    _  u  ?  .  f
 
            R  M  r    S  '  E
-
-T - Tab | E - Escape | M - Magic key (repeat) | S - Space | R - Return
 ```
 
 <img width="1039" height="785" alt="image" src="./Tressym.png" />
@@ -69,7 +78,7 @@ I used [cyanophage](https://cyanophage.github.io/playground.html?layout=qpdkx%5C
 
      z  x  c  v  b    n  m  ,  .  /
 
-           E  M  r    S  '  R
+           R  M  S    S  '  E
 ```
 
 <img width="1039" height="785" alt="image" src="./QWERTY.png" />

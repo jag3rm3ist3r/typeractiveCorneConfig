@@ -908,6 +908,7 @@ _name_: macro_##_name_ {					\
 						;
 		};
 	};
+};
 
 &mmv {
     //x-input-code = <INPUT_REL_X>;

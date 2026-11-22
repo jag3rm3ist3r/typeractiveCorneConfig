@@ -824,16 +824,26 @@ _name_: macro_##_name_ {					\
 		clr_mod: clear_mods {
 			compatible = "zmk,behavior-macro";
 			#binding-cells = <0>;
-			wait-ms = <1>;
-			tap-ms = <1>;
-			bindings =	<&macro_release &kp LSHFT>,
-						<&macro_release &kp RSHFT>,
-						<&macro_release &kp LCTRL>,
-						<&macro_release &kp RCTRL>,
-						<&macro_release &kp LALT>,
-						<&macro_release &kp RALT>,
-						<&macro_release &kp LGUI>,
-						<&macro_release &kp RGUI>;
+			wait-ms = <5>;
+			tap-ms = <5>;
+			bindings	= <&macro_release &kp LSHFT>
+						, <&macro_release &kp RSHFT>
+						, <&macro_release &kp LCTRL>
+						, <&macro_release &kp RCTRL>
+						, <&macro_release &kp LALT>
+						, <&macro_release &kp RALT>
+						, <&macro_release &kp LGUI>
+						, <&macro_release &kp RGUI>
+						// Do it twice because there is a bug in ZMK.
+						, <&macro_release &kp LSHFT>
+						, <&macro_release &kp RSHFT>
+						, <&macro_release &kp LCTRL>
+						, <&macro_release &kp RCTRL>
+						, <&macro_release &kp LALT>
+						, <&macro_release &kp RALT>
+						, <&macro_release &kp LGUI>
+						, <&macro_release &kp RGUI>
+						;
 		};
 		// Append =
 		aeq: append_equals_macro {
@@ -895,10 +905,12 @@ _name_: macro_##_name_ {					\
 			bindings	= <&macro_param_1to1>
 						, <&macro_press &mo MACRO_PLACEHOLDER>
 						, <&macro_pause_for_release>
-						, <&macro_release &kp LALT>
-						, <&macro_release &kp RALT>
 						, <&macro_param_1to1>
 						, <&macro_release &mo MACRO_PLACEHOLDER>
+						, <&macro_wait_time 10>
+						, <&macro_release &kp LALT>
+						, <&macro_wait_time 10>
+						, <&macro_release &kp RALT>
 						;
 		};
 		alttab: alt_tab_macro {

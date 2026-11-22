@@ -895,8 +895,9 @@ _name_: macro_##_name_ {					\
 			bindings	= <&macro_param_1to1>
 						, <&macro_press &mo MACRO_PLACEHOLDER>
 						, <&macro_pause_for_release>
+						, <&macro_release &kp LALT>
+						, <&macro_release &kp RALT>
 						, <&macro_param_1to1>
-						, <&kp LALT &kp RALT>
 						, <&macro_release &mo MACRO_PLACEHOLDER>
 						;
 		};

@@ -7,6 +7,7 @@ E - Escape
 M - Magic key (repeat)
 S - Space
 R - Return
+
 Letters in the middle of numbers layer are actually those letters as capitals.
 
 ## Layers
